@@ -16,7 +16,7 @@
                          :ignore-error-status t))))
 
 (defun include-css (filename)
-  ($ `(:link :rel "stylesheet" :href ,filename)))
+  ($ (:link :rel "stylesheet" :href filename)))
 
 (defparameter *about-text*
   (let ((cl-markup:*auto-escape* nil))
