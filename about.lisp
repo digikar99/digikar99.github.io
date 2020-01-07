@@ -32,20 +32,20 @@
       (:title "Shubhamkar B. Ayare (digikar)")
       (:script :type "text/javascript"
                (ps:ps
-                (setf window.onload
-                      (lambda (e)
-                        (defvar vw (/ document.document-element.client-width 100))
-                        (console.log "fired!")
-                        (defvar header
-                          (aref (document.get-elements-by-class-name "defining-pic") 0))
-                        (defvar sticky (* vw 35))
-                        (console.log sticky)
-                        (setf window.onscroll
-                              (lambda (e)
-                                (console.log "scroll")
-                                (if (> window.page-y-offset sticky)
-                                    (header.class-list.add "sticky")
-                                    (header.class-list.remove "sticky")))))))))
+                 (setf window.onload
+                       (lambda (e)
+                         (defvar vw (/ document.document-element.client-width 100))
+                         (console.log "fired!")
+                         (defvar header
+                           (aref (document.get-elements-by-class-name "defining-pic") 0))
+                         (defvar sticky (* vw 35))
+                         (console.log sticky)
+                         (setf window.onscroll
+                               (lambda (e)
+                                 (console.log "scroll")
+                                 (if (> window.page-y-offset sticky)
+                                     (header.class-list.add "sticky")
+                                     (header.class-list.remove "sticky")))))))))
      (:body
       (:div :class "defining-pic" (:img :id "defining-pic-img" :src "defining-pic.jpg"))
       (:main
@@ -128,7 +128,7 @@
                  " a chance to hone my git skills :).")
              (:h4 "reader and uniform-utilities")
              (:p "I have also contributed Common Lisp libraries for "
-                 (:a :href " ,using compiler macros" "providing syntax")
+                 (:a :href "https://github.com/digikar99/reader" "providing syntax")
                  " for lambdas, hash-tables, accessors, maps and sets using reader macros,"
                  " as well as another "
                  (:a :href "https://github.com/digikar99/uniform-utilities"
