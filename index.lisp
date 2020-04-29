@@ -1,36 +1,33 @@
-(ql:quickload '(:cl-markup :reader :parenscript) :silent t)
+(ql:quickload '(:cl-who :reader :parenscript) :silent t)
 
 (reader:enable-reader-syntax 'lambda)
 
-(setf (macro-function '$) (macro-function 'cl-markup:markup))
+(use-package :cl-who)
 
-(defmacro with-tidy-xml (file-name string)
-  (let ((file-name-sym (gensym)))
-    `(let ((,file-name-sym ,file-name))
-       (with-open-file (f ,file-name-sym
-                          :direction :output
-                          :if-exists :supersede
-                          :if-does-not-exist :create)
-         (write-string ,string f))
-       (uiop:run-program (concatenate 'string "tidy -m -xml -i " ,file-name-sym)
-                         :ignore-error-status t))))
-
-(defun include-css (filename)
-  ($ (:link :rel "stylesheet" :href filename)))
+(defmacro who (&body body)
+  `(with-html-output-to-string (s nil :indent t)
+     (htm ,@body)))
 
 (defmacro b (string)
-  `(cl-markup:markup (:span :class "bold" ,string)))
+  `(htm (:span :class "bold" ,string)))
 
-(defparameter *about-text*
-  (let ((cl-markup:*auto-escape* nil))
-    (cl-markup:html5
-     (:head
-      (:meta :charset "utf-8")
-      (:meta :name "viewport"
-             :content "width=device-width, initial-scale=1.0, shrink-to-fit=no")
-      (include-css "index.css")
-      (:title "Shubhamkar B. Ayare (digikar)")
-      (:script :type "text/javascript"
+(defmacro include-css (filename)
+  `(htm (:link :rel "stylesheet" :href ,filename)))
+
+
+(with-open-file (f "index.html" :direction :output
+                   :if-exists :supersede
+                   :if-does-not-exist :create)
+  (with-html-output (s f :indent t)
+    (declare #+sbcl(sb-ext:muffle-conditions ))
+    (:head
+     (:meta :charset "utf-8")
+     (:meta :name "viewport"
+            :content "width=device-width, initial-scale=1.0, shrink-to-fit=no")
+     (include-css "index.css")
+     (:title "Shubhamkar B. Ayare (digikar)")
+     (:script :type "text/javascript"
+              (str
                (ps:ps
                  (setf window.onload
                        (lambda (e)
@@ -164,4 +161,3 @@
              (:br))
        (:footer "Made with lisp."))))))
 
-(with-tidy-xml "index.html" *about-text*)
