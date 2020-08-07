@@ -51,11 +51,12 @@
              "[This page is intended to introduce me in a formal setting. "
              "For an informal introduction, please see my "
              (:a :href "https://www.quora.com/profile/Shubhamkar-Ayare" "Quora profile")
-             ". My resume can be found " (:a :href "resume.pdf" "here") ".]")
+             ". My resume can be found " (:a :href "resume.pdf" "here") "."
+             (b "The below information is older than the resume.") "]")
        (:div :id "contents"
              (:h2 "Education")
              (:p "Formally, I completed my Secondary School Education from Rosary High School (Pune) in 2015, and Higher Secondary Education (equivalent to K12) from Anglo Urdu Boys' High School (along with FIITJEE), also from Pune, in 2017. I have had the opportunity (thanks to affirmative action!) to pursue a four year B. Tech. with a focus in Computer Science and Engineering. I am currently in third year and will graduate in 2021.")
-             (:p "Informally, I have invested a significant amount of time in recent years in Common Lisp and Emacs - I hope these skills will last me for the next 40 years :). I also indulge in Psychology to understand people, Cognitive Science to supplement my knowledge of Computers for putting together an AGI*, as well as Philosophy and Economics (albeit limited to the courses we were offered at IIT Bombay - they are interesting none-the-less and I'd like to pursue them when I'm free of the other tasks.")
+             (:p "Informally, I have invested a significant amount of time in recent years in Common Lisp and Emacs - I hope these skills will last me for the next 40 years :). I also indulge in Psychology to understand people, Cognitive Science to supplement my knowledge of Computers for putting together an AGI, as well as Philosophy and Economics (albeit limited to the courses we were offered at IIT Bombay - they are interesting none-the-less and I'd like to pursue them when I'm free of the other tasks.")
              (:div :id "profile-pic" (:img :src "profile-pic.jpg"))
              (:hr)
 
