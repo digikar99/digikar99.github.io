@@ -51,7 +51,8 @@
              "[This page is intended to introduce me in a formal setting. "
              "For an informal introduction, please see my "
              (:a :href "https://www.quora.com/profile/Shubhamkar-Ayare" "Quora profile")
-             ". My resume can be found " (:a :href "resume.pdf" "here") "."
+             ". My resume and CV can be found " (:a :href "resume.pdf" "here") " and "
+             (:a :href "cv.pdf" "here") " respectively."
              (b "The below information is older than the resume.") "]")
        (:div :id "contents"
              (:h2 "Education")
