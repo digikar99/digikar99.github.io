@@ -6,6 +6,8 @@ body{
 
 a{
 		text-decoration:none;
+    margin:0;
+    padding:0;
 }
 
 .bold{
@@ -20,7 +22,7 @@ a{
 		margin:auto;
 		width:60vw;
 		min-width:300px;
-		text-align:justify;
+		text-align:left;
 		left:0;
 }
 
