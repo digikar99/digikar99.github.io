@@ -1,0 +1,53 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+TITLE: Cognitive Science - digikar99.github.io
+
+#+BEGIN_CENTER
+[[file:index.html][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:cognitive-science.html][Cognitive Science]] | [[./digimon.html][Digimon]]
+#+END_CENTER
+
+#+TOC: headlines 1
+
+#+html: <br>
+
+* 1. Why Cognitive Science?
+
+I think, if understanding the universe was (one of) the hottest field in the past century or four, understanding the (human) brain will be (one of) the hottest field of this century.
+
+Besides, even though our brains and minds and bodies are marvelous in certain aspects, they are miserable in some other aspects. Our bodies aren't the best instruments for venturing into outer space. Nor are our disconnected brains the best vessels in the digital age. Entire decades of experience are lost with the death of a human. It takes years to obtain mastery in specific fields.
+
+But equally importantly, it will be amazing to be able to understand how a 100 billion neurons and a quadrillion synapses come together to form an entity who is reading this text. It is spooky to realize that in some cases, there can be not one you, but two or even multiple yous*. Or you can have multiple bodies with a single brain. Or you can cease to be conscious while you are sleeping. What. Is. Going. On.
+
+Will we some day be able to recreate human minds with a computer? What would it take to do so? Why, even after so much data and efforts, are five-year olds still better conversationalists than something like the Google Assistant or Siri? What exactly would it take to learn language to a /human/-degree?
+
+*No, I am not yet versed (let alone /well/-versed) with [[https://en.wikipedia.org/wiki/Dissociative_identity_disorder][Dissociative Identity Disorder]], or with [[https://en.wikipedia.org/wiki/Split-brain][Callosal Syndrome]], or with [[https://en.wikipedia.org/wiki/Craniopagus_twins][Craniopagus twins]]
+
+* 2. Why Cognitive Science and not Neuroscience or Psychology?
+
+A rose is a rose whether one calls it an apple or a rose.
+
+My current areas of interest include First Language Acquisition and Computational Cognitive Science and Consciousness - I'm yet to touch upon anything more than the former.
+
+In the former, I've been able to touch upon
+
+- Traditional Linguistics: Functional vs Chomskian, anyone?
+- Anthropology: To what extent is language a product of culture vs something inherent?
+- Machine Learning / Natural Language Processing: Word Vectors are great. In what way do they tie to our internal representations? (Nope, they aren't everything, since they do not incorporate /all of/ common-sense.)
+- Neuroscience: Certain areas of the brain /do/ affect language. Aphasia concerns with such linguistic disorders.
+
+As such, we are /really/ not sticking to any particular specific field in order to understand a phenomenon known as language. (And when you think of language, also think about nonverbal languages, such as the American Sign Language!)
+
+* 3. What are you working on / want to work upon?
+
+I started out with First Language Acquisition, but I have very recently got wrapped up in Computational Cognitive Science and Consciousness. I feel inclined towards Cognitive Architectures because we seem to acquire language in the context of an "internal world" rather than in "complete isolation". In addition, from an evolutionary perspective, Consciousness feels more primitive than Language.
+
+I don't yet know what to make of this beyond these loose threads of thought.
+
+* 4. Learning Resources
+
+- School Education (expected 2 dedicated years): [[https://alterschoolindia.com/][alterschoolindia]]
+  - Prerequisites: English, understanding of a 10/14 year old
+- Computer Science (expected 2 dedicated years): [[https://teachyourselfcs.com/][teachyourselfcs.com]]
+  - Prerequisites: English, Mathematics from the above resource, understanding of a 16/18 year old

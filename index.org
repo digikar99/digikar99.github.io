@@ -1,0 +1,77 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="index.css">
+#+HTML_HEAD: <script src="index.js"></script>
+#+OPTIONS: toc:nil num:nil title:nil html-postamble:nil
+#+TITLE: Shubhamkar B. Ayare (digikar)
+
+#+begin_export html
+<div class='defining-pic'><img id='defining-pic-img' src='defining-pic.jpg' /></div>
+#+end_export
+
+* Shubhamkar B. Ayare
+
+#+BEGIN_CENTER
+[[file:index.html][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:cognitive-science.html][Cognitive Science]] | [[./digimon.html][Digimon]]
+#+END_CENTER
+
+-----
+
+** Who am I?
+
+
+
+Uhm, well, I have elaborated it [[https://human9being9.wordpress.com/2020/05/03/me/][here]].
+
+.
+
+.
+
+.
+
+Go, have a read!
+
+.
+
+Waiting for you
+
+.
+
+Okay, on a serious note: as of August 2021, I've completed my undergraduate with a specialization in Computer Science and Engineering from IIT Bombay, and am currently a first year masters student pursuing Cognitive Science at IIT Kanpur.
+
+#+begin_export html
+<div id='profile-pic'><img src='profile-pic.jpg' /></div>
+#+end_export
+
+Besides academics,
+
+- For the past few years, I have been consistently coding [[./common-lisp-and-emacs.html][Common Lisp in Emacs]], and watching [[./digimon.html][Digimon]].
+- I have been on [[https://www.quora.com/profile/Shubhamkar-Ayare][Quora]] since at least 2014, and possibly before. A number of my answers self-deemed to be interesting have been collected [[https://human9being9.wordpress.com/my-quora/][here]].
+- Some of the books I've read or in my to-read list listed here include
+  - Sapiens: A brief History of Humankind
+  - Ender’s Game and its sequel Speaker for the Dead
+  - Godel, Escher and Bach: An eternal golden braid
+  - Linear Algebra Done Right
+  - The Language Instinct: How the Mind creates language
+
+- I also sometimes write on [[http://human9being9.wordpress.com/][wordpress]]. Some articles of general interest include:
+  - [[https://human9being9.wordpress.com/10-things-you-must-know/][10 Things You Must Know]]
+  - [[https://human9being9.wordpress.com/2020/02/15/dealing-with-loneliness/][Dealing with Loneliness]]
+  - [[https://human9being9.wordpress.com/2020/02/06/evolving-perspectives-on-actions-and-desires/][Evolving Perspectives on Actions and Desires]]
+  - [[https://human9being9.wordpress.com/28-2/][Myopia]]
+  - [[https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/][Active Learning *with Zettelkasten*]]
+
+- [[https://alterschoolindia.com/][alterschoolindia]]: Supplementary resources for middle school education.
+  - [[https://alterschoolindia.com/intermediate.html][alterschoolindia/intermediate]]: Some resources on Career Tasting (yes, that's T-A-S-T)
+
+** Contact
+
+You can write an email to shubhamayare[at]yahoo[dot]co[dot]in. Feel free to ping me more than once, lest it gets lost in other emails.
+
+#+begin_center
+
+[[https://github.com/digikar99][Github]] | [[https://www.quora.com/profile/Shubhamkar-Ayare][Quora]] | [[https://www.facebook.com/shubhamkar.ayare][Facebook]] | [[https://reddit.com/u/digikar][Reddit]] | [[https://www.linkedin.com/in/shubhamkar-a-9583b7133/][LinkedIn]]
+
+(made with [[https://orgmode.org/][_emacs org_]])
+
+#+end_center
