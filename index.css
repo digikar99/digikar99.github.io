@@ -86,3 +86,15 @@ p, h3, ul{
 .org-center p{
     text-align:center;
 }
+
+.slideshow-container {
+    position: relative;
+    background: #f1f1f1f1;
+    width:60vw;
+    margin:auto;
+    margin-top:15px;
+    margin-bottom:15px;
+    padding: 30px;
+    text-align: center;
+    height:90px;
+}

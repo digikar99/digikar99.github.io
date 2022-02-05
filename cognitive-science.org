@@ -41,9 +41,11 @@ As such, we are /really/ not sticking to any particular specific field in order 
 
 * 3. What are you working on / want to work upon?
 
-I started out with First Language Acquisition, but I have very recently got wrapped up in Computational Cognitive Science and Consciousness. I feel inclined towards Cognitive Architectures because we seem to acquire language in the context of an "internal world" rather than in "complete isolation". In addition, from an evolutionary perspective, Consciousness feels more primitive than Language.
+I started out with First Language Acquisition, then got wrapped up in Computational Cognitive Science and Consciousness. I feel inclined towards Cognitive Architectures because we seem to acquire language in the context of an "internal world" rather than in "complete isolation". In addition, from an evolutionary perspective, Consciousness feels more primitive than Language. 
 
-I don't yet know what to make of this beyond these loose threads of thought.
+Yet, some other aspects of cognition feel more primitive than full-fledged adult-human-level consciousness: think about cockroaches or rats. In recent days, I'm inclined towards the question of how a "continuous" stream of perception (light on the retina, vibrations on the ear drum) become "discretized" (the objects you "see", the words you "hear").
+
+Beyond that, I'm still clueless!
 
 * 4. Learning Resources
 
@@ -51,3 +53,4 @@ I don't yet know what to make of this beyond these loose threads of thought.
   - Prerequisites: English, understanding of a 10/14 year old
 - Computer Science (expected 2 dedicated years): [[https://teachyourselfcs.com/][teachyourselfcs.com]]
   - Prerequisites: English, Mathematics from the above resource, understanding of a 16/18 year old
+- Blog Post: [[https://human9being9.wordpress.com/2022/01/22/cognitive-science-and-artificial-general-intelligence-bootstrapping-and-childhood-cognitive-development/][Cognitive Science and Artificial General Intelligence: Bootstrapping and Childhood Cognitive Development]]

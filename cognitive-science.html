@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-02 Mon 00:42 -->
+<!-- 2022-02-05 Sat 20:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Cognitive Science - digikar99.github.io</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="shubhamkar" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -161,6 +162,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -178,60 +192,13 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="others.css">
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Cognitive Science - digikar99.github.io</h1>
 <div class="org-center">
 <p>
@@ -239,23 +206,23 @@ for the JavaScript code in this tag.
 </p>
 </div>
 
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org741ada5">1. Why Cognitive Science?</a></li>
-<li><a href="#orge181142">2. Why Cognitive Science and not Neuroscience or Psychology?</a></li>
-<li><a href="#org53c22b6">3. What are you working on / want to work upon?</a></li>
-<li><a href="#orgeae6a3e">4. Learning Resources</a></li>
+<li><a href="#org9f057c4">1. Why Cognitive Science?</a></li>
+<li><a href="#org19ab560">2. Why Cognitive Science and not Neuroscience or Psychology?</a></li>
+<li><a href="#org6e76742">3. What are you working on / want to work upon?</a></li>
+<li><a href="#org3565bb8">4. Learning Resources</a></li>
 </ul>
 </div>
 </div>
 
 <br>
 
-<div id="outline-container-org741ada5" class="outline-2">
-<h2 id="org741ada5">1. Why Cognitive Science?</h2>
-<div class="outline-text-2" id="text-org741ada5">
+<div id="outline-container-org9f057c4" class="outline-2">
+<h2 id="org9f057c4">1. Why Cognitive Science?</h2>
+<div class="outline-text-2" id="text-org9f057c4">
 <p>
 I think, if understanding the universe was (one of) the hottest field in the past century or four, understanding the (human) brain will be (one of) the hottest field of this century.
 </p>
@@ -278,9 +245,9 @@ Will we some day be able to recreate human minds with a computer? What would it 
 </div>
 </div>
 
-<div id="outline-container-orge181142" class="outline-2">
-<h2 id="orge181142">2. Why Cognitive Science and not Neuroscience or Psychology?</h2>
-<div class="outline-text-2" id="text-orge181142">
+<div id="outline-container-org19ab560" class="outline-2">
+<h2 id="org19ab560">2. Why Cognitive Science and not Neuroscience or Psychology?</h2>
+<div class="outline-text-2" id="text-org19ab560">
 <p>
 A rose is a rose whether one calls it an apple or a rose.
 </p>
@@ -290,7 +257,7 @@ My current areas of interest include First Language Acquisition and Computationa
 </p>
 
 <p>
-In the former, I've been able to touch upon 
+In the former, I've been able to touch upon
 </p>
 
 <ul class="org-ul">
@@ -306,22 +273,26 @@ As such, we are <i>really</i> not sticking to any particular specific field in o
 </div>
 </div>
 
-<div id="outline-container-org53c22b6" class="outline-2">
-<h2 id="org53c22b6">3. What are you working on / want to work upon?</h2>
-<div class="outline-text-2" id="text-org53c22b6">
+<div id="outline-container-org6e76742" class="outline-2">
+<h2 id="org6e76742">3. What are you working on / want to work upon?</h2>
+<div class="outline-text-2" id="text-org6e76742">
 <p>
-I started out with First Language Acquisition, but I have very recently got wrapped up in Computational Cognitive Science and Consciousness. I feel inclined towards Cognitive Architectures because we seem to acquire language in the context of an "internal world" rather than in "complete isolation". In addition, from an evolutionary perspective, Consciousness feels more primitive than Language.
+I started out with First Language Acquisition, then got wrapped up in Computational Cognitive Science and Consciousness. I feel inclined towards Cognitive Architectures because we seem to acquire language in the context of an "internal world" rather than in "complete isolation". In addition, from an evolutionary perspective, Consciousness feels more primitive than Language. 
 </p>
 
 <p>
-I don't yet know what to make of this beyond these loose threads of thought.
+Yet, some other aspects of cognition feel more primitive than full-fledged adult-human-level consciousness: think about cockroaches or rats. In recent days, I'm inclined towards the question of how a "continuous" stream of perception (light on the retina, vibrations on the ear drum) become "discretized" (the objects you "see", the words you "hear").
+</p>
+
+<p>
+Beyond that, I'm still clueless!
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgeae6a3e" class="outline-2">
-<h2 id="orgeae6a3e">4. Learning Resources</h2>
-<div class="outline-text-2" id="text-orgeae6a3e">
+<div id="outline-container-org3565bb8" class="outline-2">
+<h2 id="org3565bb8">4. Learning Resources</h2>
+<div class="outline-text-2" id="text-org3565bb8">
 <ul class="org-ul">
 <li>School Education (expected 2 dedicated years): <a href="https://alterschoolindia.com/">alterschoolindia</a>
 <ul class="org-ul">
@@ -331,6 +302,7 @@ I don't yet know what to make of this beyond these loose threads of thought.
 <ul class="org-ul">
 <li>Prerequisites: English, Mathematics from the above resource, understanding of a 16/18 year old</li>
 </ul></li>
+<li>Blog Post: <a href="https://human9being9.wordpress.com/2022/01/22/cognitive-science-and-artificial-general-intelligence-bootstrapping-and-childhood-cognitive-development/">Cognitive Science and Artificial General Intelligence: Bootstrapping and Childhood Cognitive Development</a></li>
 </ul>
 </div>
 </div>

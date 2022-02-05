@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-02 Mon 00:47 -->
+<!-- 2022-02-05 Sat 20:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Shubhamkar B. Ayare (digikar)</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="shubhamkar" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -161,6 +162,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -178,66 +192,19 @@
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   .org-svg { width: 90%; }
-  /*]]>*/-->
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="index.css">
 <script src="index.js"></script>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <div class='defining-pic'><img id='defining-pic-img' src='defining-pic.jpg' /></div>
 
-<div id="outline-container-org656db51" class="outline-2">
-<h2 id="org656db51">Shubhamkar B. Ayare</h2>
-<div class="outline-text-2" id="text-org656db51">
+<div id="outline-container-orgdcbfb1e" class="outline-2">
+<h2 id="orgdcbfb1e">Shubhamkar B. Ayare</h2>
+<div class="outline-text-2" id="text-orgdcbfb1e">
 <div class="org-center">
 <p>
 <a href="index.html">Home</a> | <a href="common-lisp-and-emacs.html">Common Lisp and Emacs</a> | <a href="cognitive-science.html">Cognitive Science</a> | <a href="./digimon.html">Digimon</a>
@@ -247,9 +214,9 @@ for the JavaScript code in this tag.
 <hr />
 </div>
 
-<div id="outline-container-orgde4cf31" class="outline-3">
-<h3 id="orgde4cf31">Who am I?</h3>
-<div class="outline-text-3" id="text-orgde4cf31">
+<div id="outline-container-org966f6d8" class="outline-3">
+<h3 id="org966f6d8">Who am I?</h3>
+<div class="outline-text-3" id="text-org966f6d8">
 <p>
 Uhm, well, I have elaborated it <a href="https://human9being9.wordpress.com/2020/05/03/me/">here</a>.
 </p>
@@ -283,7 +250,7 @@ Waiting for you
 </p>
 
 <p>
-Okay, on a serious note: as of August 2021, I've completed my undergraduate with a specialization in Computer Science and Engineering from IIT Bombay, and am currently a first year masters student pursuing Cognitive Science at IIT Kanpur.
+Okay, on a serious note: as of August 2021, I've completed my undergraduate with a specialization in Computer Science and Engineering from IIT Bombay, and am currently a first year masters student pursuing Cognitive Science at IIT Kanpur. I'm hoping to pursue topics in Object-based Attention as a part of my Masters' thesis.
 </p>
 
 <div id='profile-pic'><img src='profile-pic.jpg' /></div>
@@ -310,7 +277,7 @@ Besides academics,
 <li><a href="https://human9being9.wordpress.com/2020/02/15/dealing-with-loneliness/">Dealing with Loneliness</a></li>
 <li><a href="https://human9being9.wordpress.com/2020/02/06/evolving-perspectives-on-actions-and-desires/">Evolving Perspectives on Actions and Desires</a></li>
 <li><a href="https://human9being9.wordpress.com/28-2/">Myopia</a></li>
-<li><a href="https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/">Active Learning <b>with Zettelkasten</b></a></li>
+<li><a href="https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/">Active Learning &lowast;with Zettelkasten&lowast;</a></li>
 </ul></li>
 
 <li><a href="https://alterschoolindia.com/">alterschoolindia</a>: Supplementary resources for middle school education.
@@ -321,12 +288,19 @@ Besides academics,
 </div>
 </div>
 
-<div id="outline-container-org0ad71e0" class="outline-3">
-<h3 id="org0ad71e0">Contact</h3>
-<div class="outline-text-3" id="text-org0ad71e0">
+<div id="outline-container-org517e512" class="outline-3">
+<h3 id="org517e512">Contact</h3>
+<div class="outline-text-3" id="text-org517e512">
 <p>
 You can write an email to shubhamayare[at]yahoo[dot]co[dot]in. Feel free to ping me more than once, lest it gets lost in other emails.
 </p>
+
+<div class="slideshow-container" id="org9b62391">
+<p>
+
+</p>
+
+</div>
 
 <div class="org-center">
 <p>
