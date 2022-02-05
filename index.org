@@ -37,7 +37,7 @@ Waiting for you
 
 .
 
-Okay, on a serious note: as of August 2021, I've completed my undergraduate with a specialization in Computer Science and Engineering from IIT Bombay, and am currently a first year masters student pursuing Cognitive Science at IIT Kanpur.
+Okay, on a serious note: as of August 2021, I've completed my undergraduate with a specialization in Computer Science and Engineering from IIT Bombay, and am currently a first year masters student pursuing Cognitive Science at IIT Kanpur. I'm hoping to pursue topics in Object-based Attention as a part of my Masters' thesis.
 
 #+begin_export html
 <div id='profile-pic'><img src='profile-pic.jpg' /></div>
@@ -59,7 +59,7 @@ Besides academics,
   - [[https://human9being9.wordpress.com/2020/02/15/dealing-with-loneliness/][Dealing with Loneliness]]
   - [[https://human9being9.wordpress.com/2020/02/06/evolving-perspectives-on-actions-and-desires/][Evolving Perspectives on Actions and Desires]]
   - [[https://human9being9.wordpress.com/28-2/][Myopia]]
-  - [[https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/][Active Learning *with Zettelkasten*]]
+  - [[https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/][Active Learning \ast{}with Zettelkasten\ast{}]]
 
 - [[https://alterschoolindia.com/][alterschoolindia]]: Supplementary resources for middle school education.
   - [[https://alterschoolindia.com/intermediate.html][alterschoolindia/intermediate]]: Some resources on Career Tasting (yes, that's T-A-S-T)
@@ -67,6 +67,10 @@ Besides academics,
 ** Contact
 
 You can write an email to shubhamayare[at]yahoo[dot]co[dot]in. Feel free to ping me more than once, lest it gets lost in other emails.
+
+#+begin_slideshow-container
+
+#+end_slideshow-container
 
 #+begin_center
 
