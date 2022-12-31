@@ -3,14 +3,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-08-02 Mon 00:42 -->
+<!-- 2022-12-31 Sat 15:26 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Common Lisp and Emacs - digikar99.github.io</title>
-<meta name="generator" content="Org mode" />
 <meta name="author" content="shubhamkar" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -31,8 +31,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -40,22 +41,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -161,6 +162,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -177,86 +191,42 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="others.css">
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
 
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+<link rel='stylesheet' href='styles.css'>
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans' />
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Common Lisp and Emacs - digikar99.github.io</h1>
 <div class="org-center">
 <p>
-<a href="index.html">Home</a> | <a href="common-lisp-and-emacs.html">Common Lisp and Emacs</a> | <a href="cognitive-science.html">Cognitive Science</a> | <a href="./digimon.html">Digimon</a>
+<a href="index.html">Home</a> | <b>COMMON LISP AND EMACS</b> | <a href="agi-cogsci.html">AGI and Cognitive Science</a> | <a href="./digimon.html">Digimon</a>
 </p>
 </div>
 
-<div id="table-of-contents">
+<div id="table-of-contents" role="doc-toc">
 <h2>Table of Contents</h2>
-<div id="text-table-of-contents">
+<div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org9e1ac91">1. Why Emacs (or Vi) in [insert year]?</a></li>
-<li><a href="#org4a2ae7c">2. Can Emacs substitute my IDE?</a></li>
-<li><a href="#org069d737">3. Recommended Resources to start with Common Lisp</a></li>
-<li><a href="#org5103c50">4. Do I have to learn Emacs to learn Common Lisp?</a></li>
-<li><a href="#orgb97905b">5. Some projects you have done / are working on</a></li>
+<li><a href="#orgb840371">1. Why Emacs (or Vi) in [insert year]?</a></li>
+<li><a href="#org77ddd68">2. Can Emacs substitute my IDE?</a></li>
+<li><a href="#orge432ad4">3. Recommended Resources to start with Common Lisp</a></li>
+<li><a href="#org53a916f">4. Do I have to learn Emacs to learn Common Lisp?</a></li>
+<li><a href="#org11290ba">5. Some projects you have done / are working on</a></li>
 </ul>
 </div>
 </div>
 
 <br>
 
-<div id="outline-container-org9e1ac91" class="outline-2">
-<h2 id="org9e1ac91">1. Why Emacs (or Vi) in [insert year]?</h2>
-<div class="outline-text-2" id="text-org9e1ac91">
+<div id="outline-container-orgb840371" class="outline-2">
+<h2 id="orgb840371">1. Why Emacs (or Vi) in [insert year]?</h2>
+<div class="outline-text-2" id="text-orgb840371">
 <p>
 If something is not discouraged by a community years after its first release, then that something must have some merit subject to your own scrutiny. Vi is ubiquitous, and its modal-editing is a boon for editing - not necessarily writing - code. Emacs is extensible, and its community has provided <a href="https://github.com/emacs-evil/evil">Extensible VI Layer</a> to provide the best of Emacs and Vi.
 </p>
@@ -266,7 +236,7 @@ If something is not discouraged by a community years after its first release, th
 
 <div class="org-center">
 
-<div class="figure">
+<div id="org6f41275" class="figure">
 <p><img src="images/emacs.png" alt="emacs.png" />
 </p>
 </div>
@@ -281,7 +251,7 @@ This is emacs.
 
 <div class="org-center">
 
-<div class="figure">
+<div id="orgaba3af2" class="figure">
 <p><img src="https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png" alt="main.png" />
 </p>
 </div>
@@ -296,7 +266,7 @@ This also is <a href="https://github.com/hlissner/doom-emacs">emacs</a>.
 
 <div class="org-center">
 
-<div class="figure">
+<div id="orgbca4180" class="figure">
 <p><img src="https://raw.githubusercontent.com/syl20bnr/spacemacs/develop/doc/img/spacemacs-python.png" alt="spacemacs-python.png" />
 </p>
 </div>
@@ -315,15 +285,15 @@ And if you ever feel annoyed by constantly switching between insert and edit mod
 </div>
 </div>
 
-<div id="outline-container-org4a2ae7c" class="outline-2">
-<h2 id="org4a2ae7c">2. Can Emacs substitute my IDE?</h2>
-<div class="outline-text-2" id="text-org4a2ae7c">
+<div id="outline-container-org77ddd68" class="outline-2">
+<h2 id="org77ddd68">2. Can Emacs substitute my IDE?</h2>
+<div class="outline-text-2" id="text-org77ddd68">
 <p>
 If you know why exactly do you need the IDE, then, no. If you actually use the PyCharm or IntelliJ IDEA features dedicated to those languages, then, no, emacs - in my very limited experience - does not replace a full-blown IDE. But, <a href="https://www.reddit.com/r/emacs/search?q=intellij&amp;restrict_sr=1">you could always ask a community</a>.
 </p>
 
 <p>
-Fortunately so far, I have had the luxury to stick with Common Lisp and there, <a href="https://github.com/slime/slime">Superior Lisp Interaction Mode for Emacs (SLIME)</a> absolutely blows most things out of the water.
+Fortunately so far, I have had the luxury to stick with Common Lisp and there, <a href="https://github.com/slime/slime">Superior Lisp Interaction Mode for Emacs (SLIME)</a> absolutely blows most things out of the water even though it has its shortcomings.
 </p>
 
 <div class="org-center">
@@ -332,27 +302,27 @@ Fortunately so far, I have had the luxury to stick with Common Lisp and there, <
 </div>
 </div>
 
-<div id="outline-container-org069d737" class="outline-2">
-<h2 id="org069d737">3. Recommended Resources to start with Common Lisp</h2>
-<div class="outline-text-2" id="text-org069d737">
+<div id="outline-container-orge432ad4" class="outline-2">
+<h2 id="orge432ad4">3. Recommended Resources to start with Common Lisp</h2>
+<div class="outline-text-2" id="text-orge432ad4">
 <p>
 <a href="https://gist.github.com/digikar99/a1925ad3249a431c9eecf09af2fdef8a">Opinionated Common Lisp Resources 2020</a>
 </p>
 </div>
 </div>
 
-<div id="outline-container-org5103c50" class="outline-2">
-<h2 id="org5103c50">4. Do I have to learn Emacs to learn Common Lisp?</h2>
-<div class="outline-text-2" id="text-org5103c50">
+<div id="outline-container-org53a916f" class="outline-2">
+<h2 id="org53a916f">4. Do I have to learn Emacs to learn Common Lisp?</h2>
+<div class="outline-text-2" id="text-org53a916f">
 <p>
-If you are in it for the long haul, yes. But, something like <a href="https://github.com/digikar99/emacs-noob/tree/slime-company-modern">emacs-noob/slime-company-modern</a> can provide familiar (non-emacs/vi) key-bindings, so that you can focus on Common Lisp first, and then on Emacs. 
+If you are in it for the long haul, yes. But, something like <a href="https://github.com/digikar99/emacs-noob/tree/slime-company-modern">emacs-noob/slime-company-modern</a> can provide familiar (non-emacs/vi) key-bindings, so that you can focus on Common Lisp first, and then on Emacs.
 </p>
 </div>
 </div>
 
-<div id="outline-container-orgb97905b" class="outline-2">
-<h2 id="orgb97905b">5. Some projects you have done / are working on</h2>
-<div class="outline-text-2" id="text-orgb97905b">
+<div id="outline-container-org11290ba" class="outline-2">
+<h2 id="org11290ba">5. Some projects you have done / are working on</h2>
+<div class="outline-text-2" id="text-org11290ba">
 <p>
 All of these are immature projects. Wait for another 5-10* years to test their maturity.
 </p>
@@ -371,12 +341,16 @@ With Common Lisp, there is
 </p>
 
 <ul class="org-ul">
+<li><a href="https://github.com/digikar99/py4cl2-cffi">py4cl2-cffi</a>: finally, we have a CFFI approach to using python libraries from common lisp!</li>
 <li><a href="https://github.com/digikar99/py4cl2">py4cl2</a>: a bunch of incompatible changes and improvements over the original <a href="https://github.com/bendudson/py4cl">py4cl</a>; the goal is to enable the use of python libraries in common lisp in non-performance-intensive use cases. compared to py4cl, py4cl2 is still immature; like most things Common Lisp, I'll let time decide when it becomes mature enough.</li>
-<li><a href="https://github.com/digikar99/polymorphic-functions/">polymorphic-functions</a>: a library that intends to bring type-based adhoc, subtype as well as parametric polymorphism to common lisp; yeah common lisp does already have a super neat class-based polymorphism known as CLOS with a MOP, and a few <a href="https://github.com/alex-gutev/static-dispatch">helper</a> <a href="https://github.com/marcoheisig/fast-generic-functions">libraries</a>; but I and a few others have wished for type-based polymorphism.</li>
+<li><a href="https://github.com/digikar99/extensible-compound-types">extensible-compound-types</a>: common lisp provides DEFTYPE that only allows defining type <i>aliases</i> aka <i>derived type specifiers</i>. That means there is no way through which users can define types with true type parameters. The closest is <code>satisfies</code> which gets ugly quickly. <code>extensible-compound-types</code> is an attempt to overcome this limitation.</li>
+<li><a href="https://github.com/digikar99/polymorphic-functions/">polymorphic-functions</a>: a library that intends to bring type-based adhoc, subtype as well as (limited) parametric polymorphism to common lisp; yeah common lisp does already have a super neat class-based polymorphism known as CLOS with a MOP, and a few <a href="https://github.com/alex-gutev/static-dispatch">helper</a> <a href="https://github.com/marcoheisig/fast-generic-functions">libraries</a>; but I and a few others have wished for type-based polymorphism.</li>
 <li><a href="https://github.com/digikar99/dense-arrays">dense-arrays</a>: a numpy-like array object for common lisp</li>
 <li><a href="https://github.com/digikar99/numericals">numericals</a>: a simd-based basic math library for common lisp</li>
 <li><a href="https://common-lisp-libraries.readthedocs.io/">common-lisp-libraries.readthedocs.io</a>: an attractive documentation site for some of the defacto common lisp libraries</li>
 </ul>
+
+<div style="text-align:center;display:block;"><img src="./images/dense-numericals.png" style="width:720px;"/></div>
 
 <p>
 *If 5-10 years sounds like too much, then, welcome to the world of Common Lisp :). This language was ANSI standardized in 1994, which means if you stuck to the ANSI standard (or perhaps the then defacto libraries), then code written in the year 2000 should still be working in 2020. Well, that is in theory; in practice, I still lack much experience.

@@ -5,7 +5,7 @@
 #+TITLE: Common Lisp and Emacs - digikar99.github.io
 
 #+BEGIN_CENTER
-[[file:index.html][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:cognitive-science.html][Cognitive Science]] | [[./digimon.html][Digimon]]
+[[file:index.html][Home]] | *COMMON LISP AND EMACS* | [[file:agi-cogsci.html][AGI and Cognitive Science]] | [[./digimon.html][Digimon]]
 #+END_CENTER
 
 #+TOC: headlines 1
@@ -52,7 +52,7 @@ And if you ever feel annoyed by constantly switching between insert and edit mod
 
 If you know why exactly do you need the IDE, then, no. If you actually use the PyCharm or IntelliJ IDEA features dedicated to those languages, then, no, emacs - in my very limited experience - does not replace a full-blown IDE. But, [[https://www.reddit.com/r/emacs/search?q=intellij&restrict_sr=1][you could always ask a community]].
 
-Fortunately so far, I have had the luxury to stick with Common Lisp and there, [[https://github.com/slime/slime][Superior Lisp Interaction Mode for Emacs (SLIME)]] absolutely blows most things out of the water.
+Fortunately so far, I have had the luxury to stick with Common Lisp and there, [[https://github.com/slime/slime][Superior Lisp Interaction Mode for Emacs (SLIME)]] absolutely blows most things out of the water even though it has its shortcomings.
 
 #+BEGIN_CENTER
 #+BEGIN_EXPORT html
@@ -79,10 +79,14 @@ With Emacs, there is
 
 With Common Lisp, there is
 
+- [[https://github.com/digikar99/py4cl2-cffi][py4cl2-cffi]]: finally, we have a CFFI approach to using python libraries from common lisp!
 - [[https://github.com/digikar99/py4cl2][py4cl2]]: a bunch of incompatible changes and improvements over the original [[https://github.com/bendudson/py4cl][py4cl]]; the goal is to enable the use of python libraries in common lisp in non-performance-intensive use cases. compared to py4cl, py4cl2 is still immature; like most things Common Lisp, I'll let time decide when it becomes mature enough.
-- [[https://github.com/digikar99/polymorphic-functions/][polymorphic-functions]]: a library that intends to bring type-based adhoc, subtype as well as parametric polymorphism to common lisp; yeah common lisp does already have a super neat class-based polymorphism known as CLOS with a MOP, and a few [[https://github.com/alex-gutev/static-dispatch][helper]] [[https://github.com/marcoheisig/fast-generic-functions][libraries]]; but I and a few others have wished for type-based polymorphism.
+- [[https://github.com/digikar99/extensible-compound-types][extensible-compound-types]]: common lisp provides DEFTYPE that only allows defining type /aliases/ aka /derived type specifiers/. That means there is no way through which users can define types with true type parameters. The closest is =satisfies= which gets ugly quickly. =extensible-compound-types= is an attempt to overcome this limitation.
+- [[https://github.com/digikar99/polymorphic-functions/][polymorphic-functions]]: a library that intends to bring type-based adhoc, subtype as well as (limited) parametric polymorphism to common lisp; yeah common lisp does already have a super neat class-based polymorphism known as CLOS with a MOP, and a few [[https://github.com/alex-gutev/static-dispatch][helper]] [[https://github.com/marcoheisig/fast-generic-functions][libraries]]; but I and a few others have wished for type-based polymorphism.
 - [[https://github.com/digikar99/dense-arrays][dense-arrays]]: a numpy-like array object for common lisp
 - [[https://github.com/digikar99/numericals][numericals]]: a simd-based basic math library for common lisp
 - [[https://common-lisp-libraries.readthedocs.io/][common-lisp-libraries.readthedocs.io]]: an attractive documentation site for some of the defacto common lisp libraries
+
+#+html: <div style="text-align:center;display:block;"><img src="./images/dense-numericals.png" style="width:720px;"/></div>
 
 *If 5-10 years sounds like too much, then, welcome to the world of Common Lisp :). This language was ANSI standardized in 1994, which means if you stuck to the ANSI standard (or perhaps the then defacto libraries), then code written in the year 2000 should still be working in 2020. Well, that is in theory; in practice, I still lack much experience.

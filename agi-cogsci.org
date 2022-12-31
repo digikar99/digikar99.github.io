@@ -1,0 +1,72 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+TITLE: AGI and Cognitive Science - digikar99.github.io
+
+#+BEGIN_CENTER
+[[file:index.html][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | *AGI AND COGNITIVE SCIENCE* | [[./digimon.html][Digimon]]
+#+END_CENTER
+
+#+TOC: headlines 1
+
+#+html: <br>
+
+* 0. What is AGI?
+
+AGI stands for Artificial General Intelligence. 
+
+What is the difference between the mainstream Artificial Intelligence aka AI and Artificial General Intelligence aka AGI, if there is a difference at all? It depends on who you ask. In my understanding, a number of people believe that modern day AI developments will /naturally/ lead to AGI as we get more and more data, and work out ways to make machine learning and deep learning models do more and more things. On the other hand, there is a certain minority of people who believe that, yes, at one point of time AI and AGI were the same, and the goals of AI as a field was to produce human level (or beyond) intelligence. However, as is common with many endeavours, this initial goal got side-stepped and over the past few decades, tremendous progress is being made in what this minority calls Artificial Narrow Intelligence. According to this minority, it is therefore that we need a "new" field called Artificial General Intelligence in order to regroup efforts towards that initial goal of human level or beyond intelligence. In essence, in my understanding, some believe that it is working out the specific task details that is the hard part, or should at least come before we work out the high level organizing principles; while some others think that once we have the high level organizing principles, working out the specific task details will be easier, or perhaps even that the specific task details have already been sufficiently worked out. 
+
+I identify myself as a part of this minority who believe that there is a difference between Artificial General Intelligence and Artificial (Narrow) Intelligence, and the mainstream AI/ML/DL methods will only yield a machine that is intelligent /in the eyes of the researcher/, but not intelligent /independently of the researcher/. Clearly, the intelligence of you the reader stands on its own and does not depend on the intelligence of your creators or the people you interact with. I am willing to accept that my position is mistaken the day mainstream AI results in the creation of machines that we can trust are more "true scientists" and "explorers" than the humans of that day, and therefore, we'd be willing to entrust our most precious jobs and missions to the machines for reasons other than the durability and replacability of the physical body of the machines. That is, I think a good evidence for the claim that "we have achieved AGI" would be whether or not we are willing to "put the machine in charge" /even putting aside our human ego/. Currently, there are good reasons /other than ego/ to not put the machine in-charge without human supervision or apriori defining the limits of the problems that the machine has to deal with.
+
+* 1. Are there good reasons to develop an AGI? Wouldn't that be dangerous?
+
+AI is dangerous as it is, in the hands of a super-powerful/wealthy minority or the military. In fact there already are efforts to decentralize AI. I think developing an AGI doesn't simply mean developing a more capable AI, but rather providing the machine with the means to escape the dangerous purposes (perhaps unintentionally even!) it was designed for.
+
+Besides, even though our brains and minds and bodies are marvelous in certain aspects, they are miserable in some other aspects. Our bodies aren't the best instruments for venturing into outer space. Nor are our disconnected brains the best vessels in the digital age. Entire decades of experience are lost with the death of a human. It takes years to obtain mastery in specific fields.
+
+But equally importantly, perhaps the understanding we obtain during the process of creating an AGI would provide us with better means to understand our own selves. Why do we have any experience at all if we can do all kinds of things during [[https://www.mayoclinic.org/diseases-conditions/sleepwalking/symptoms-causes/syc-20353506][sleeping]]?
+
+* 2. What do you think is the best way to achieve AGI?
+
+At the current point of time, I think the best path to achieve AGI is to explore the work on [[https://www.worldscientific.com/worldscibooks/10.1142/8665][Non-Axiomatic Logic]] and [[https://zenodo.org/record/7008/files/ANewConstructivistAI-FromManualMethodstoSelf-ConstructiveSystems.pdf][Self-Constructive Systems]]. It will be a while before I attain the background to work on either of this, worst case never. But I'm mentioning it here, so that if this topic excites you the reader - or someone you know - and you have the tangible and intangible resources to give this a go, then please do.
+
+Indeed, this is only what /I/ think is the "best" /at the time of this writing/. May be at a future point of time, I run into a better idea. If you run into a different idea which you feel or think is better than these, feel free to give that idea a go! Except, don't just stop at the idea, ideas are dime a dozen.
+
+* 2. Should I pursue Cognitive Science if I want to pursue AGI?
+
+To the extent that you have never taken courses on philosophy of science, philosophy of mind, I will certainly encourage pursuing Cognitive Science at a place with a strength in philosophical and computational methods.
+
+If AGI is the focus, another suggestion would also be - as Tomasello has suggested - on looking at things through the lens of Ontogeny and Phylogeny. You could pick up his recent publication on [[https://mitpress.mit.edu/9780262047005/the-evolution-of-agency/][The Evolution of Agency]]. A reason for this is that developing a "baby AGI" - that can bootstrap into an "adult AGI" - seems easier (and safer?) than directly developing an "adult AGI". And when modern day cognitive science or its siblings study cognition, the focus is usually on how the cognition is in adult humans, and I think that makes it hard to separate out which aspects of cognition are inherent to having human level intelligence/consciousness and which aspects are inherent to being /that particular/ human or a human with /that particular background/.
+
+* 3. I have a background in XYZ, can you recommend me something will lead to AGI?
+
+I actually started out with taking a course on NLP, thinking that understanding language will be sufficient for developing an AGI. That led me to thinking about how human children acquire language without having any language apriori - and thus First Language Acquisition. I then got wrapped up in Computational Cognitive Science and Consciousness, because we seem to acquire language in the context of an "internal world" rather than in "complete isolation". In addition, from an evolutionary perspective, prelinguistic cognition feels more primitive than language from an evolutionary or phylogenetic perspective: think about cockroaches or rats.
+
+There are other arguments for "Perception" coming /before/ "Representations", as well as Perception being a necessary condition for AGI. As such, something you can work on includes figuring out how your background relates to perception, as well as how perception integrates into NAL or Replicode systems.
+
+* 4. Learning Resources
+
+[[https://cis.temple.edu/~pwang/AGI-Curriculum.html][This]] is an AGI curriculum put forth by a well-esteemed AGI researcher.
+
+Here is an alternative suggestion based on my experiences so far:
+- School Education (expected 2 dedicated years):
+  - Prerequisites: English, understanding of a 10/14 year old
+- Computer Science (expected 2 dedicated years): [[https://teachyourselfcs.com/][teachyourselfcs.com]]
+  - Prerequisites: English, Mathematics from the above resource, understanding of a 16/18 year old
+- Blog Post: [[https://human9being9.wordpress.com/2022/01/22/cognitive-science-and-artificial-general-intelligence-bootstrapping-and-childhood-cognitive-development/][Cognitive Science and Artificial General Intelligence: Bootstrapping and Childhood Cognitive Development]]
+
+Something more directly relevant to the discussions above includes:
+
+- Dedicated 2 months: [[https://link.springer.com/book/9780387310732][Christopher Bishop's Pattern Recognition and Machine Learning]]
+- Dedicated 1 month: [[https://www.goodreads.com/book/show/6296680-understanding-psychology-as-a-science][Diene's Understanding Psychology as a Science]]
+- Dedicated 2 months: [[https://www.cambridge.org/core/journals/philosophy-of-science/article/abs/zenon-w-pylyshyn-computation-and-cognition-toward-a-foundation-for-cognitive-science-cambridge-ma-bradford-booksmit-press-1984-xxiii-292-pp-2500/830D21F75AC20AE4E5CA419E91A77C9D][Pylyshyn's Computation and Cognition: Toward a Foundation for Cognitive Science]]
+- Dedicated 1 month: [[http://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/nicodbook/Cognet_PDF/Pylyshyn_Things_all.pdf][Pylyshyn's Things and Places: How the Mind Connects with the World]]
+- Dedicated 2 months: [[https://www.worldscientific.com/worldscibooks/10.1142/8665][Pei Wang's Non-Axiomatic Logic: A Model of Intelligent Reasoning]]
+
+Other readings:
+- /all/ of Pylyshyn's writings
+- /all/ of Pei Wang's writings
+
+*When I say "dedicated", it assumes you will be working full-time on the topic.
