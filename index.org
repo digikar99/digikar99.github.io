@@ -12,7 +12,7 @@
 * Shubhamkar B. Ayare
 
 #+BEGIN_CENTER
-[[file:index.html][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:cognitive-science.html][Cognitive Science]] | [[./digimon.html][Digimon]]
+*HOME* | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:agi-cogsci.html][AGI and Cognitive Science]] | [[./digimon.html][Digimon]]
 #+END_CENTER
 
 -----
@@ -37,7 +37,11 @@ Waiting for you
 
 .
 
-Okay, on a serious note: as of August 2021, I've completed my undergraduate with a specialization in Computer Science and Engineering from IIT Bombay, and am currently a first year masters student pursuing Cognitive Science at IIT Kanpur. I'm hoping to pursue topics in Object-based Attention as a part of my Masters' thesis.
+Okay, on a serious note: as of January 2023, I've completed my undergraduate with a specialization in Computer Science and Engineering from IIT Bombay, and am currently a second year masters student pursuing Cognitive Science at IIT Kanpur.
+
+I'm currently working on Computational Cognitive Modeling of Multiple Object Tracking in Humans as part of my Masters' thesis under Prof. Nisheeth Srivastava, and am enjoying and exploring the motivations and implications of [[https://en.wikipedia.org/wiki/Zenon_Pylyshyn][Pylyshyn]]'s [[https://en.wikipedia.org/wiki/Visual_indexing_theory][Visual Indexing Theory]] while working out a model of multiple object tracking without indexes.
+
+Someday I hope to explore the implications and limitations of Artificial General Intelligence from the perspective of Non-Axiomatic Reasoning and Replicode.
 
 #+begin_export html
 <div id='profile-pic'><img src='profile-pic.jpg' /></div>
@@ -45,16 +49,18 @@ Okay, on a serious note: as of August 2021, I've completed my undergraduate with
 
 Besides academics,
 
-- For the past few years, I have been consistently coding [[./common-lisp-and-emacs.html][Common Lisp in Emacs]], and watching [[./digimon.html][Digimon]].
-- I have been on [[https://www.quora.com/profile/Shubhamkar-Ayare][Quora]] since at least 2014, and possibly before. A number of my answers self-deemed to be interesting have been collected [[https://human9being9.wordpress.com/my-quora/][here]].
+- For the past few years, I have been consistently coding [[./common-lisp-and-emacs.html][Common Lisp in Emacs]].
+- I have been on [[https://www.quora.com/profile/Shubhamkar-Ayare][Quora]] since at least 2014, and possibly before. A number of my answers that I felt are interesting have been collected [[https://human9being9.wordpress.com/my-quora/][here]].
 - Some of the books I've read or in my to-read list listed here include
   - Sapiens: A brief History of Humankind
   - Ender’s Game and its sequel Speaker for the Dead
   - Godel, Escher and Bach: An eternal golden braid
   - Linear Algebra Done Right
   - The Language Instinct: How the Mind creates language
+  - The Evolution of Agency: Behavioral Organization from Lizards to Humans
 
 - I also sometimes write on [[http://human9being9.wordpress.com/][wordpress]]. Some articles of general interest include:
+  - [[https://human9being9.wordpress.com/2022/10/09/whitewashing-persuasion-this-is-what-i-think-is-the-best-for-you-please-do-your-best-to-accept-this-uncertainty-and-choose-what-is-good/][Whitewashing Persuasion: “This is what I think is the best for you, please do your best to accept this uncertainty, and choose what is good.”]]
   - [[https://human9being9.wordpress.com/10-things-you-must-know/][10 Things You Must Know]]
   - [[https://human9being9.wordpress.com/2020/02/15/dealing-with-loneliness/][Dealing with Loneliness]]
   - [[https://human9being9.wordpress.com/2020/02/06/evolving-perspectives-on-actions-and-desires/][Evolving Perspectives on Actions and Desires]]

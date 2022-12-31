@@ -5,7 +5,7 @@
 #+TITLE: Digimon - digikar99.github.io
 
 #+BEGIN_CENTER
-[[file:index.html][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:cognitive-science.html][Cognitive Science]] | [[./digimon.html][Digimon]]
+[[file:index.html][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:agi-cogsci.html][AGI and Cognitive Science]] | *DIGIMON*
 #+END_CENTER
 
 #+html: <br>
