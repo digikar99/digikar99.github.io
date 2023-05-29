@@ -5,7 +5,7 @@
 #+TITLE: Common Lisp and Emacs - digikar99.github.io
 
 #+BEGIN_CENTER
-[[file:index.html][Home]] | *COMMON LISP AND EMACS* | [[file:agi-cogsci.html][AGI and Cognitive Science]] | [[./digimon.html][Digimon]]
+[[file:index.html#home][Home]] | *COMMON LISP AND EMACS* | [[file:agi-cogsci.html][AGI and Cognitive Science]] | [[./digimon.html][Digimon]]
 #+END_CENTER
 
 #+TOC: headlines 1

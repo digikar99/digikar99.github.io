@@ -5,7 +5,7 @@
 #+TITLE: AGI and Cognitive Science - digikar99.github.io
 
 #+BEGIN_CENTER
-[[file:index.html][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | *AGI AND COGNITIVE SCIENCE* | [[./digimon.html][Digimon]]
+[[file:index.html#home][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | *AGI AND COGNITIVE SCIENCE* | [[./digimon.html][Digimon]]
 #+END_CENTER
 
 #+TOC: headlines 1
@@ -51,6 +51,17 @@ There are other arguments for "Perception" coming /before/ "Representations", as
 [[https://cis.temple.edu/~pwang/AGI-Curriculum.html][This]] is an AGI curriculum put forth by a well-esteemed AGI researcher.
 
 Here is an alternative suggestion based on my experiences so far:
+
+|----------------------+----------+--------------------------------+----------+----------|
+| Year / Age-group     | Duration |                        Curriculum                     |
+| <l>                  |   <c>    |                           <c>                         |
+|----------------------+----------+--------------------------------+----------+----------|
+| School (10-14 years) | 4 years  |             [[https://alterschoolindia.com/][alterschoolindia]] or equivalent             |
+|----------------------+----------+--------------------------------+----------+----------|
+| 14 years and beyond  |          |            Stream 1            | Stream 2 | Stream 3 |
+|----------------------+----------+--------------------------------+----------+----------|
+|                      | 2 months |                                |          |          |
+
 - School Education (expected 2 dedicated years):
   - Prerequisites: English, understanding of a 10/14 year old
 - Computer Science (expected 2 dedicated years): [[https://teachyourselfcs.com/][teachyourselfcs.com]]
