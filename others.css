@@ -16,3 +16,9 @@ p{
     padding:5px;
     margin:0;
 }
+
+blockquote{
+    background-color:#ddd;
+    border-radius:15px;
+    padding:6px;
+}

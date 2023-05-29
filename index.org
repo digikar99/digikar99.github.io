@@ -9,6 +9,10 @@
 <div class='defining-pic'><img id='defining-pic-img' src='defining-pic.jpg' /></div>
 #+end_export
 
+#+begin_export html
+<span id="home"></span>
+#+end_export
+
 * Shubhamkar B. Ayare
 
 #+BEGIN_CENTER
@@ -18,7 +22,6 @@
 -----
 
 ** Who am I?
-
 
 
 Uhm, well, I have elaborated it [[https://human9being9.wordpress.com/2020/05/03/me/][here]].
