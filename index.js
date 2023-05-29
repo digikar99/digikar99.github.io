@@ -13,6 +13,7 @@ function advanceSlides(){
     var slideIndex = Math.floor(Math.random() * numSlides);
     if (slideIndex >= numSlides) slideIndex = 0;
     slidesContainer.innerHTML = "<quote>\"" + slides[slideIndex] + "\"</quote>";
+    if (slides[slideIndex] == "") advanceSlides();
 }
 
 window.onload = function (e) {
