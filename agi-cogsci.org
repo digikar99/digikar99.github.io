@@ -12,13 +12,11 @@
 
 #+html: <br>
 
-* 0. What is AGI?
+* 0. Don't we already have AGI with GPT4 and DALL-E?
 
-AGI stands for Artificial General Intelligence. 
+Empirically, the day an AI system is successful in supervising critical systems including cars on Indian roads, operation rooms, nuclear facilities - a separate system for each is acceptable(!) -  for decades on end without programmer supervision, that will perhaps be the day I will accept that we have an AGI. So long as there is a programmer in some part of the loop of maintaining an AI system, we don't have an AGI. The involvement of the programmer in the maintenance of a long-running computer system essentially gives the AI the freedom to be successful without good-enough models of the world. 
 
-What is the difference between the mainstream Artificial Intelligence aka AI and Artificial General Intelligence aka AGI, if there is a difference at all? It depends on who you ask. In my understanding, a number of people believe that modern day AI developments will /naturally/ lead to AGI as we get more and more data, and work out ways to make machine learning and deep learning models do more and more things. On the other hand, there is a certain minority of people who believe that, yes, at one point of time AI and AGI were the same, and the goals of AI as a field was to produce human level (or beyond) intelligence. However, as is common with many endeavours, this initial goal got side-stepped and over the past few decades, tremendous progress is being made in what this minority calls Artificial Narrow Intelligence. According to this minority, it is therefore that we need a "new" field called Artificial General Intelligence in order to regroup efforts towards that initial goal of human level or beyond intelligence. In essence, in my understanding, some believe that it is working out the specific task details that is the hard part, or should at least come before we work out the high level organizing principles; while some others think that once we have the high level organizing principles, working out the specific task details will be easier, or perhaps even that the specific task details have already been sufficiently worked out. 
-
-I identify myself as a part of this minority who believe that there is a difference between Artificial General Intelligence and Artificial (Narrow) Intelligence, and the mainstream AI/ML/DL methods will only yield a machine that is intelligent /in the eyes of the researcher/, but not intelligent /independently of the researcher/. Clearly, the intelligence of you the reader stands on its own and does not depend on the intelligence of your creators or the people you interact with. I am willing to accept that my position is mistaken the day mainstream AI results in the creation of machines that we can trust are more "true scientists" and "explorers" than the humans of that day, and therefore, we'd be willing to entrust our most precious jobs and missions to the machines for reasons other than the durability and replacability of the physical body of the machines. That is, I think a good evidence for the claim that "we have achieved AGI" would be whether or not we are willing to "put the machine in charge" /even putting aside our human ego/. Currently, there are good reasons /other than ego/ to not put the machine in-charge without human supervision or apriori defining the limits of the problems that the machine has to deal with.
+Until then, we will have AI systems that will have huge commercial success, systems that will solve 80% of our problems, systems that will amplify our power multiplicatively (not additively!). Perhaps, there might not even be any commercial incentive to the development of machines with full general intelligence that provide additive power the way your friends, colleagues, and lab-mates do.
 
 * 1. Are there good reasons to develop an AGI? Wouldn't that be dangerous?
 
@@ -30,37 +28,38 @@ But equally importantly, perhaps the understanding we obtain during the process 
 
 * 2. What do you think is the best way to achieve AGI?
 
-At the current point of time, I think the best path to achieve AGI is to explore the work on [[https://www.worldscientific.com/worldscibooks/10.1142/8665][Non-Axiomatic Logic]] and [[https://zenodo.org/record/7008/files/ANewConstructivistAI-FromManualMethodstoSelf-ConstructiveSystems.pdf][Self-Constructive Systems]]. It will be a while before I attain the background to work on either of this, worst case never. But I'm mentioning it here, so that if this topic excites you the reader - or someone you know - and you have the tangible and intangible resources to give this a go, then please do.
+There seems to be a recurring idea that conceptualizing, categorizing, and reidentification are at the core of intelligence. Unless a system is able to reidentify new high-dimensional sensory data in terms of its previous sensations, every sensation of the system will be distinct and the system will be unable to make use of its previous knowledge and experience.
+
+It's a puzzle to me what this reidentification should look like, or what forms conceptualization and categorization should take. Certain aspects seem clear that the traditional ways of categorization and classification based on closed world assumptions are insufficient. A mere open world assumption also does not suffice, because the way we categorize the same sensory experience depends on not just our own prior knowledge, but also on our goals and intentions. A relevant example concerning this is Necker's cube. The perceptual object (usually two) that one experiences, depends on which of the middle two vertices the observer focuses their attention on.
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :style width:240px
+[[file:images/necker.png]]
+#+END_CENTER
+
+However, we humans also have an uncanny ability to identify what the beliefs and intentions of another agent (human?) are by mere observation, also known as the Theory of Mind. This ability develops fairly early in life and, perhaps, also forms the basis of shared symbols enabling communication and learning from other agents. It's unclear whether internet-scale video and text data can help develop this ability.
+
+Previously, I have felt the work on [[https://www.worldscientific.com/worldscibooks/10.1142/8665][Non-Axiomatic Logic]] and [[https://zenodo.org/record/7008/files/ANewConstructivistAI-FromManualMethodstoSelf-ConstructiveSystems.pdf][Self-Constructive Systems]] to be promising in the construction of AGI. However, on later reflection and discussion, it seems that the approaches are useful for high level cognition, but the problems of reidentification of sensory data seem to require different approaches.
 
 Indeed, this is only what /I/ think is the "best" /at the time of this writing/. May be at a future point of time, I run into a better idea. If you run into a different idea which you feel or think is better than these, feel free to give that idea a go! Except, don't just stop at the idea, ideas are dime a dozen.
 
-* 2. Should I pursue Cognitive Science if I want to pursue AGI?
+* 3. Should I pursue Cognitive Science if I want to pursue AGI?
 
 To the extent that you have never taken courses on philosophy of science, philosophy of mind, I will certainly encourage pursuing Cognitive Science at a place with a strength in philosophical and computational methods.
 
 If AGI is the focus, another suggestion would also be - as Tomasello has suggested - on looking at things through the lens of Ontogeny and Phylogeny. You could pick up his recent publication on [[https://mitpress.mit.edu/9780262047005/the-evolution-of-agency/][The Evolution of Agency]]. A reason for this is that developing a "baby AGI" - that can bootstrap into an "adult AGI" - seems easier (and safer?) than directly developing an "adult AGI". And when modern day cognitive science or its siblings study cognition, the focus is usually on how the cognition is in adult humans, and I think that makes it hard to separate out which aspects of cognition are inherent to having human level intelligence/consciousness and which aspects are inherent to being /that particular/ human or a human with /that particular background/.
 
-* 3. I have a background in XYZ, can you recommend me something will lead to AGI?
+* 4. I have a background in XYZ, can you recommend me something will lead to AGI?
 
 I actually started out with taking a course on NLP, thinking that understanding language will be sufficient for developing an AGI. That led me to thinking about how human children acquire language without having any language apriori - and thus First Language Acquisition. I then got wrapped up in Computational Cognitive Science and Consciousness, because we seem to acquire language in the context of an "internal world" rather than in "complete isolation". In addition, from an evolutionary perspective, prelinguistic cognition feels more primitive than language from an evolutionary or phylogenetic perspective: think about cockroaches or rats.
 
 There are other arguments for "Perception" coming /before/ "Representations", as well as Perception being a necessary condition for AGI. As such, something you can work on includes figuring out how your background relates to perception, as well as how perception integrates into NAL or Replicode systems.
 
-* 4. Learning Resources
+* 5. Learning Resources
 
 [[https://cis.temple.edu/~pwang/AGI-Curriculum.html][This]] is an AGI curriculum put forth by a well-esteemed AGI researcher.
 
 Here is an alternative suggestion based on my experiences so far:
-
-|----------------------+----------+--------------------------------+----------+----------|
-| Year / Age-group     | Duration |                        Curriculum                     |
-| <l>                  |   <c>    |                           <c>                         |
-|----------------------+----------+--------------------------------+----------+----------|
-| School (10-14 years) | 4 years  |             [[https://alterschoolindia.com/][alterschoolindia]] or equivalent             |
-|----------------------+----------+--------------------------------+----------+----------|
-| 14 years and beyond  |          |            Stream 1            | Stream 2 | Stream 3 |
-|----------------------+----------+--------------------------------+----------+----------|
-|                      | 2 months |                                |          |          |
 
 - School Education (expected 2 dedicated years):
   - Prerequisites: English, understanding of a 10/14 year old
