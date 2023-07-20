@@ -90,3 +90,5 @@ With Common Lisp, there is
 #+html: <div style="text-align:center;display:block;"><img src="./images/dense-numericals.png" style="width:720px;"/></div>
 
 *If 5-10 years sounds like too much, then, welcome to the world of Common Lisp :). This language was ANSI standardized in 1994, which means if you stuck to the ANSI standard (or perhaps the then defacto libraries), then code written in the year 2000 should still be working in 2020. Well, that is in theory; in practice, I still lack much experience.
+
+For my purposes, I absolutely do need Common Lisp implementations with a working CLTL2 (and some more) support. In my experience, SBCL does this reasonably. But the day this support vanishes from SBCL, I might as well drop Common Lisp in favor of another language.
