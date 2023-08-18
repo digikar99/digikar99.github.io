@@ -21,9 +21,9 @@
 
 -----
 
-** Who am I?
+** "Who am I?"
 
-For most readers, I will be a graduate student under the Cognitive Science department at IIT Kanpur, India. As part of my master's thesis, I have been investigating the [[https://en.wikipedia.org/wiki/Visual_indexing_theory][Visual Indexing Theory]] of the late [[https://en.wikipedia.org/wiki/Zenon_Pylyshyn][Dr. Zenon Pylyshyn]], and working an index-less model of human multiple object tracking of visually identical objects under the guidance of [[https://www.cse.iitk.ac.in/users/nsrivast/][Asso. Prof. Nisheeth Srivastava]].
+For most readers, I will be a graduate student under the Cognitive Science department at IIT Kanpur, India. As part of my master's thesis, I have been investigating the [[https://en.wikipedia.org/wiki/Visual_indexing_theory][Visual Indexing Theory]] of the late [[https://en.wikipedia.org/wiki/Zenon_Pylyshyn][Dr. Zenon Pylyshyn]], and working an index-less model of human multiple object tracking of visually identical objects under the guidance of [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]].
 
 #+begin_export html
 <div id='profile-pic'><img src='profile-pic.jpg' /></div>
