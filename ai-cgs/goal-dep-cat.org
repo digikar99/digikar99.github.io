@@ -1,0 +1,30 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../others.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+TITLE: Goal Dependent Categorization
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:nar.html][Non-Axiomatic Reasoning]] | *Next:* [[file:shared-attention.html][Shared Attention and Theory of Mind]]
+#+END_CENTER
+
+There seems to be a recurring theme that conceptualizing, categorizing, and reidentification are at the core of intelligence. Unless a system is able to reidentify new high-dimensional sensory data in terms of its previous sensations, every sensation of the system will be distinct and the system will be unable to make use of its previous knowledge and experience.
+
+Usually, categorization and classification is based on closed world assumptions. But even a mere open world assumption does not suffice, because the way we categorize the same sensory experience depends on not just our own prior knowledge, but also on our goals and intentions. A relevant example concerning this is Necker's cube. (But also see other [[https://en.wikipedia.org/wiki/Ambiguous_image][ambiguous figures in psychology]].) The perceptual object (usually two) that one experiences, depends on which of the middle two vertices the observer focuses their attention on.
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :style width:180px
+[[file:../images/necker.png]]
+#+END_CENTER
+
+Thus, one remarkable property about the mapping between a high dimensional stimulus and the high level categories is that this is a many-to-many mapping. In other words, the answers to questions such as "Who is this person?", "What is this an image of?", "What does this text mean?" depend on not only the thing under consideration, but also on who asks the questions, what categories the asker has in their mind, and perhaps what implicit or explicit goals or intentions the asker has.
+
+When in danger, you can hit someone with a shoe in self-defense. Does it remain a shoe, or does it become a weapon then? The category corresponding to a particular high dimensional stimulus is not only dependent on the stimulus itself but also what the system itself is /looking for/. I have only come across [[https://paperswithcode.com/method/slot-attention][Slot Attention]] which seems to acknowledge this. Even then, it's not really clear if and how this problem is or can be solved.
+
+Interestingly, the issue seems remarkably similar to [[https://en.wikipedia.org/wiki/Type_class][Typeclasses / Interfaces / Adhoc Polymorphism in Programming Languages]].
+
+However, an important difference might be that the categories are not only inside individual heads, but are actually shared across individuals. 
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:nar.html][Non-Axiomatic Reasoning]] | *Next:* [[file:shared-attention.html][Shared Attention and Theory of Mind]]
+#+END_CENTER

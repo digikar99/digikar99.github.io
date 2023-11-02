@@ -1,0 +1,20 @@
+#+HTML_HEAD: <meta charset="utf-8 h">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../others.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+TITLE: Shared Attention and Theory of Mind
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:goal-dep-cat.html][Goal-Dependent Categorization]] | *Next:* [[file:causality.html][Causality]]
+#+END_CENTER
+
+It is probable that human ability to think symbolically aka using categories developed in response to our need to communicate with each other. Language use involves symbols, and communication is only possible if the two parties involved in a communicative exchange have shared beliefs about what the linguistic symbols mean. Shared Attention and Theory of Mind are said to be important abilities necessary for language and culture acquisition (citations?). Theory of Mind deficits lead to autism, and in severe cases also hampers language learning. Autistic individuals can be remarkable in certain skills and abilities, yet may face difficulties in understanding social norms and appropriateness.
+
+As such, research on flexible goal-dependent categorization needs to be augmented by research on theory of mind, unless we want our machines to be autistic. Interestingly, developing machines with theory of mind can also readily solve the [[https://en.wikipedia.org/wiki/AI_alignment][Alignment Problem]], because, then, the machines will readily understand not what humans say or do, but what we /intend/ to say or do. Neurotypical children - even as young as one year old - can readily pick up intentions.
+
+However, perhaps, inferring beliefs and desires from actions seems to require research on Causality.
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:goal-dep-cat.html][Goal-Dependent Categorization]] | *Next:* [[file:causality.html][Causality]]
+#+END_CENTER
+

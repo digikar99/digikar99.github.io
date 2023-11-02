@@ -1,0 +1,20 @@
+#+HTML_HEAD: <meta charset="utf-8 h">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../others.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+TITLE: Causality
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:shared-attention.html][Shared Attention and Theory of Mind]] | *Next:* None
+#+END_CENTER
+
+There is an idea that thinking is acting in an imagined space. To do so, we need models of the world - a simplification or abstraction of the world. By definition, models cannot capture everything about the world. However, as an organism or a system gains more experience, or as its goals or environment change, it has the opportunity to augment its models.
+
+Thus, in the long run, certain models which allow the system to reuse its past knowledge are better than other models which make augmentations difficult. It turns out that models which incorporate causality are actually amongst such good models (See section 1.3 of version 2 of [[http://bayes.cs.ucla.edu/BOOK-2K/][this book]].).
+
+In fact, causal models have the potential to address issues related to transfer learning and out-of-distribution generalization that have been picking up pace in the machine learning community over the last decade. (See [[https://ieeexplore.ieee.org/abstract/document/9363924/][this paper]].) However, most research on causality either involves the causal models or at least the variables being given apriori. It is unclear how such variables may be discovered from high dimensional data. It should certainly be possible, since humans as well as non-human animals seem to be able to do it quite well.
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:shared-attention.html][Shared Attention and Theory of Mind]] | *Next:* None
+#+END_CENTER
+

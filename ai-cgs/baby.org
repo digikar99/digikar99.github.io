@@ -1,0 +1,82 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../others.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+TITLE: Baby AGI and Developmental Cognitive Science
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* None | *Next:* [[file:nar.html][Non-Axiomatic Reasoning]]
+#+END_CENTER
+
+We are no more than a lump of carbon, hydrogen, oxygen and several other
+elements on this giant planet we call Earth. The universe will run out of stars some day. Sooner than that, the sun will run out of hydrogen. Perhaps sooner, another large piece of rock strikes Earth again, causing yet another mass extinction. Or, may be, a near-earth supernova fries the Earth.
+
+You get it. We -- humans -- are not safe. It isn't wise to keep all our
+eggs in one basket. We need to colonize beyond Earth. Yes, space exploration and habitation research is important. But I wish to point towards another research direction. As marvellous as our biological bodies are, they are
+ill-suited for living beyond Earth, especially during interplanetary travel. Shown again was the vulnerability of our biological bodies when we struggled against the Covid19 pandemic. A better substrate to replace our biological bodies would be excellent.
+
+But while artificial limbs are important elements for overcoming our biology bodies, I want to bring the reader's +focus+ mind to their... mind. I'm interested in the creation of an artificial mind.
+
+A separate motivation for this also stems from mere curiosity. Sitting
+behind those darting eyes lies one of the most mysterious systems in
+the universe -- 100 billion neurons, each connected to almost 10
+thousand others -- all made of the same carbon we obtain when we burn
+sugar on a stove. How can something as nonliving as a piece of rock be
+made of the same basic elements that make up something as lively as you or me? Perhaps, along with the mysteries of the cosmos, mysteries of our minds will continue to be amongst the longest unsolved puzzles of humankind.
+
+Of course, /once/ Artificial General Intelligence is attained,
+speculation has it that it will soon explode into a singularity, for
+better or worse. Hopefully, it proves helpful in finding solutions to
+cancer, physics, inequity, and sustainable progress, amongst other
+things. (Or, maybe, the Covid19 pandemic taught us some form of equity
+already?)
+
+But where does one begin taking a crack at AGI? Maybe one way is to look
+inward at the only example we have of sufficiently general intelligence
+-- ourselves. But clearly, no direct intervention puts our minds into
+their adult forms. Plus, studying the adult mind is like studying the
+artifacts left behind by the sociocultural environment the individual
+grew up in. Doesn't seem like a great way to understand where nature
+ended and nurture began.
+
+At the [[http://agi-conf.org/2021/][AGI 2021]] conference, I was pleasantly surprised to be affirmed by this primitive conclusion. Bootstrapping was an important theme throughout the conference: /We should not aim to create Artificial General Intelligence. We should aim at creating a (minimal) system that could give rise to Artificial General Intelligence./ One may argue that this itself is sufficiently general intelligence.
+
+Clearly, such a system already exists: the human child. If the reader is
+a younger me, pondering over what intelligence is, how our brain-minds
+do what they do, then know that Childhood Cognitive Development and Bootstrapping could be a valuable perspective to consider. I was pleased to hear that Michael Tomasello, one of the leading figures in First Language Acquisition, also pointed towards studying Phylogeny and Ontogeny to understand human cognition better in his [[https://www.youtube.com/watch?v=pPFSQQ0MUHo][Rumelhart Prize Presentation at the CogSci 2022 Conference]].
+
+* Learning Resources
+
+Following are some resources that may be useful for starting out with Artificial General Intelligence.
+  
+The AGI Conferences are listed [[https://agi-conf.org/][here]], with AGI 2021 available [[http://agi-conference.org/2021][here]] and its schedule [[https://agi-conf.org/2021/schedule/][here]]. The proceedings are also available for [[https://link.springer.com/book/10.1007/978-3-030-93758-4][reading]] and [[https://www.youtube.com/playlist?list=PLAJnaovHtaFTzIS4eBi9Jm5eMlsRzFoEA][viewing]]! Many excellent resources for self-education in AGI and prerequisites have been collected [[https://cis.temple.edu/~pwang/AGI-Curriculum.html][here]]. In terms of keywords, "bootstrapping agi" might yield more relevant results than "bootstrapping" alone.
+
+When it comes to childhood cognition, [[https://onlinelibrary.wiley.com/doi/book/10.1002/9781444325485][Wiley-Blackwell's Handbook of Childhood Cognitive Development]] can be a good place to start. However, while there have been calls for [[https://en.wikipedia.org/wiki/Unified_Theories_of_Cognition][Unified Theories of Cognition]] since the 1990s, I am yet to come across a call for a /Unified Theory of Developmental Cognition/. There has been significant progress in mainstream AI over the last 30 years which can be used for such a unified theory. Still, certain important elements remain: particular ones, I am interested in include (i) discovering causal models from high dimensional data (ii) augmenting machine learning via shared attention and theory of mind.
+
+All is not well in the field of AGI either. In particular, as [[https://www.sciencedirect.com/science/article/pii/S1877050922002228][this paper]] points out, most AGI research leans towards being Proof of Concept rather than digging deeper. Good AGI research is relatively rare. Pei Wang's [[https://cis.temple.edu/~pwang/NARS-Intro.html][Non-Axiomatic Reasoning System]] is an research direction I have found promising.
+
+[[https://cis.temple.edu/~pwang/AGI-Curriculum.html][Pei Wang]] has put together an excellent AGI curriculum. Here is an alternative suggestion based on my experiences so far:
+
+- School Education (expected 2 dedicated years):
+  - Prerequisites: English, understanding of a 10/14 year old
+- Computer Science (expected 2 dedicated years): [[https://teachyourselfcs.com/][teachyourselfcs.com]]
+  - Prerequisites: English, Mathematics from the above resource, understanding of a 16/18 year old
+
+Something more directly relevant to the discussions above includes:
+
+- Dedicated 2 months: [[https://link.springer.com/book/9780387310732][Christopher Bishop's Pattern Recognition and Machine Learning]]
+- Dedicated 1 month: [[https://www.goodreads.com/book/show/6296680-understanding-psychology-as-a-science][Diene's Understanding Psychology as a Science]]
+- Dedicated 2 months: [[https://www.cambridge.org/core/journals/philosophy-of-science/article/abs/zenon-w-pylyshyn-computation-and-cognition-toward-a-foundation-for-cognitive-science-cambridge-ma-bradford-booksmit-press-1984-xxiii-292-pp-2500/830D21F75AC20AE4E5CA419E91A77C9D][Pylyshyn's Computation and Cognition: Toward a Foundation for Cognitive Science]]
+- Dedicated 1 month: [[http://ruccs.rutgers.edu/images/personal-zenon-pylyshyn/nicodbook/Cognet_PDF/Pylyshyn_Things_all.pdf][Pylyshyn's Things and Places: How the Mind Connects with the World]]
+- Dedicated 2 months: [[https://www.worldscientific.com/worldscibooks/10.1142/8665][Pei Wang's Non-Axiomatic Logic: A Model of Intelligent Reasoning]]
+
+Other readings:
+- /all/ of Pylyshyn's writings
+- /all/ of Pei Wang's writings
+- /all/ of Judea Pearl's writings
+
+*When I say "dedicated", it assumes you will be working full-time on the topic.
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* None | *Next:* [[file:nar.html][Non-Axiomatic Reasoning]]
+#+END_CENTER

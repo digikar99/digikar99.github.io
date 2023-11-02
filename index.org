@@ -16,55 +16,20 @@
 * Shubhamkar B. Ayare
 
 #+BEGIN_CENTER
-*HOME* | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:agi-cogsci.html][AGI and Cognitive Science]] | [[./digimon.html][Digimon]]
+*HOME* | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:thoughts.html][AI and CogSci]] | [[./digimon.html][Digimon]]
 #+END_CENTER
 
 -----
 
-** "Who am I?"
-
-For most readers, I will be a graduate student under the Cognitive Science department at IIT Kanpur, India. As part of my master's thesis, I have been investigating the [[https://en.wikipedia.org/wiki/Visual_indexing_theory][Visual Indexing Theory]] of the late [[https://en.wikipedia.org/wiki/Zenon_Pylyshyn][Dr. Zenon Pylyshyn]], and working an index-less model of human multiple object tracking of visually identical objects under the guidance of [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]].
+I am a graduate student under the Cognitive Science department at IIT Kanpur, India. As part of my master's thesis, I investigated the [[https://en.wikipedia.org/wiki/Visual_indexing_theory][Visual Indexing Theory]] of [[https://en.wikipedia.org/wiki/Zenon_Pylyshyn][Dr. Zenon Pylyshyn]]. I've worked on an index-less model of human multiple object tracking of visually identical objects under the guidance of [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]].
 
 #+begin_export html
 <div id='profile-pic'><img src='profile-pic.jpg' /></div>
 #+end_export
 
-I also have a background in computer science through an undergraduate degree at IIT Bombay, and spend my free time developing and maintaining [[https://github.com/digikar99][Common Lisp libraries]].
+I also have a background in computer science through an undergraduate degree at IIT Bombay, and spend my free time developing and maintaining [[file:common-lisp-and-emacs.html][Common Lisp libraries]].
 
-That said, this is a question that has plagued me for a while. Perhaps the reason it is tough to answer is because there is no unique objective answer to such a question. For example, consider this image. What is it an image of?
-
-#+BEGIN_CENTER
-#+ATTR_HTML: :width 180
-[[file:images/cat.webp]]
-#+END_CENTER
-
-A cat? Yes, but it's also an image of a collar that has a paint the molecules of which illuminated using white light reflect red light. And even that would be an insufficient description!
-
-I think the answers to questions such as "Who is this person?", "What is this an image of?", "What does this text mean?" depend on not only the thing under consideration, but also on who asks the questions, what categories the asker has in their mind, and perhaps what implicit or explicit goals or intentions the asker has. Some day, I wish to incorporate the asker-dependency of these questions into the development of machines with human-like learning abilities.
-
-In the longer run, I wish to build machines with human-like general learning abilities. Besides academics,
-
-- For the past few years, I have been consistently coding [[./common-lisp-and-emacs.html][Common Lisp in Emacs]].
-- I have been on [[https://www.quora.com/profile/Shubhamkar-Ayare][Quora]] since at least 2014. Some of my answers that I felt were interesting have been collected [[https://human9being9.wordpress.com/my-quora/][here]].
-- Some interesting books I've come across include
-  - Sapiens: A brief History of Humankind
-  - Ender’s Game and its sequel Speaker for the Dead
-  - Godel, Escher and Bach: An eternal golden braid
-  - Linear Algebra Done Right
-  - The Language Instinct: How the Mind creates language
-  - The Evolution of Agency: Behavioral Organization from Lizards to Humans
-  - The Evolution of the Sensitive Soul: Learning and the Origins of Consciousness
-
-- I also sometimes write on [[http://human9being9.wordpress.com/][wordpress]]. Some articles of general interest include:
-  - [[https://human9being9.wordpress.com/2022/10/09/whitewashing-persuasion-this-is-what-i-think-is-the-best-for-you-please-do-your-best-to-accept-this-uncertainty-and-choose-what-is-good/][Whitewashing Persuasion: “This is what I think is the best for you, please do your best to accept this uncertainty, and choose what is good.”]]
-  - [[https://human9being9.wordpress.com/10-things-you-must-know/][10 Things You Must Know]]
-  - [[https://human9being9.wordpress.com/2020/02/15/dealing-with-loneliness/][Dealing with Loneliness]]
-  - [[https://human9being9.wordpress.com/2020/02/06/evolving-perspectives-on-actions-and-desires/][Evolving Perspectives on Actions and Desires]]
-  - [[https://human9being9.wordpress.com/28-2/][Myopia]]
-  - [[https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/][Active Learning \ast{}with Zettelkasten\ast{}]]
-
-- [[https://alterschoolindia.com/][alterschoolindia]]: Supplementary resources for middle school education.
-  - [[https://alterschoolindia.com/intermediate.html][alterschoolindia/intermediate]]: Some resources on Career Tasting (yes, that's T-A-S-T)
+In the longer run, I wish to build machines with human-like general learning abilities that require zero programmer maintenance. Over the years, I have developed [[file:thoughts.html][a few thoughts]] about this.
 
 ** Contact
 
@@ -79,5 +44,9 @@ You can write an email to shubhamayare[at]yahoo[dot]co[dot]in. Feel free to ping
 [[https://github.com/digikar99][Github]] | [[https://www.quora.com/profile/Shubhamkar-Ayare][Quora]] | [[https://www.facebook.com/shubhamkar.ayare][Facebook]] | [[https://reddit.com/u/digikar][Reddit]] | [[https://www.linkedin.com/in/shubhamkar-a-9583b7133/][LinkedIn]]
 
 (made with [[https://orgmode.org/][_emacs org_]])
+
+/Ideas are dime a dozen. Tell me what you have tried, your conclusions, the assumptions under which those conclusions seem warranted./
+
+/Don't just tell me what's wrong with things. Tell me how they can be made right./ 
 
 #+end_center

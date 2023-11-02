@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2023-11-02 Thu 19:10 -->
+<!-- 2023-11-02 Thu 19:42 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Shubhamkar B. Ayare (digikar)</title>
+<title>Non-Axiomatic Reasoning</title>
 <meta name="author" content="shubhamkar" />
 <meta name="generator" content="Org Mode" />
 <style>
@@ -195,81 +195,48 @@
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<link rel="stylesheet" type="text/css" href="index.css">
-<script src="index.js"></script>
+<link rel="stylesheet" type="text/css" href="../others.css">
 
 <link rel='stylesheet' href='styles.css'>
 <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans' />
 </head>
 <body>
 <div id="content" class="content">
-<div class='defining-pic'><img id='defining-pic-img' src='defining-pic.jpg' /></div>
-
-<span id="home"></span>
-
-<div id="outline-container-orgb76c3ec" class="outline-2">
-<h2 id="orgb76c3ec">Shubhamkar B. Ayare</h2>
-<div class="outline-text-2" id="text-orgb76c3ec">
+<h1 class="title">Non-Axiomatic Reasoning</h1>
 <div class="org-center">
 <p>
-<b>HOME</b> | <a href="common-lisp-and-emacs.html">Common Lisp and Emacs</a> | <a href="thoughts.html">AI and CogSci</a> | <a href="./digimon.html">Digimon</a>
+<b>Up:</b> <a href="../thoughts.html">AI and CogSci</a> | <b>Previous:</b> <a href="baby.html">Baby AGI and Developmental Cognitive Science</a> | <b>Next:</b> <a href="goal-dep-cat.html">Goal-Dependent Categorization</a>
 </p>
 </div>
 
-<hr />
-
 <p>
-I am a graduate student under the Cognitive Science department at IIT Kanpur, India. As part of my master's thesis, I investigated the <a href="https://en.wikipedia.org/wiki/Visual_indexing_theory">Visual Indexing Theory</a> of <a href="https://en.wikipedia.org/wiki/Zenon_Pylyshyn">Dr. Zenon Pylyshyn</a>. I've worked on an index-less model of human multiple object tracking of visually identical objects under the guidance of <a href="https://www.cse.iitk.ac.in/users/nsrivast/">Prof. Nisheeth Srivastava</a>.
-</p>
-
-<div id='profile-pic'><img src='profile-pic.jpg' /></div>
-
-<p>
-I also have a background in computer science through an undergraduate degree at IIT Bombay, and spend my free time developing and maintaining <a href="common-lisp-and-emacs.html">Common Lisp libraries</a>.
+The basic idea behind non-axiomatic reasoning is to use experience gained while exploring an environment as evidence for or against hypotheses about different aspects of the environment.
 </p>
 
 <p>
-In the longer run, I wish to build machines with human-like general learning abilities that require zero programmer maintenance. Over the years, I have developed <a href="thoughts.html">a few thoughts</a> about this.
+This idea has been implemented for the development of a full-fledged <a href="https://www.worldscientific.com/worldscibooks/10.1142/8665#t=aboutBook">Non-Axiomatic Logic</a> as well as a <a href="https://cis.temple.edu/~pwang/NARS-Intro.html">Reasoning System</a>. A two-continuous-valued truth value is used, one to indicate how much the experience supports a given hypothesis, and another to indicate the amount of evidence itself. Research on NARS has been ongoing since the 1990s; unfortunately, it has only remained a niche. Yet, a <a href="https://github.com/opennars/opennars">substantial amount of code</a> has been written exploring this research direction.
 </p>
-</div>
 
-<div id="outline-container-org79ec744" class="outline-3">
-<h3 id="org79ec744">Contact</h3>
-<div class="outline-text-3" id="text-org79ec744">
 <p>
-You can write an email to shubhamayare[at]yahoo[dot]co[dot]in. Feel free to ping me more than once, lest it gets lost in other emails.
+In the 2020s, it is more popular to use probability distributions, and particularly Bayes' Law, to quantify evidence for and against different hypothesis. Pei Wang has contrasted the myriad issues with different logic systems to put NAL into context in the first chapter of the <a href="https://www.worldscientific.com/worldscibooks/10.1142/8665#t=aboutBook">NAL Book</a>. In particular, as far as measuring evidence using probability distributions are concerned, it requires that all the possibilities are known apriori, that the proposition space be pre-specified and be fixed before the evidence measurement runs. (Also see <a href="https://www.sciencedirect.com/science/article/pii/S000437020400027X">The limitations of Bayesianism</a>.) Non-Axiomatic Reasoning attempts to overcome this.
 </p>
 
-<div class="slideshow-container" id="org62cbffb">
 <p>
-
+However, it seems that a similar goal may also be achieved using causal models of the environment. One reason why humans operate robustly is given to be that they have numerous causal models of the environment. In part, this is intuitive. And when intuition fails us, we resort to a systematic investigation aka science. It turns out that causal models can provide a way to perform robustly despite minimal amount of data, similar to humans. Judea Pearl has written extensively <a href="http://bayes.cs.ucla.edu/BOOK-2K/">causality</a>.
 </p>
 
-</div>
+<p>
+Nevertheless, I think Non-Axiomatic Reasoning also provides a natural pathway to safe A(G)I. Meseems that the mainstream AI safety research is trying to climb a slippery wall except in areas that are already well understood by other sciences. Without rooting the AI's knowledge in a two-valued truth value, and without giving the AI system itself a measure of the truthiness of its knowledge, AI (safety) research is left with trying to measure AI results against an external objective. This is like trying to raise a child by dictating them what is good and what is bad. Unfortunately, parenting is more complex than that. Beyond a few well-defined areas of human knowledge, raising children would rather involve giving the child themselves a way to figure out what is good or bad. Even in day-to-day interactions as colleagues, we trust each other not because the other never does anything we could not comprehend, but because we trust each other to consult each other when we are unsure. Without giving AI this ability to measure truthiness of its beliefs, such trust seems impossible.
+</p>
+
+<p>
+However, the current framework of non-axiomatic reasoning linked above assumes apriori availability of symbols from the environment. Often, this has been worked around by using modern machine learning systems to extract fixed categorical knowledge from the high dimensional sense data obtained from the environment. However, modern machine learning systems often assume that a given high dimensional stimulus only maps to a single high level category or symbol. However, as we discuss next, this is not the case.
+</p>
 
 <div class="org-center">
 <p>
-
+<b>Up:</b> <a href="../thoughts.html">AI and CogSci</a> | <b>Previous:</b> <a href="baby.html">Baby AGI and Developmental Cognitive Science</a> | <b>Next:</b> <a href="goal-dep-cat.html">Goal-Dependent Categorization</a>
 </p>
-
-<p>
-<a href="https://github.com/digikar99">Github</a> | <a href="https://www.quora.com/profile/Shubhamkar-Ayare">Quora</a> | <a href="https://www.facebook.com/shubhamkar.ayare">Facebook</a> | <a href="https://reddit.com/u/digikar">Reddit</a> | <a href="https://www.linkedin.com/in/shubhamkar-a-9583b7133/">LinkedIn</a>
-</p>
-
-<p>
-(made with <a href="https://orgmode.org/"><u>emacs org</u></a>)
-</p>
-
-<p>
-<i>Ideas are dime a dozen. Tell me what you have tried, your conclusions, the assumptions under which those conclusions seem warranted.</i>
-</p>
-
-<p>
-<i>Don't just tell me what's wrong with things. Tell me how they can be made right.</i> 
-</p>
-</div>
-</div>
-</div>
 </div>
 </div>
 </body>
