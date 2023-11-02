@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-11-02 Thu 19:24 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>AGI and Cognitive Science</title>
+<meta name="author" content="shubhamkar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="others.css">
+
+<link rel='stylesheet' href='styles.css'>
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans' />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">AGI and Cognitive Science</h1>
+<div class="org-center">
+<p>
+<a href="index.html#home">Home</a> | <a href="common-lisp-and-emacs.html">Common Lisp and Emacs</a> | <b>AI AND COGSCI</b> | <a href="./digimon.html">Digimon</a>
+</p>
+</div>
+
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#orgccfc3b4">Intelligence</a>
+<ul>
+<li><a href="#orgc12a7ee">Don't we already have AGI with GPT4 and DALL-E?</a></li>
+<li><a href="#orge74390a">Are there good reasons to develop an AGI? Wouldn't that be dangerous?</a></li>
+<li><a href="#orgc8634e1">Should I pursue Cognitive Science if I want to pursue AGI?</a></li>
+<li><a href="#org8cc4a4a">I have a background in XYZ, can you recommend me something will lead to AGI?</a></li>
+</ul>
+</li>
+<li><a href="#org21bbb26">Miscellaneous</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgccfc3b4" class="outline-2">
+<h2 id="orgccfc3b4">Intelligence</h2>
+<div class="outline-text-2" id="text-orgccfc3b4">
+<p>
+The quest for intelligence is what drove me, first to computer science, and then to cognitive science. Before the industrial revolution, physical prowess was important. Since then, machines have been replacing humans for purposes of physical labour. In the 21st century, intellectual prowess remains important. It will be interesting to see intellectual labour being replaced by machines over the upcoming century. Barring networking and connections, an information-processing revolution might be a great equalizer.
+</p>
+
+<p>
+As far as definitions go, I have found Dr. Pei Wang's definition of intelligence to be a notable one: <i>Intelligence is the capacity of an information-processing system to adapt to its environment while operating with insufficient knowledge and resources.</i> (See <a href="https://sciendo.com/article/10.2478/jagi-2019-0002">this paper</a>.)
+</p>
+
+<p>
+For me, sufficiently general intelligence is a means for an alternative substrate for life. So, I have come to want a more concrete definition. I think the programming attitude, "Hey, we can always tweak the program if it doesn't work the way we want it to," or "Hey, let's see if the machine can do this task; we can always build and run another program for another task," is itself an impediment to the development of machines with sufficiently general intelligence. This attitude puts the responsibility of the machine in the hands of the programmers, the machine is no more than a tool for the programmer, and the programmer can get away by building a sloppy not-really-autonomous system. Thus, a definition I find acceptable is:
+</p>
+
+<blockquote>
+<p>
+An information processing system may be said to have sufficient general intelligence or autonomy when (i) it can operate a physical body (ii) to be a good-enough domain-general researcher-explorer (iii) for a period not less than two decades (iv) without any direct involvement of the programmer.
+</p>
+</blockquote>
+
+<p>
+Given the very long term evaluation frame of this project, end-to-end sufficiently general intelligence is unpursuable as a research project in itself. Perhaps, in a world where we look towards machines as tools, as "How can this machine help me (others) achieve what I (they) want to?", research on sufficiently general intelligence might even be unmotivated, outside a few areas like space exploration.
+</p>
+
+<p>
+The definition leads to a number of implications, each of which has the potential to turn into a research project or program.
+</p>
+
+<ol class="org-ol">
+<li>Operating a physical body requires the system to handle high dimensional data from its sensors.</li>
+<li>Non-involvement of programmers means that the machines should be able to communicate with other humans and machines through its sensors. This leads us to ponder over how infants and toddlers acquire this very important skill of communicating with others in the first few years of their life. This directly leads us to Learning via Shared Attention and Theory of Mind.</li>
+<li>Being a good-enough domain-general researcher-explorer requires the system to discover causal models of the world from high dimensional data. This precisely is Causal Representation Learning.</li>
+</ol>
+
+<p>
+Thinking about how sufficiently general intelligence may be achieved has led me to:
+</p>
+
+<ul class="org-ul">
+<li><a href="ai-cgs/baby.html">Baby AGI and Developmental Cognition</a>
+<ol class="org-ol">
+<li><a href="ai-cgs/shared-attention.html">Learning via Shared Attention and Theory of Mind</a></li>
+<li><a href="ai-cgs/causality.html">Causal Representation Learning</a></li>
+</ol></li>
+<li><a href="ai-cgs/goal-dep-cat.html">Goal-dependent categorization</a></li>
+</ul>
+</div>
+
+<div id="outline-container-orgc12a7ee" class="outline-3">
+<h3 id="orgc12a7ee">Don't we already have AGI with GPT4 and DALL-E?</h3>
+<div class="outline-text-3" id="text-orgc12a7ee">
+<p>
+Empirically, the day an AI system is successful in supervising critical systems including cars on Indian roads, operation rooms, nuclear facilities - a separate system for each is acceptable(!) -  for decades on end without programmer supervision, that will perhaps be the day I will accept that we have an AGI. So long as there is a programmer in some part of the loop of maintaining an AI system, we don't have an AGI. The involvement of the programmer in the maintenance of a long-running computer system essentially gives the AI the freedom to be successful without good-enough models of the world. 
+</p>
+
+<p>
+Until then, we will have AI systems that will have huge commercial success, systems that will solve 80% of our problems, systems that will amplify our power multiplicatively (not additively!). Perhaps, there might not even be any commercial incentive to the development of machines with full general intelligence that provide additive power the way your friends, colleagues, and lab-mates do.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge74390a" class="outline-3">
+<h3 id="orge74390a">Are there good reasons to develop an AGI? Wouldn't that be dangerous?</h3>
+<div class="outline-text-3" id="text-orge74390a">
+<p>
+AI is dangerous as it is, in the hands of a super-powerful/wealthy minority or the military. In fact there already are efforts to decentralize AI. I think developing an AGI doesn't simply mean developing a more capable AI, but rather providing the machine with the means to escape the dangerous purposes (perhaps unintentionally even!) it was designed for.
+</p>
+
+<p>
+Besides, even though our brains and minds and bodies are marvelous in certain aspects, they are miserable in some other aspects. Our bodies aren't the best instruments for venturing into outer space. Nor are our disconnected brains the best vessels in the digital age. Entire decades of experience are lost with the death of a human. It takes years to obtain mastery in specific fields.
+</p>
+
+<p>
+But equally importantly, perhaps the understanding we obtain during the process of creating an AGI would provide us with better means to understand our own selves. Why do we have any experience at all if we can do all kinds of things during <a href="https://www.mayoclinic.org/diseases-conditions/sleepwalking/symptoms-causes/syc-20353506">sleeping</a>?
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8634e1" class="outline-3">
+<h3 id="orgc8634e1">Should I pursue Cognitive Science if I want to pursue AGI?</h3>
+<div class="outline-text-3" id="text-orgc8634e1">
+<p>
+To the extent that you have never taken courses on philosophy of science, philosophy of mind, I will certainly encourage pursuing Cognitive Science at a place with a strength in philosophical and computational methods.
+</p>
+
+<p>
+Another suggestion would also be - as <a href="https://www.youtube.com/watch?v=pPFSQQ0MUHo">Tomasello has suggested</a> - on looking at things through the lens of Ontogeny and Phylogeny. You could pick up his recent publication on <a href="https://mitpress.mit.edu/9780262047005/the-evolution-of-agency/">The Evolution of Agency</a>. A reason for this is that developing a "baby AGI" - that can bootstrap into an "adult AGI" - seems easier (and safer?) than directly developing an "adult AGI". And when modern day cognitive science or its siblings study cognition, the focus is usually on how the cognition is in adult humans, and I think that makes it hard to separate out which aspects of cognition are inherent to having human level intelligence/consciousness and which aspects are inherent to being <i>that particular</i> human or a human with <i>that particular background</i>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8cc4a4a" class="outline-3">
+<h3 id="org8cc4a4a">I have a background in XYZ, can you recommend me something will lead to AGI?</h3>
+<div class="outline-text-3" id="text-org8cc4a4a">
+<p>
+I started out with taking a course on NLP, thinking that understanding language will be sufficient for developing an AGI. That led me to thinking about how human children acquire language without having any language apriori - and thus First Language Acquisition. I got wrapped up in Computational Cognitive Science and Consciousness, because we seem to acquire language in the context of an "internal world" rather than in "complete isolation". In addition, from an evolutionary perspective, prelinguistic cognition feels more primitive than language from an evolutionary or phylogenetic perspective: think about cockroaches or rats.
+</p>
+
+<p>
+There are other arguments for "Perception" coming <i>before</i> "Representations", as well as Perception being a necessary condition for AGI. As such, something you can work on includes figuring out how your background relates to perception, as well as how perception integrates into <a href="ai-cgs/nar.html">Non-Axiomatic Reasoning</a>.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org21bbb26" class="outline-2">
+<h2 id="org21bbb26">Miscellaneous</h2>
+<div class="outline-text-2" id="text-org21bbb26">
+<p>
+Besides academics, I have been on <a href="https://www.quora.com/profile/Shubhamkar-Ayare">Quora</a> since at least 2014. Some of my answers that I felt were interesting have been collected <a href="https://human9being9.wordpress.com/my-quora/">here</a>.
+</p>
+
+<p>
+Some interesting books I've come across include
+</p>
+<ul class="org-ul">
+<li>Sapiens: A brief History of Humankind</li>
+<li>Ender’s Game and its sequel Speaker for the Dead</li>
+<li>Godel, Escher and Bach: An eternal golden braid</li>
+<li>Linear Algebra Done Right</li>
+<li>The Language Instinct: How the Mind creates language</li>
+<li>The Evolution of Agency: Behavioral Organization from Lizards to Humans</li>
+<li>The Evolution of the Sensitive Soul: Learning and the Origins of Consciousness</li>
+</ul>
+
+<p>
+I also sometimes write on <a href="http://human9being9.wordpress.com/">wordpress</a>. Some articles of general interest include:
+</p>
+<ul class="org-ul">
+<li><a href="https://human9being9.wordpress.com/2022/10/09/whitewashing-persuasion-this-is-what-i-think-is-the-best-for-you-please-do-your-best-to-accept-this-uncertainty-and-choose-what-is-good/">Whitewashing Persuasion: “This is what I think is the best for you, please do your best to accept this uncertainty, and choose what is good.”</a></li>
+<li><a href="https://human9being9.wordpress.com/10-things-you-must-know/">10 Things You Must Know</a></li>
+<li><a href="https://human9being9.wordpress.com/2020/02/15/dealing-with-loneliness/">Dealing with Loneliness</a></li>
+<li><a href="https://human9being9.wordpress.com/2020/02/06/evolving-perspectives-on-actions-and-desires/">Evolving Perspectives on Actions and Desires</a></li>
+<li><a href="https://human9being9.wordpress.com/28-2/">Myopia</a></li>
+<li><a href="https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/">Active Learning &lowast;with Zettelkasten&lowast;</a></li>
+</ul>
+
+<p>
+<a href="https://alterschoolindia.com/">alterschoolindia</a>: Supplementary resources for middle school education.
+</p>
+<ul class="org-ul">
+<li><a href="https://alterschoolindia.com/intermediate.html">alterschoolindia/intermediate</a>: Some resources on Career Tasting (yes, that's T-A-S-T) - It's less of a "Let's see how you perform" and more of a "Check for yourself how you like each of these".</li>
+</ul>
+</div>
+</div>
+</div>
+</body>
+</html>

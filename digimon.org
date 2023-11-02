@@ -2,20 +2,20 @@
 #+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
 #+OPTIONS: toc:nil num:nil html-postamble:nil
-#+TITLE: Digimon - digikar99.github.io
+#+TITLE: Digimon
 
 #+BEGIN_CENTER
-[[file:index.html#home][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:agi-cogsci.html][AGI and Cognitive Science]] | *DIGIMON*
+[[file:index.html#home][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:thoughts.html][AI and CogSci]] | *DIGIMON*
 #+END_CENTER
 
 #+html: <br>
 
 #+begin_quote
-For some reason, it seems I have slightly moved on from Digimon. 
+For reasons beyond me, it seems I have slightly moved on from Digimon. 
 
-A big part of it perhaps has to do with the lingering question of what should (school) education look like. When I had written the below article in 2021, I was still somewhat enthusiastic about school education, about gathering resources about certain kinds of basic knowledge that every human - and perhaps every sentient being - should know for a better world.
+A big part of it perhaps has to do with the lingering question of what should (school) education look like. When I had written the below article in 2021, I was still somewhat enthusiastic about school education, about gathering resources for certain kinds of basic knowledge that every human - and perhaps every sentient being - should know, for a better world.
 
-But it seems the more I thought about that, the more I realized that determining such kinds of basic knowledge depends on the position one takes about how a society or civilization should operate. There are basic themes of Utilitarianism and of Sustainability, but the detailing remains to be worked out. Lacking that detail, I seem to have entered a state of apathy for things beyond my immediate whims and goals.
+But it seems the more I thought about basic education, the more I realized that determining basic knowledge depends on the position one takes about how a society or civilization should operate. There are basic themes of Utilitarianism and of Sustainability, but the detailing remains to be worked out. Lacking that detail, I seem to have entered a state of apathy for things beyond my immediate whims and goals.
 #+end_quote
 
 I'd strongly urge the reader to get young, as young as 10 or 12, and re-grow with the characters in [[https://human9being9.wordpress.com/digimon/the-depths-of-adventures/][Digimon Adventure (1999)]]. It is by no means perfect but definitely leaves some valuable marks on the viewer. Some of the things,
@@ -57,4 +57,4 @@ If anything, I also cooked up a comparison between [[https://drive.google.com/fi
 - Digimon seems to give off a "me collaborating aka not playing tricks with /us/ and giving to the world at large" vibes
 - while Naruto seems to give off (a more grounded perhaps?) "me, the friends who accepted and believed in me, my family, the community /vs/ the tragedies of life and how I climb up the social ladder".
 
-If or not this is the difference if there is one at all, would surely constitute an interesting discussion /if and when I find the time/. If interested, feel free to ping me up at shubhamayare[at]yahoo[dot]co[dot]in!
+If or not this is the difference if there is one at all, would surely constitute an interesting discussion if and when I find the time. If interested, feel free to ping me up at shubhamayare[at]yahoo[dot]co[dot]in!

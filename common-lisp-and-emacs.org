@@ -2,10 +2,10 @@
 #+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
 #+OPTIONS: toc:nil num:nil html-postamble:nil
-#+TITLE: Common Lisp and Emacs - digikar99.github.io
+#+TITLE: Common Lisp and Emacs
 
 #+BEGIN_CENTER
-[[file:index.html#home][Home]] | *COMMON LISP AND EMACS* | [[file:agi-cogsci.html][AGI and Cognitive Science]] | [[./digimon.html][Digimon]]
+[[file:index.html#home][Home]] | *COMMON LISP AND EMACS* | [[file:thoughts.html][AI and CogSci]] | [[./digimon.html][Digimon]]
 #+END_CENTER
 
 #+TOC: headlines 1
@@ -50,9 +50,9 @@ And if you ever feel annoyed by constantly switching between insert and edit mod
 
 * 2. Can Emacs substitute my IDE?
 
-If you know why exactly do you need the IDE, then, no. If you actually use the PyCharm or IntelliJ IDEA features dedicated to those languages, then, no, emacs - in my very limited experience - does not replace a full-blown IDE. But, [[https://www.reddit.com/r/emacs/search?q=intellij&restrict_sr=1][you could always ask a community]].
+If you know why exactly you need the IDE for, then, no. If you actually use the PyCharm or IntelliJ IDEA features dedicated to those languages, then, no, emacs - does not replace a full-blown IDE. But, [[https://www.reddit.com/r/emacs/search?q=intellij&restrict_sr=1][you could always ask a community]].
 
-Fortunately so far, I have had the luxury to stick with Common Lisp and there, [[https://github.com/slime/slime][Superior Lisp Interaction Mode for Emacs (SLIME)]] absolutely blows most things out of the water even though it has its shortcomings.
+Although as far as Common Lisp is concerned, the [[https://github.com/slime/slime][Superior Lisp Interaction Mode for Emacs (SLIME)]] absolutely blows most things out of the water even though it has its own shortcomings.
 
 #+BEGIN_CENTER
 #+BEGIN_EXPORT html
@@ -66,7 +66,7 @@ Fortunately so far, I have had the luxury to stick with Common Lisp and there, [
 
 * 4. Do I have to learn Emacs to learn Common Lisp?
 
-If you are in it for the long haul, yes. But, something like [[https://github.com/digikar99/emacs-noob/tree/slime-company-modern][emacs-noob/slime-company-modern]] can provide familiar (non-emacs/vi) key-bindings, so that you can focus on Common Lisp first, and then on Emacs.
+If you are in it for the long haul, yes. But, something like [[https://github.com/digikar99/emacs-noob/tree/slime-company-modern][emacs-noob/slime-company-modern]] or [[https://github.com/corvideon/mousemacs][mousemacs]] can provide familiar (non-emacs/vi) key-bindings, so that you can focus on Common Lisp first, and then on Emacs.
 
 * 5. Some projects you have done / are working on
 
