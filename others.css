@@ -2,6 +2,7 @@ body{
     overflow-x:hidden;
     font-family:sans;
     width:60vw;
+    min-width: 360px;
     margin:auto;
     margin-bottom:30px;
 }
@@ -21,4 +22,8 @@ blockquote{
     background-color:#ddd;
     border-radius:15px;
     padding:6px;
+}
+
+.references > div > div > div{
+    padding-top: 0.5em;
 }

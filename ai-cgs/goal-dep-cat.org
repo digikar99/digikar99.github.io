@@ -5,7 +5,7 @@
 #+TITLE: Goal Dependent Categorization
 
 #+BEGIN_CENTER
-*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:nar.html][Non-Axiomatic Reasoning]] | *Next:* [[file:shared-attention.html][Shared Attention and Theory of Mind]]
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:nar.html][Non-Axiomatic Reasoning]] | *Next:* [[file:20th-century.html][Summarizing 20th century discussions]]
 #+END_CENTER
 
 There seems to be a recurring theme that conceptualizing, categorizing, and reidentification are at the core of intelligence. Unless a system is able to reidentify new high-dimensional sensory data in terms of its previous sensations, every sensation of the system will be distinct and the system will be unable to make use of its previous knowledge and experience.
@@ -17,14 +17,19 @@ Usually, categorization and classification is based on closed world assumptions.
 [[file:../images/necker.png]]
 #+END_CENTER
 
+It turns out that in visual perception (atleast as understood around the early 2000s), attention - or rather foreground vs background - closely relates to perceptual depth. In particular, objects in the foreground (or near the foreground?) of our perception appear closer than objects in the background. Thus, a machine learning approach trying to obtain embeddings out of 2D images should also use a "perceptual" depth map in addition to the image itself. "Perceptual" because obtaining an objective depthmap out of 2D images is an underconstrained task, and as the example of the Necker cube above shows, a single 2D image can lend itself to multiple perceptions and accompanying depth maps. Perhaps, the idea that we perceive a global depth map also needs to be thrown out, because we can also perceive contradictory perceptual objects such as the Penrose stairs below. For me, these ideas first became concrete through a course on Visual Perception under Prof. Devpriya Kumar at IIT Kanpur.
+
+#+BEGIN_CENTER
+#+ATTR_HTML: :style width:180px
+file:../images/penrose.png
+#+END_CENTER
+
 Thus, one remarkable property about the mapping between a high dimensional stimulus and the high level categories is that this is a many-to-many mapping. In other words, the answers to questions such as "Who is this person?", "What is this an image of?", "What does this text mean?" depend on not only the thing under consideration, but also on who asks the questions, what categories the asker has in their mind, and perhaps what implicit or explicit goals or intentions the asker has.
 
 When in danger, you can hit someone with a shoe in self-defense. Does it remain a shoe, or does it become a weapon then? The category corresponding to a particular high dimensional stimulus is not only dependent on the stimulus itself but also what the system itself is /looking for/. I have only come across [[https://paperswithcode.com/method/slot-attention][Slot Attention]] which seems to acknowledge this. Even then, it's not really clear if and how this problem is or can be solved.
 
-Interestingly, the issue seems remarkably similar to [[https://en.wikipedia.org/wiki/Type_class][Typeclasses / Interfaces / Adhoc Polymorphism in Programming Languages]].
-
-However, an important difference might be that the categories are not only inside individual heads, but are actually shared across individuals. 
+It turns out that this notion of "looking for" has already been discussed in the 20th century.
 
 #+BEGIN_CENTER
-*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:nar.html][Non-Axiomatic Reasoning]] | *Next:* [[file:shared-attention.html][Shared Attention and Theory of Mind]]
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:nar.html][Non-Axiomatic Reasoning]] | *Next:* [[file:20th-century.html][Summarizing 20th century discussions]]
 #+END_CENTER

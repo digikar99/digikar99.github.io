@@ -98,3 +98,15 @@ p, h3, ul{
     text-align: center;
     height:90px;
 }
+
+.references{
+    padding: 1.5em;
+}
+
+.references > div > div > div{
+    padding-top: 0.5em;
+}
+
+    padding-top: 60px;
+    padding-bottom: 0.5em;
+}

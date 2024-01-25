@@ -3,7 +3,7 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="index.css">
 #+HTML_HEAD: <script src="index.js"></script>
 #+OPTIONS: toc:nil num:nil title:nil html-postamble:nil
-#+TITLE: Shubhamkar B. Ayare (digikar)
+#+TITLE: Shubhamkar Ayare (digikar)
 
 #+begin_export html
 <div class='defining-pic'><img id='defining-pic-img' src='defining-pic.jpg' /></div>
@@ -13,27 +13,42 @@
 <span id="home"></span>
 #+end_export
 
-* Shubhamkar B. Ayare
+* Shubhamkar Ayare
 
 #+BEGIN_CENTER
-*HOME* | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:thoughts.html][AI and CogSci]] | [[./digimon.html][Digimon]]
+*HOME* | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:thoughts.html][AI and CogSci]] | [[file:books-blog.html][Books and Blogs]] | [[./digimon.html][Digimon]]
 #+END_CENTER
 
 -----
 
-I am a graduate student under the Cognitive Science department at IIT Kanpur, India. As part of my master's thesis, I investigated the [[https://en.wikipedia.org/wiki/Visual_indexing_theory][Visual Indexing Theory]] of [[https://en.wikipedia.org/wiki/Zenon_Pylyshyn][Dr. Zenon Pylyshyn]]. I've worked on an index-less model of human multiple object tracking of visually identical objects under the guidance of [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]].
+I am a graduate student under the Cognitive Science department at IIT Kanpur, India. As part of my master's thesis, I investigated the [[https://en.wikipedia.org/wiki/Visual_indexing_theory][Visual Indexing Theory]] of [[https://en.wikipedia.org/wiki/Zenon_Pylyshyn][Dr. Zenon Pylyshyn]] (also see [[citet:&pylyshyn2007book]]). I've worked on an index-less model of human multiple object tracking of visually identical objects under the guidance of [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]] [[cite:&ayare2023tracking]]
 
 #+begin_export html
 <div id='profile-pic'><img src='profile-pic.jpg' /></div>
 #+end_export
 
-I also have a background in computer science through an undergraduate degree at IIT Bombay, and spend my free time developing and maintaining [[file:common-lisp-and-emacs.html][Common Lisp libraries]].
+I did my undergraduate studies in Computer Science at IIT Bombay, where I had the chance to acquaintance myself with Reinforcement Learning and do a project on Tangram Solving using Constraint Satisfaction under [[https://www.cse.iitb.ac.in/~shivaram/][Prof. Shivaram Kalyanakrishnan]].
 
-In the longer run, I wish to build machines with human-like general learning abilities that require zero programmer maintenance. Over the years, I have developed [[file:thoughts.html][a few thoughts]] about this.
+I spend my free time developing and maintaining Common Lisp libraries. These include a library to [[https://github.com/digikar99/py4cl2-cffi][call python callables from Common Lisp]] or a (very primitive) library for [[https://digikar99.github.io/numericals/][high performance numerical computing]] powered by [[https://github.com/digikar99/bmas][SIMD operations]]. Now, [[https://gist.github.com/digikar99/b76964faf17b3a86739c001dc1b14a39][Common Lisp has its limitations]], so while developing the numerical computing library, I have also gotten dragged into [[https://gitlab.com/digikar/peltadot/][extending Common Lisp's types and dispatching over them]].
 
-** Contact
+My interest in Common Lisp has stemmed from a search for a stable platform for long term projects, potentially spanning decades. It is [[http://random-state.net/features-of-common-lisp.html][more flexible yet stable than Python]] and at least [[https://stackoverflow.com/questions/19877268/why-are-python-and-ruby-so-slow-while-lisp-implementations-are-fast][one of its implementations (SBCL) is an optimizing compiler]] generating native code as performant as C compilers. These days, there are various [[https://portability.cl/][defacto libraries]] providing support for a number of modern features including multithreading and unicode amongst others. There are also [[https://github.com/coalton-lang/coalton/][efforts to bring the goodness of Hindley-Milner type system to Common Lisp]].
 
-You can write an email to shubhamayare[at]yahoo[dot]co[dot]in. Feel free to ping me more than once, lest it gets lost in other emails.
+I fancy the development of machines with human-like general intelligence. But after an initial encounter with artificial intelligence and machine learning, I have ended up on [[file:ai-cgs/20th-century.html][a tour to Dreyfus and Hiedeggerian AI]]. 
+
+I now think research into causality cite:&gopnik2022causal and on enabling robots and machines to learn from their sociocultural environments cite:&colas2022language would be important precursors for general intelligence. Reinforcement learning with some augmentations cite:&colas2022autotelic looks like a useful framework for both these goals.
+
+* References
+:properties:
+:html_container_class: references
+:end:
+
+bibliography:~/references.bib
+
+* Contact
+
+Email: shubhamayare[at]yahoo[dot]co[dot]in.
+
+#+html: <hr/>
 
 #+begin_slideshow-container
 
@@ -41,12 +56,12 @@ You can write an email to shubhamayare[at]yahoo[dot]co[dot]in. Feel free to ping
 
 #+begin_center
 
-[[https://github.com/digikar99][Github]] | [[https://www.quora.com/profile/Shubhamkar-Ayare][Quora]] | [[https://www.facebook.com/shubhamkar.ayare][Facebook]] | [[https://reddit.com/u/digikar][Reddit]] | [[https://www.linkedin.com/in/shubhamkar-a-9583b7133/][LinkedIn]]
+/Ideas are dime a dozen. Tell me your trials, your learnings, and the assumptions behind them./
+
+/Say not just what's wrong with things, but also how they can be made right./ 
+
+[[https://github.com/digikar99][Github]] | [[https://www.linkedin.com/in/shubhamkar-a-9583b7133/][LinkedIn]]
 
 (made with [[https://orgmode.org/][_emacs org_]])
-
-/Ideas are dime a dozen. Tell me what you have tried, your conclusions, the assumptions under which those conclusions seem warranted./
-
-/Don't just tell me what's wrong with things. Tell me how they can be made right./ 
 
 #+end_center

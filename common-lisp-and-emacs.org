@@ -5,7 +5,7 @@
 #+TITLE: Common Lisp and Emacs
 
 #+BEGIN_CENTER
-[[file:index.html#home][Home]] | *COMMON LISP AND EMACS* | [[file:thoughts.html][AI and CogSci]] | [[./digimon.html][Digimon]]
+[[file:index.html#home][Home]] | *COMMON LISP AND EMACS* | [[file:thoughts.html][AI and CogSci]] | [[file:books-blog.html][Books and Blogs]] | [[./digimon.html][Digimon]]
 #+END_CENTER
 
 #+TOC: headlines 1
