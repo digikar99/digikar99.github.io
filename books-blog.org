@@ -1,0 +1,38 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+TITLE: Books and Blogs
+
+#+BEGIN_CENTER
+[[file:index.html#home][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:thoughts.html][AI and CogSci]] | *BOOKS AND BLOGS* | [[./digimon.html][Digimon]]
+#+END_CENTER
+
+I used to write on [[https://www.quora.com/profile/Shubhamkar-Ayare][Quora]] in its middle years, around 2014. Some of my answers that I felt were interesting have been collected [[https://human9being9.wordpress.com/my-quora/][here]].
+
+Interesting books I've come across include
+- What the Buddha Taught by /Walpola Rahula/
+- Sapiens: A brief History of Humankind by /Yuval Noah Harari/
+- Ender’s Game and its sequel Speaker for the Dead by /Orson Scott Card/
+- Godel, Escher and Bach: An eternal golden braid by /Douglas R. Hofstadter/
+- Linear Algebra Done Right by /Sheldon Axler/
+- The Language Instinct: How the Mind creates language by /Steven Pinker/
+- The Evolution of Agency: Behavioral Organization from Lizards to Humans by /Michael Tomasello/
+- The Evolution of the Sensitive Soul: Learning and the Origins of Consciousness by /Simona Ginsburg and Eva Jablonka/
+- What Computers /Still/ Can't Do: A Critique of Artificial Reason by /Hubert Dreyfus/
+
+There's a [[http://human9being9.wordpress.com/][wordpress]] blog I write on sometimes. Some articles of general interest might include:
+- [[https://human9being9.wordpress.com/2022/10/09/whitewashing-persuasion-this-is-what-i-think-is-the-best-for-you-please-do-your-best-to-accept-this-uncertainty-and-choose-what-is-good/][Whitewashing Persuasion: “This is what I think is the best for you, please do your best to accept this uncertainty, and choose what is good.”]]
+- [[https://human9being9.wordpress.com/10-things-you-must-know/][10 Things You Must Know]]
+- [[https://human9being9.wordpress.com/2020/02/15/dealing-with-loneliness/][Dealing with Loneliness]]
+- [[https://human9being9.wordpress.com/2020/02/06/evolving-perspectives-on-actions-and-desires/][Evolving Perspectives on Actions and Desires]]
+- [[https://human9being9.wordpress.com/28-2/][Myopia]]
+- [[https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/][Active Learning \ast{}with Zettelkasten\ast{}]]
+
+Around the end of high school and the beginning of college, I used to wonder if anything could be done to make middle school education less siloed. I ended up with a partly-made (10%?) website - [[https://digikar99.github.io/alterschoolindia][alterschoolindia]] - that aimed at moving from one topic (eg: civics) to a distant another (eg: mathematics) through continuous interactive questioning.
+
+- There's also a section on [[https://digikar99.github.io/alterschoolindia/intermediate.html][alterschoolindia/intermediate]]: Some resources on Career Tasting (yes, that's T-A-S-T) - It's less of "Let's see how you perform" and more of "Check for yourself how you like each of these".
+
+- I recently ran into a [[https://www.lesswrong.com/posts/xg3hXCYQPJkwHyik2/the-best-textbooks-on-every-subject][LessWrong Blog Post on The Best Textbooks on Every Subject]] that may be of use to some. 
+
+Lacking an audience, and perhaps, more importantly, realizing that "useless" school education would be determined by the sociocultural system of a society, I lost the motivation for developing alterschoolindia further. It seems that to decide the school curriculum, one needs some opinions on the sociocultural system of a society -- hopefully, there exists something more sensible/efficient than the modern democratic systems. Here, by "useless", I mean the modern notion that school education should focus on "useful" skills and knowledge that can actually be applied so that the future citizens can be more productive members of the +labour-force+ society.

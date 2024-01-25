@@ -1,0 +1,95 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../others.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+TITLE: Summarizing 20th century discussions
+
+#+BEGIN_CENTER
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:goal-dep-cat.html][Goal Dependent Categorization]] | *Next:* [[file:shared-attention.html][Shared Attention and Theory of Mind]]
+
+#+html: <hr>
+
+#+END_CENTER
+
+In 1972, Hubert L. Dreyfus wrote a book titled /What Computers Can't Do: The Limits of Artificial Intelligence/ (later revised into citet:&dreyfus1992). It attempted to demonstrate what was wrong with the then rule-based AI aka GOFAI by relying on Continental Philosophy. The essence is that the symbolic AI methodology of the 1950s inherited from the reductionist philosophical paradigm predominant in the west for much of the early 20th century -- and also for the previous 2000 years(!).
+
+#+begin_quote
+GOFAI is based on the Cartesian idea that all understanding consists in forming and using appropriate symbolic representations. For Descartes, these representations were complex descriptions built up out of primitive ideas or elements. Kant added the important idea that all concepts are rules for relating such elements, and Frege showed that rules could be formalized so that they could be manipulated without intuition or interpretation.
+#+end_quote
+
+To someone trained in the reductionist methods of modern science - or atleast someone with an undergraduate background in computer science - this looks puzzling. /How else is one to conceive of the world if not by reducing it to simpler components?/ In citet:&dreyfus1995making, Dreyfus answers -
+
+#+begin_quote
+Heidegger, before Wittgenstein, carried out, in response to Husserl, a phenomenological description of the everyday world and everyday objects like chairs and hammers, and like Wittgenstein he found that the everyday world could not be represented by a set of context-free elements. It was Heidegger who forced Husserl to face precisely this problem. He pointed out that there are other ways of "encountering" things than relating to them as objects defined by a set of predicates. When we use a piece of equipment like a hammer, Heidegger pointed out, we actualize a skill (which need not be represented in the mind) in the context of a socially organized nexus of equipment, purposes, and human roles (which need not be represented as a set of facts). This context or world, and our everyday ways of skillful coping in it which Heidegger called circumspection, are not something we think but, as part of our socialization, forms the way we are.
+#+end_quote
+
+One of the troubles with the GOFAI approaches, then, is trying to represent  everything in terms of /context-free purpose-free/ ("looking for") /symbols/ and trying to come up with context-free /formal/ rules. Now, of course, the rules are usually developed by a human in some context, but that context stayed only in the human head and was never entered into the AI system, atleast not in its earliest days. In the later days, there have been efforts to decontextualize this context and enter the common sense knowledge into the computer cite:&cycWikipedia.
+
+This would lead one to think that GOFAI is then rightly replaced by neural networks / PDP approach prevalent today. However, citet:&dreyfus1995making has had something to say about them too. Perhaps, Dreyfus has elaborated this point better in the preface to citet:&dreyfus1992:
+
+#+begin_quote
+There is yet another fundamental problem with the route to artificial intelligence through the supervised training of neural networks. In GOFAI, it has long been clear that whatever intelligence the system exhibits has been explicitly identified and programmed by the system designer. The system has no independent learning ability that allows it to recognize situations in which the rules it has been taught are inappropriate and to construct new rules. Neural networks do appear to have learning ability; but in situations of supervised learning, it is really the person who decides which cases are good examples who is furnishing the intelligence. What the network learns is merely how to capture this intelligence in terms of connection strengths. Networks, like GOFAI systems, therefore lack the ability to recognize situations in which what they have learned is inappropriate; instead, it is up to the human user to recognize failures and either modify the outputs of situations the net has already been trained on or provide new cases that will lead to appropriate modifications in behavior. The most difficult situation arises when the environment in which the network is being used undergoes a structural change. Consider, for example, the situation that occurred when OPEC instigated the energy crisis in 1973. In such a situation, it may well happen that even the human trainer does not know the responses that are now correct and that should be used in retraining the net. Viewed from this perspective, neural networks are almost as dependent upon human intelligence as are GOFAI systems, and their vaunted learning ability is almost illusory. What we really need is a system that learns on its own how to cope with the environment and modifies its own responses as the environment changes.
+
+To satisfy this need, recent research has turned to an approach sometimes called "reinforcement learning." This approach has two advantages over supervised learning. First, supervised learning requires that the device be told the correct action for each situation. Reinforcement learning assumes only that the world provides a reinforcement signal measuring the immediate cost or benefit of an action. It then seeks to minimize or maximize the total reinforcement it receives while solving any problem. In this way, it gradually learns from experience the optimal actions to take in various situations so as to achieve long-term objectives. [...]
+#+end_quote
+
+However, citet:&dreyfus1992 criticizes reinforcement learning too (atleast in its raw form):
+
+#+begin_quote
+One problem would remain even if the above practical problems were solved. In all applications of reinforcement learning the programmer must use his or her knowledge of the problem to formulate a rule that specifies the immediate reinforcement received at each step. For path problems and games the objective nature of the problem dictates the rule. If, however, the problem involves human coping, there is no simple objective answer as to what constitutes immediate reinforcement. Even if we assume the simplistic view that human beings behave so as to maximize their total sense of satisfaction, a reinforcement learning approach to producing such behavior would require a rule for determining the immediate satisfaction derived from each possible action in each possible situation. But human beings do not have or need any such rule. Our needs, desires, and emotions provide us directly with a sense of the appropriateness of our behavior. If these needs, desires, and emotions in turn depend on the abilities and vulnerabilities of a biological body socialized into a culture, even reinforcement-learning devices still have a very long way to go.
+#+end_quote
+
+Beyond reinforcement learning, machine learning research has also moved towards Self-supervised Learning cite:&sslWikipedia. That might also pave the way for a self-supervised equivalent of reinforcement learning. What that is supposed to look like, what other aspects it is supposed to touch upon, still seems to be a matter of research.
+
+One may also note that it is not necessary for the machine-child to be perfectly identical to humans, but only /sufficiently/. From our own interactions with each other, we know that we have the ability to understand and communicate with each other (including with our pets of a different species!) even if each of us have /somewhat/ different preferences. I'd argue that Shared Attention and Theory of Mind are important precursors for this ability cite:&tomasello1993cultural.
+
+There is atleast one other important point that Dreyfus and a few others have argued against. GOFAI as well as a number of machine learning projects of the 2020s attempt to encode and /represent/ every /relevant fact/ under the sun. On the other hand, humans are largely ignorant of the /facts/ in their surroundings. Phenomena such as Change Blindness cite:&simons1997change and Inattentional Blindness cite:&mack1998inattentional suggest that humans have conscious access to only a very small part of our environments. It is despite this low-bandwidth access that we manage to accomplish whatever we do. But then, how do humans operate in this world if not by representing everything? citet:&dreyfus1992 quotes Chapman:
+
+#+begin_quote
+If you want to find out something about the world that will affect how you
+should act, you can usually just look and see. Concrete activity is principally concerned with the here-and-now. You mostly don't need to worry about things that have gone before, are much in the future, or are not physically present. You don't need to maintain a world model; *the world is its own best representation*.
+#+end_quote
+
+But isn't representational learning cite:&featureLearningWikipedia the bread and butter of the deep learning of 2020s? Here, it might be helpful to make a distinction between (atleast) two senses of the word 'representation' (see citet:&pylyshyn1986, citet:&eliasmith2000neurons, or also Chapter 3 of citet:&pylyshyn2007book):
+
+1. The first sense of representation used above and often used by cognitive scientists is an abstract conceptual sense. Put simply, this allows the representation to /misrepresent/ something, such as misrepresenting the rope for a snake. It also allows for the representation to exist /independently/ of its referents, and /cause/ behavior even in the absence of its referents. For example, one would explain that a representation of a pot of gold causes one to go on the search for it, even though the pot (the representation's referent) may not actually exist!
+
+2. The second sense of representations concerns when the representations under consideration are /caused/ by certain environmental stimuli. This sense is commonly used in neuroscience as well as in machine learning. They do not allow for misrepresentations and also pose a mystery to explain how representations of non-existing objects can come into existence.
+
+Thus, when Chapman says "the world is its own best representation", he is referring to the first sense of representation. Machine learning and deep learning practioners relying on representational learning are using the second sense of representation.
+
+Even though Dreyfus has argued against representations of the first sense and the accompanying rules, in citet:&dreyfus1992, he himself states:
+
+#+begin_quote
+Generally, in acquiring a skill-in learning to drive, dance, or pronounce a foreign language, for example-at first we must slowly, awkwardly, and consciously follow the rules. But then there comes a moment when we finally can perform automatically. At this point we do not seem to be simply dropping these same rigid rules into unconsciousness; rather we seem to have picked up the muscular gestalt which gives our behavior a new flexibility and smoothness.
+#+end_quote
+
+Additionally, in light of the limitations of 2020s deep learning models  (citet:&ye2023CVPR, citet:&bitton2023ICCV) despite being trained on terabytes of data, it seems that /some way/ of aligning both approaches does seem necessary.
+
+* Summary
+
+1. GOFAI as well as /applications/ of machine learning and deep learning of 2020s often assume a reductionist framework. The reductionist framework renders the task of general intelligence an impossible endeavour.
+
+2. Unsupervised learning and self-supervised sidesteps reductionism to some extent. But while trying to /apply/ them to /solve problems/, as practioners trained in reductionist methodologies, we reintroduce the reductionist framework and again raise the same issues. 
+
+3. Additionally, our behavior and internal workings are also shaped by our needs, desires, and emotions, which themselves are the product of our evolutionary history and of absorbing our sociocultural environment. The machine with general intelligence need not be /identical/ to us, but if it is to successfully communicate with us and learn from other humans, it has to be /sufficiently similar/ to us.
+
+4. Intrinsically motivated reinforcement learning is another potential research direction useful for machines with general intelligence.
+
+5. However, despite having a body with needs, desires, emotions sufficiently aligned with a prototypical human, it might still be necessary to integrate the representational approach with the nonrepresentational approaches.
+
+6. Shared attention and theory of mind can help alleviate the need to have /identical/ needs, desires, emotions.
+
+* References
+:properties:
+:html_container_class: references
+:end:
+
+bibliography:~/references.bib
+
+#+BEGIN_CENTER
+
+#+html: <hr>
+
+*Up:* [[file:../thoughts.html][AI and CogSci]] | *Previous:* [[file:goal-dep-cat.html][Goal Dependent Categorization]] | *Next:* [[file:shared-attention.html][Shared Attention and Theory of Mind]]
+#+END_CENTER

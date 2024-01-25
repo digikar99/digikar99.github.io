@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-26 Fri 01:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Summarizing 20th century discussions</title>
+<meta name="author" content="shubhamkar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="../others.css">
+
+<link rel='stylesheet' href='styles.css'>
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans' />
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Summarizing 20th century discussions</h1>
+<div class="org-center">
+<p>
+<b>Up:</b> <a href="../thoughts.html">AI and CogSci</a> | <b>Previous:</b> <a href="goal-dep-cat.html">Goal Dependent Categorization</a> | <b>Next:</b> <a href="shared-attention.html">Shared Attention and Theory of Mind</a>
+</p>
+
+<hr>
+</div>
+
+<p>
+In 1972, Hubert L. Dreyfus wrote a book titled <i>What Computers Can't Do: The Limits of Artificial Intelligence</i> (later revised into <a href="#citeproc_bib_item_3">Dreyfus 1992</a>). It attempted to demonstrate what was wrong with the then rule-based AI aka GOFAI by relying on Continental Philosophy. The essence is that the symbolic AI methodology of the 1950s inherited from the reductionist philosophical paradigm predominant in the west for much of the early 20th century &#x2013; and also for the previous 2000 years(!).
+</p>
+
+<blockquote>
+<p>
+GOFAI is based on the Cartesian idea that all understanding consists in forming and using appropriate symbolic representations. For Descartes, these representations were complex descriptions built up out of primitive ideas or elements. Kant added the important idea that all concepts are rules for relating such elements, and Frege showed that rules could be formalized so that they could be manipulated without intuition or interpretation.
+</p>
+</blockquote>
+
+<p>
+To someone trained in the reductionist methods of modern science - or atleast someone with an undergraduate background in computer science - this looks puzzling. <i>How else is one to conceive of the world if not by reducing it to simpler components?</i> In <a href="#citeproc_bib_item_4">Dreyfus and Dreyfus 1995</a>, Dreyfus answers -
+</p>
+
+<blockquote>
+<p>
+Heidegger, before Wittgenstein, carried out, in response to Husserl, a phenomenological description of the everyday world and everyday objects like chairs and hammers, and like Wittgenstein he found that the everyday world could not be represented by a set of context-free elements. It was Heidegger who forced Husserl to face precisely this problem. He pointed out that there are other ways of "encountering" things than relating to them as objects defined by a set of predicates. When we use a piece of equipment like a hammer, Heidegger pointed out, we actualize a skill (which need not be represented in the mind) in the context of a socially organized nexus of equipment, purposes, and human roles (which need not be represented as a set of facts). This context or world, and our everyday ways of skillful coping in it which Heidegger called circumspection, are not something we think but, as part of our socialization, forms the way we are.
+</p>
+</blockquote>
+
+<p>
+One of the troubles with the GOFAI approaches, then, is trying to represent  everything in terms of <i>context-free purpose-free</i> ("looking for") <i>symbols</i> and trying to come up with context-free <i>formal</i> rules. Now, of course, the rules are usually developed by a human in some context, but that context stayed only in the human head and was never entered into the AI system, atleast not in its earliest days. In the later days, there have been efforts to decontextualize this context and enter the common sense knowledge into the computer (<a href="#citeproc_bib_item_2">“Cyc - Wikipedia –- En.Wikipedia.Org,” n.d.</a>).
+</p>
+
+<p>
+This would lead one to think that GOFAI is then rightly replaced by neural networks / PDP approach prevalent today. However, <a href="#citeproc_bib_item_4">Dreyfus and Dreyfus 1995</a> has had something to say about them too. Perhaps, Dreyfus has elaborated this point better in the preface to <a href="#citeproc_bib_item_3">Dreyfus 1992</a>:
+</p>
+
+<blockquote>
+<p>
+There is yet another fundamental problem with the route to artificial intelligence through the supervised training of neural networks. In GOFAI, it has long been clear that whatever intelligence the system exhibits has been explicitly identified and programmed by the system designer. The system has no independent learning ability that allows it to recognize situations in which the rules it has been taught are inappropriate and to construct new rules. Neural networks do appear to have learning ability; but in situations of supervised learning, it is really the person who decides which cases are good examples who is furnishing the intelligence. What the network learns is merely how to capture this intelligence in terms of connection strengths. Networks, like GOFAI systems, therefore lack the ability to recognize situations in which what they have learned is inappropriate; instead, it is up to the human user to recognize failures and either modify the outputs of situations the net has already been trained on or provide new cases that will lead to appropriate modifications in behavior. The most difficult situation arises when the environment in which the network is being used undergoes a structural change. Consider, for example, the situation that occurred when OPEC instigated the energy crisis in 1973. In such a situation, it may well happen that even the human trainer does not know the responses that are now correct and that should be used in retraining the net. Viewed from this perspective, neural networks are almost as dependent upon human intelligence as are GOFAI systems, and their vaunted learning ability is almost illusory. What we really need is a system that learns on its own how to cope with the environment and modifies its own responses as the environment changes.
+</p>
+
+<p>
+To satisfy this need, recent research has turned to an approach sometimes called "reinforcement learning." This approach has two advantages over supervised learning. First, supervised learning requires that the device be told the correct action for each situation. Reinforcement learning assumes only that the world provides a reinforcement signal measuring the immediate cost or benefit of an action. It then seeks to minimize or maximize the total reinforcement it receives while solving any problem. In this way, it gradually learns from experience the optimal actions to take in various situations so as to achieve long-term objectives. [&#x2026;]
+</p>
+</blockquote>
+
+<p>
+However, <a href="#citeproc_bib_item_3">Dreyfus 1992</a> criticizes reinforcement learning too (atleast in its raw form):
+</p>
+
+<blockquote>
+<p>
+One problem would remain even if the above practical problems were solved. In all applications of reinforcement learning the programmer must use his or her knowledge of the problem to formulate a rule that specifies the immediate reinforcement received at each step. For path problems and games the objective nature of the problem dictates the rule. If, however, the problem involves human coping, there is no simple objective answer as to what constitutes immediate reinforcement. Even if we assume the simplistic view that human beings behave so as to maximize their total sense of satisfaction, a reinforcement learning approach to producing such behavior would require a rule for determining the immediate satisfaction derived from each possible action in each possible situation. But human beings do not have or need any such rule. Our needs, desires, and emotions provide us directly with a sense of the appropriateness of our behavior. If these needs, desires, and emotions in turn depend on the abilities and vulnerabilities of a biological body socialized into a culture, even reinforcement-learning devices still have a very long way to go.
+</p>
+</blockquote>
+
+<p>
+Beyond reinforcement learning, machine learning research has also moved towards Self-supervised Learning (<a href="#citeproc_bib_item_10">“Self-Supervised Learning - Wikipedia –- En.Wikipedia.Org,” n.d.</a>). That might also pave the way for a self-supervised equivalent of reinforcement learning. What that is supposed to look like, what other aspects it is supposed to touch upon, still seems to be a matter of research.
+</p>
+
+<p>
+One may also note that it is not necessary for the machine-child to be perfectly identical to humans, but only <i>sufficiently</i>. From our own interactions with each other, we know that we have the ability to understand and communicate with each other (including with our pets of a different species!) even if each of us have <i>somewhat</i> different preferences. I'd argue that Shared Attention and Theory of Mind are important precursors for this ability (<a href="#citeproc_bib_item_12">Tomasello, Kruger, and Ratner 1993</a>).
+</p>
+
+<p>
+There is atleast one other important point that Dreyfus and a few others have argued against. GOFAI as well as a number of machine learning projects of the 2020s attempt to encode and <i>represent</i> every <i>relevant fact</i> under the sun. On the other hand, humans are largely ignorant of the <i>facts</i> in their surroundings. Phenomena such as Change Blindness (<a href="#citeproc_bib_item_11">Simons and Levin 1997</a>) and Inattentional Blindness (<a href="#citeproc_bib_item_7">Mack and Rock 1998</a>) suggest that humans have conscious access to only a very small part of our environments. It is despite this low-bandwidth access that we manage to accomplish whatever we do. But then, how do humans operate in this world if not by representing everything? <a href="#citeproc_bib_item_3">Dreyfus 1992</a> quotes Chapman:
+</p>
+
+<blockquote>
+<p>
+If you want to find out something about the world that will affect how you
+should act, you can usually just look and see. Concrete activity is principally concerned with the here-and-now. You mostly don't need to worry about things that have gone before, are much in the future, or are not physically present. You don't need to maintain a world model; <b>the world is its own best representation</b>.
+</p>
+</blockquote>
+
+<p>
+But isn't representational learning (<a href="#citeproc_bib_item_6">“Feature Learning - Wikipedia –- En.Wikipedia.Org,” n.d.</a>) the bread and butter of the deep learning of 2020s? Here, it might be helpful to make a distinction between (atleast) two senses of the word 'representation' (see <a href="#citeproc_bib_item_8">Pylyshyn 1986</a>, <a href="#citeproc_bib_item_5">Eliasmith 2000</a>, or also Chapter 3 of <a href="#citeproc_bib_item_9">Pylyshyn 2007</a>):
+</p>
+
+<ol class="org-ol">
+<li>The first sense of representation used above and often used by cognitive scientists is an abstract conceptual sense. Put simply, this allows the representation to <i>misrepresent</i> something, such as misrepresenting the rope for a snake. It also allows for the representation to exist <i>independently</i> of its referents, and <i>cause</i> behavior even in the absence of its referents. For example, one would explain that a representation of a pot of gold causes one to go on the search for it, even though the pot (the representation's referent) may not actually exist!</li>
+
+<li>The second sense of representations concerns when the representations under consideration are <i>caused</i> by certain environmental stimuli. This sense is commonly used in neuroscience as well as in machine learning. They do not allow for misrepresentations and also pose a mystery to explain how representations of non-existing objects can come into existence.</li>
+</ol>
+
+<p>
+Thus, when Chapman says "the world is its own best representation", he is referring to the first sense of representation. Machine learning and deep learning practioners relying on representational learning are using the second sense of representation.
+</p>
+
+<p>
+Even though Dreyfus has argued against representations of the first sense and the accompanying rules, in <a href="#citeproc_bib_item_3">Dreyfus 1992</a>, he himself states:
+</p>
+
+<blockquote>
+<p>
+Generally, in acquiring a skill-in learning to drive, dance, or pronounce a foreign language, for example-at first we must slowly, awkwardly, and consciously follow the rules. But then there comes a moment when we finally can perform automatically. At this point we do not seem to be simply dropping these same rigid rules into unconsciousness; rather we seem to have picked up the muscular gestalt which gives our behavior a new flexibility and smoothness.
+</p>
+</blockquote>
+
+<p>
+Additionally, in light of the limitations of 2020s deep learning models  (<a href="#citeproc_bib_item_13">Ye et al. 2023</a>, <a href="#citeproc_bib_item_1">Bitton-Guetta et al. 2023</a>) despite being trained on terabytes of data, it seems that <i>some way</i> of aligning both approaches does seem necessary.
+</p>
+
+<div id="outline-container-orgf23b601" class="outline-2">
+<h2 id="orgf23b601">Summary</h2>
+<div class="outline-text-2" id="text-orgf23b601">
+<ol class="org-ol">
+<li>GOFAI as well as <i>applications</i> of machine learning and deep learning of 2020s often assume a reductionist framework. The reductionist framework renders the task of general intelligence an impossible endeavour.</li>
+
+<li>Unsupervised learning and self-supervised sidesteps reductionism to some extent. But while trying to <i>apply</i> them to <i>solve problems</i>, as practioners trained in reductionist methodologies, we reintroduce the reductionist framework and again raise the same issues.</li>
+
+<li>Additionally, our behavior and internal workings are also shaped by our needs, desires, and emotions, which themselves are the product of our evolutionary history and of absorbing our sociocultural environment. The machine with general intelligence need not be <i>identical</i> to us, but if it is to successfully communicate with us and learn from other humans, it has to be <i>sufficiently similar</i> to us.</li>
+
+<li>Intrinsically motivated reinforcement learning is another potential research direction useful for machines with general intelligence.</li>
+
+<li>However, despite having a body with needs, desires, emotions sufficiently aligned with a prototypical human, it might still be necessary to integrate the representational approach with the nonrepresentational approaches.</li>
+
+<li>Shared attention and theory of mind can help alleviate the need to have <i>identical</i> needs, desires, emotions.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgd59d461" class="outline-2 references">
+<h2 id="orgd59d461">References</h2>
+<div class="outline-text-2" id="text-orgd59d461">
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Bitton-Guetta, Nitzan, Yonatan Bitton, Jack Hessel, Ludwig Schmidt, Yuval Elovici, Gabriel Stanovsky, and Roy Schwartz. 2023. “Breaking Common Sense: WHOOPS! a Vision-and-Language Benchmark of Synthetic and Compositional Images.” In <i>Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)</i>, 2616–27.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>“Cyc - Wikipedia –- En.Wikipedia.Org.” n.d. https://en.wikipedia.org/wiki/Cyc.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Dreyfus, Hubert L. 1992. <i>What Computers Still Can’t Do</i>. The MIT Press. London, England: MIT Press.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Dreyfus, Hubert L, and Stuart E Dreyfus. 1995. “Making a Mind Vs. Modeling the Brain: Al Back at a Branchpoint.” <i>An International Journal of Computing and Informatics</i> 19: 425–41.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Eliasmith, Christopher David. 2000. <i>How Neurons Mean: A Neurocomputational Theory of Representational Content</i>. Washington University in St. Louis.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>“Feature Learning - Wikipedia –- En.Wikipedia.Org.” n.d. https://en.wikipedia.org/wiki/Feature_learning.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_7"></a>Mack, Arien, and Irvin Rock. 1998. “Inattentional Blindness: Perception without Attention.” <i>Visual Attention</i> 8 (01).</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_8"></a>Pylyshyn, Zenon W. 1986. <i>Computation and Cognition: Toward a Foundation for Cognitive Science</i>. The MIT Press. doi:<a href="https://doi.org/10.7551/mitpress/2004.001.0001">10.7551/mitpress/2004.001.0001</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_9"></a>———. 2007. <i>Things and Places: How the Mind Connects with the World</i>. The Jean Nicod Lectures 2004. Cambridge, Mass.: MIT Press.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_10"></a>“Self-Supervised Learning - Wikipedia –- En.Wikipedia.Org.” n.d. https://en.wikipedia.org/wiki/Self-supervised_learning.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_11"></a>Simons, Daniel J., and Daniel T. Levin. 1997. “Change Blindness.” <i>Trends in Cognitive Sciences</i> 1 (7). Elsevier BV: 261–67. doi:<a href="https://doi.org/10.1016/s1364-6613(97)01080-2">10.1016/s1364-6613(97)01080-2</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_12"></a>Tomasello, Michael, Ann Cale Kruger, and Hilary Horn Ratner. 1993. “Cultural Learning.” <i>Behavioral and Brain Sciences</i> 16 (3). Cambridge University Press: 495–511.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_13"></a>Ye, Shuquan, Yujia Xie, Dongdong Chen, Yichong Xu, Lu Yuan, Chenguang Zhu, and Jing Liao. 2023. “Improving Commonsense in Vision-Language Models via Knowledge Graph Riddles.” In <i>Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)</i>, 2634–45.</div>
+</div>
+
+
+<div class="org-center">
+<p>
+
+</p>
+
+<hr>
+
+<p>
+<b>Up:</b> <a href="../thoughts.html">AI and CogSci</a> | <b>Previous:</b> <a href="goal-dep-cat.html">Goal Dependent Categorization</a> | <b>Next:</b> <a href="shared-attention.html">Shared Attention and Theory of Mind</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

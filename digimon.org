@@ -5,13 +5,13 @@
 #+TITLE: Digimon
 
 #+BEGIN_CENTER
-[[file:index.html#home][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:thoughts.html][AI and CogSci]] | *DIGIMON*
+[[file:index.html#home][Home]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:thoughts.html][AI and CogSci]] | [[file:books-blog.html][Books and Blogs]] | *DIGIMON*
 #+END_CENTER
 
 #+html: <br>
 
 #+begin_quote
-For reasons beyond me, it seems I have slightly moved on from Digimon. 
+For reasons beyond me, it seems I have slightly moved on from Digimon.
 
 A big part of it perhaps has to do with the lingering question of what should (school) education look like. When I had written the below article in 2021, I was still somewhat enthusiastic about school education, about gathering resources for certain kinds of basic knowledge that every human - and perhaps every sentient being - should know, for a better world.
 
