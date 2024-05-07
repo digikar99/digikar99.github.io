@@ -1,21 +1,13 @@
 body{
-    overflow-x:hidden;
-    font-family:sans;
     width:60vw;
     min-width: 360px;
     margin:auto;
-    margin-bottom:30px;
 }
 
 img, iframe{
     width:70vw;
     max-width:640px;
     height:auto;
-}
-
-p{
-    padding:5px;
-    margin:0;
 }
 
 blockquote{

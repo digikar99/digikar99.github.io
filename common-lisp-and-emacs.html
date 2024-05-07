@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-01-03 Wed 13:59 -->
+<!-- 2024-05-07 Tue 08:56 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Common Lisp and Emacs</title>
@@ -196,168 +196,132 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <link rel="stylesheet" type="text/css" href="others.css">
+<link rel="stylesheet" type="text/css" href="common.css">
 
 <link rel='stylesheet' href='styles.css'>
 <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans' />
 </head>
 <body>
 <div id="content" class="content">
-<h1 class="title">Common Lisp and Emacs</h1>
-<div class="org-center">
+<nav>
 <p>
-<a href="index.html#home">Home</a> | <b>COMMON LISP AND EMACS</b> | <a href="thoughts.html">AI and CogSci</a> | <a href="books-blog.html">Books and Blogs</a> | <a href="./digimon.html">Digimon</a>
+<a href="index.html">Home</a> | <a href="ai-cogsci.html">AI and CogSci</a> | <b>COMMON LISP AND EMACS</b> | <a href="miscellaneous.html">Miscellaneous</a>
 </p>
-</div>
+</nav>
 
-<div id="table-of-contents" role="doc-toc">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents" role="doc-toc">
-<ul>
-<li><a href="#orgc7a1b08">1. Why Emacs (or Vi) in [insert year]?</a></li>
-<li><a href="#org453e2e9">2. Can Emacs substitute my IDE?</a></li>
-<li><a href="#orgb1896a7">3. Recommended Resources to start with Common Lisp</a></li>
-<li><a href="#org458a241">4. Do I have to learn Emacs to learn Common Lisp?</a></li>
-<li><a href="#orgd8f1cee">5. Some projects you have done / are working on</a></li>
+<br>
+
+<div id="outline-container-org23adf8b" class="outline-2">
+<h2 id="org23adf8b">On This Page</h2>
+<div class="outline-text-2" id="text-org23adf8b">
+<ul class="org-ul">
+<li><a href="#major-common-lisp-related-projects">Major Common Lisp-related Projects</a>
+<ul class="org-ul">
+<li><a href="#1-python-libraries-for-common-lisp">1. Python libraries for Common Lisp</a></li>
+<li><a href="#2-fast-math-library-for-common-lisp">2. Fast math library for Common Lisp</a></li>
+<li><a href="#3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">3. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them</a></li>
+</ul></li>
+<li><a href="#conda-lisp">Conda Lisp</a></li>
 </ul>
 </div>
 </div>
 
-<br>
 
-<div id="outline-container-orgc7a1b08" class="outline-2">
-<h2 id="orgc7a1b08">1. Why Emacs (or Vi) in [insert year]?</h2>
-<div class="outline-text-2" id="text-orgc7a1b08">
+<div id="outline-container-major-common-lisp-related-projects" class="outline-2">
+<h2 id="major-common-lisp-related-projects">Major Common Lisp-related Projects</h2>
+<div class="outline-text-2" id="text-major-common-lisp-related-projects">
 <p>
-If something is not discouraged by a community years after its first release, then that something must have some merit subject to your own scrutiny. Vi is ubiquitous, and its modal-editing is a boon for editing - not necessarily writing - code. Emacs is extensible, and its community has provided <a href="https://github.com/emacs-evil/evil">Extensible VI Layer</a> to provide the best of Emacs and Vi.
-</p>
-
-<br>
-<br>
-
-<div class="org-center">
-
-<div id="org20c7b72" class="figure">
-<p><img src="images/emacs.png" alt="emacs.png" />
+My major Lisp projects can be divided into three broad themes.
 </p>
 </div>
 
+<div id="outline-container-1-python-libraries-for-common-lisp" class="outline-3">
+<h3 id="1-python-libraries-for-common-lisp">1. Python libraries for Common Lisp</h3>
+<div class="outline-text-3" id="text-1-python-libraries-for-common-lisp">
 <p>
-This is emacs.
-</p>
-</div>
-
-<br>
-<br>
-
-<div class="org-center">
-
-<div id="org041b92d" class="figure">
-<p><img src="https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png" alt="main.png" />
-</p>
-</div>
-
-<p>
-This also is <a href="https://github.com/hlissner/doom-emacs">emacs</a>.
-</p>
-</div>
-
-<br>
-<br>
-
-<div class="org-center">
-
-<div id="org6c06164" class="figure">
-<p><img src="https://raw.githubusercontent.com/syl20bnr/spacemacs/develop/doc/img/spacemacs-python.png" alt="spacemacs-python.png" />
-</p>
-</div>
-
-<p>
-This also is <a href="https://github.com/syl20bnr/spacemacs">emacs</a>.
-</p>
-</div>
-
-<br>
-<br>
-
-<p>
-And if you ever feel annoyed by constantly switching between insert and edit mode in Vi, feel free to try out <a href="https://github.com/digikar99/smart-god-mode">smart-god-mode</a>. The only thing beyond it (barring minor tweaks) would be a brain-computer-interface itself.
-</p>
-</div>
-</div>
-
-<div id="outline-container-org453e2e9" class="outline-2">
-<h2 id="org453e2e9">2. Can Emacs substitute my IDE?</h2>
-<div class="outline-text-2" id="text-org453e2e9">
-<p>
-If you know why exactly you need the IDE for, then, no. If you actually use the PyCharm or IntelliJ IDEA features dedicated to those languages, then, no, emacs - does not replace a full-blown IDE. But, <a href="https://www.reddit.com/r/emacs/search?q=intellij&amp;restrict_sr=1">you could always ask a community</a>.
-</p>
-
-<p>
-Although as far as Common Lisp is concerned, the <a href="https://github.com/slime/slime">Superior Lisp Interaction Mode for Emacs (SLIME)</a> absolutely blows most things out of the water even though it has its own shortcomings.
-</p>
-
-<div class="org-center">
-<iframe width="932" height="524" src="https://www.youtube.com/embed/3GEAINRCbJ4?list=PLCpux10P7KDKPb4eI5b_qSnQaY1ePGKGK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-</div>
-</div>
-
-<div id="outline-container-orgb1896a7" class="outline-2">
-<h2 id="orgb1896a7">3. Recommended Resources to start with Common Lisp</h2>
-<div class="outline-text-2" id="text-orgb1896a7">
-<p>
-<a href="https://gist.github.com/digikar99/a1925ad3249a431c9eecf09af2fdef8a">Opinionated Common Lisp Resources 2020</a>
-</p>
-</div>
-</div>
-
-<div id="outline-container-org458a241" class="outline-2">
-<h2 id="org458a241">4. Do I have to learn Emacs to learn Common Lisp?</h2>
-<div class="outline-text-2" id="text-org458a241">
-<p>
-If you are in it for the long haul, yes. But, something like <a href="https://github.com/digikar99/emacs-noob/tree/slime-company-modern">emacs-noob/slime-company-modern</a> or <a href="https://github.com/corvideon/mousemacs">mousemacs</a> can provide familiar (non-emacs/vi) key-bindings, so that you can focus on Common Lisp first, and then on Emacs.
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgd8f1cee" class="outline-2">
-<h2 id="orgd8f1cee">5. Some projects you have done / are working on</h2>
-<div class="outline-text-2" id="text-orgd8f1cee">
-<p>
-All of these are immature projects. Wait for another 5-10* years to test their maturity.
-</p>
-
-<p>
-With Emacs, there is
+<a href="https://www.quora.com/What-is-your-favourite-non-mainstream-programming-language/answer/Shubhamkar-Ayare?ch=10&amp;share=3d935d6a&amp;srid=tWo7">Common Lisp is a superb tool.</a> Unfortunately, its ecosystem vastly lags behind mainstream languages like Python. As one of my past-times, I have been working to provide facilities for calling Python functions and callables from Lisp. There are two major approaches to this:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://github.com/digikar99/smart-god-mode">smart-god-mode</a>: if you'd wish to do me or emacs community a favour - or want to tinker around in emacs, look into merging it into its original <a href="https://github.com/emacsorphanage/god-mode">god-mode</a> repository</li>
-<li><a href="https://github.com/digikar99/emacs-noob">emacs-noob</a>: a simplified starter kit for emacs; you should check out <a href="https://github.com/emacs-tw/awesome-emacs">awesome-emacs</a> before sticking with it though! Again, here too, you could look into improving the code / repository structure by implementing DRY-principles while keeping the usage as simple as possible (drag 'n drop).</li>
+<li><a href="https://github.com/digikar99/py4cl2">Through interprocess communication</a> (builds upon <a href="https://github.com/bendudson/py4cl">bendudson/py4cl</a>)</li>
+<li><a href="https://github.com/digikar99/py4cl2-cffi">By embedding python using its C-API</a></li>
 </ul>
 
 <p>
-With Common Lisp, there is
+The former is robust but slow. The latter is fast but relatively brittle. I'm certainly not the first one to attempt this. You can find more about the latter approach - as well as the open issues - from <a href="https://doi.org/10.5281/zenodo.10997435">this paper</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-2-fast-math-library-for-common-lisp" class="outline-3">
+<h3 id="2-fast-math-library-for-common-lisp">2. Fast math library for Common Lisp</h3>
+<div class="outline-text-3" id="text-2-fast-math-library-for-common-lisp">
+<p>
+Common Lisp actually has <a href="https://gist.github.com/digikar99/16066dbf24b8789c969ea58837e0fbef">several numerical computing libraries</a>. While many of them use BLAS/LAPACK/GSLL for linear algebra operations, there are no optimized operations in these libraries for basic mathematics. By basic mathematics, I mean addition, subtraction, multiplication, division. But even beyond them, there are other operations including floor, ceiling, round, absolute-value, exponentiation, logarithmic, as well as trigonometric, inverse trigonometric and their hyperbolic counterparts.
+</p>
+
+<p>
+Moreover, most libraries (including in non Common Lisp ecosystems) fall short of <a href="https://gist.github.com/digikar99/ba2f0bb34021bfdc086b9c1c712ca228">my wishlist</a>. Thus, I have been developing <a href="https://digikar99.github.io/numericals/">numericals and dense-numericals</a> to fulfil this itch. I widely adopt:
 </p>
 
 <ul class="org-ul">
-<li><a href="https://github.com/digikar99/py4cl2-cffi">py4cl2-cffi</a>: finally, we have a CFFI approach to using python libraries from common lisp!</li>
-<li><a href="https://github.com/digikar99/py4cl2">py4cl2</a>: a bunch of incompatible changes and improvements over the original <a href="https://github.com/bendudson/py4cl">py4cl</a>; the goal is to enable the use of python libraries in common lisp in non-performance-intensive use cases. compared to py4cl, py4cl2 is still immature; like most things Common Lisp, I'll let time decide when it becomes mature enough.</li>
-<li><a href="https://github.com/digikar99/extensible-compound-types">extensible-compound-types</a>: common lisp provides DEFTYPE that only allows defining type <i>aliases</i> aka <i>derived type specifiers</i>. That means there is no way through which users can define types with true type parameters. The closest is <code>satisfies</code> which gets ugly quickly. <code>extensible-compound-types</code> is an attempt to overcome this limitation.</li>
-<li><a href="https://github.com/digikar99/polymorphic-functions/">polymorphic-functions</a>: a library that intends to bring type-based adhoc, subtype as well as (limited) parametric polymorphism to common lisp; yeah common lisp does already have a super neat class-based polymorphism known as CLOS with a MOP, and a few <a href="https://github.com/alex-gutev/static-dispatch">helper</a> <a href="https://github.com/marcoheisig/fast-generic-functions">libraries</a>; but I and a few others have wished for type-based polymorphism.</li>
-<li><a href="https://github.com/digikar99/dense-arrays">dense-arrays</a>: a numpy-like array object for common lisp</li>
-<li><a href="https://github.com/digikar99/numericals">numericals</a>: a simd-based basic math library for common lisp</li>
-<li><a href="https://common-lisp-libraries.readthedocs.io/">common-lisp-libraries.readthedocs.io</a>: an attractive documentation site for some of the defacto common lisp libraries</li>
+<li><a href="https://github.com/digikar99/bmas">BMAS</a> backed by <a href="https://sleef.org/">SLEEF</a>, which uses SIMD operations to speed things up</li>
+<li>and more recently, <a href="https://eigen.tuxfamily.org/">Eigen</a> backed by <a href="https://www.netlib.org/blas/">BLAS</a> and <a href="https://www.netlib.org/lapack/">LAPACK</a></li>
 </ul>
 
-<div style="text-align:center;display:block;"><img src="./images/dense-numericals.png" style="width:720px;"/></div>
-
 <p>
-*If 5-10 years sounds like too much, then, welcome to the world of Common Lisp :). This language was ANSI standardized in 1994, which means if you stuck to the ANSI standard (or perhaps the then defacto libraries), then code written in the year 2000 should still be working in 2020. Well, that is in theory; in practice, I still lack much experience.
+This is further coupled with multithreading using <a href="https://lparallel.org/">lparallel</a> and the C-library builtin <a href="https://www.openmp.org/">OpenMP</a>.
 </p>
 
 <p>
-For my purposes, I absolutely do need Common Lisp implementations with a working CLTL2 (and some more) support. In my experience, SBCL does this reasonably. But the day this support vanishes from SBCL, I might as well drop Common Lisp in favor of another language.
+numericals works with standard Common Lisp arrays, this means, you can use it in conjunction with any other Lisp array computing library that also works with Lisp arrays. You can read more about numericals and dense-numericals <a href="https://digikar99.github.io/numericals/">here</a>.
+</p>
+
+<p>
+This line of work has actually spanned two C libraries. So, if you are a C developer and are looking for projects to contribute, here are two such projects.
+</p>
+
+<ul class="org-ul">
+<li><a href="https://github.com/digikar99/bmas">BMAS</a>: The ultimate goal is to provide a certain set of math operations across different SIMD platforms and for strided vectors. Currently, full support is only limited to AVX256.</li>
+<li><a href="https://github.com/digikar99/ceigen_lite">ceigen<sub>lite</sub></a>: <a href="https://eigen.tuxfamily.org/">Eigen</a> is an excellent C++ library for numerical computing with vectors and matrices. ceigen<sub>lite</sub> aims to provide a C interface to some of the common tasks that Eigen is capable of. In some sense, this will be a higher level interface to BLAS and LAPACK. Currently, this is just 20% complete. Besides, the compile times are enormous, so distributing the library as a binary would be great! But this has only so far been done for linux-amd64. Porting to other OS and architectures remains.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them" class="outline-3">
+<h3 id="3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">3. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them</h3>
+<div class="outline-text-3" id="text-3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">
+<p>
+Despite being a great language, I have run into several issues while using Common Lisp to develop the numerical computing library described above:
+</p>
+
+<ol class="org-ol">
+<li><b>CLOS methods dispatch over common lisp classes but not types.</b> There does not seem to be any trivial way to adapt MOP to dispatch on types instead of classes. Thus, there is no way for ANSI common lisp to dispatch over specialized array types.</li>
+<li><b>ANSI common lisp does not allow defining user-defined compound types</b> similar to the builtin <code>(vector &amp;optional element-type)</code> or <code>(integer &amp;optional lower-limit higher-limit)</code>. Types defined using <a href="http://clhs.lisp.se/Body/m_deftp.htm">CL:DEFTYPE</a> are what CLHS calls <a href="http://clhs.lisp.se/Body/26_glo_d.htm#derived_type">derived type</a> specifiers, that is, mere abbreviations and simple combinations of existing types.</li>
+<li>CLOS-based multiple dispatch might not be the best way to implement adhoc polymorphism compared to <b>traits</b>.</li>
+<li><code>cl:coerce</code> is non-extensible.</li>
+</ol>
+
+<p>
+These issues were previously addressed using <a href="https://github.com/digikar99/polymorphic-functions">polymorphic-functions</a>, <a href="https://github.com/digikar99/extensible-compound-types">extensible-compound-types</a>, <a href="https://github.com/digikar99/extensible-optimizing-coerce">extensible-optimizing-coerce</a>, coupled with a number of add-ons and supporting libraries. Over time, these projects became more closely related than what was originally envisioned. Thus, PELTADOT is an attempt to bring all of them together to make maintenance, version control and dependency management easier. See <a href="https://gitlab.com/digikar/peltadot/">here</a> for more information.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-conda-lisp" class="outline-2">
+<h2 id="conda-lisp">Conda Lisp</h2>
+<div class="outline-text-2" id="text-conda-lisp">
+<p>
+Lately, I'm facing a growing need for a conda-forge like channel for Common Lisp libraries. Hopefully, this will be much simpler and easier to maintain than conda-forge. But, it still needs to be set up. Ping me if you can relate to this need.
+</p>
+
+<p>
+The Conda Lisp channel will not only provide lisp libraries, but also lisp implementations. In addition, it will be possible for implementations and libraries to depend on non-lisp dependencies that are already a part of conda-forge. Version control and conflict resolution should also be handled well.
+</p>
+
+<p>
+If you think anaconda is slow, you are not alone: developers have gotten together to create <a href="https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html">micromamba</a>. If you think conda-build is slow, again, you are not alone; you should check out <a href="https://github.com/prefix-dev/rattler-build/">rattler-build</a>.
 </p>
 </div>
 </div>

@@ -1,0 +1,68 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="common.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil title:nil
+#+TITLE: Artificial Intelligence and Cognitive Science
+
+#+html: <nav>
+[[file:index.html][Home]] | *AI AND COGSCI* | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:miscellaneous.html][Miscellaneous]]
+#+html: </nav>
+
+-----
+
+* A. Publications
+
+1. Ayare, S., Srivastava, N. (2023). Tracking Multiple Objects without Indexes [Paper Presentation]. Proceedings of the Annual Meeting of the Cognitive Science Society, 45, Sydney, Australia. Retrieved from /https://escholarship.org/uc/item/29x6398w/
+
+2. Ayare, S., Srivastava, N. (2024). Multiple Object Tracking Without Pre-attentive Indexing. /Open Mind/, 8, 278-308. /https://doi.org/10.1162/opmi_a_00128/
+
+* B. Potential Collaborations
+
+Where possible, I've labelled the projects in terms of (i) whether they are concrete enough or speculative. (ii) the time it might take to complete them sufficiently, given a certain (iii) broad undergraduate background. Note that I'll only be able to provide an informal collaboration. But, if you are looking for formal collaboration or supervision, take a look at the people I mention.
+
+** Multiple Object Tracking without Correspondence
+
+Both publications 1 (conference) and 2 (journal) propose and demonstrate that it is possible to perform multiple object tracking (MOT) without solving the global correspondence problem of data association. There are a few caveats, which can form the basis of future work and collaboration:
+
+1. *[1 year, concrete, engineering] MOT and Optical Flow:* We primarily use instantenous location information for MOT. This information is, however, insufficient for human-level tracking performance as the analysis in publication 2 shows. A possible improvement would use locally computed optical flow as a proxy for velocity information and use it for tracking. Is this really a novel idea that the entire 40 years and counting of MOT engineering literature has not taken note of? If you are familiar with the engineering side of MOT literature - or want to study it and see for yourself - I'd love to talk and potentially turn it into a research project. I think surveying this literature would be a major undertaking, and I'd have no qualms giving first authorship to you. If you are looking for formal collaboration, have a talk with [[https://www.cgs.iitk.ac.in/user/nsrivast/][Prof. Nisheeth Srivastava]].
+
+2. *[1 year, concrete, engineering] MOT and Neuromorphic Computing:* In both publications, we allude to a possible implementation of a scaleable MOT algorithm on neuromorphic chips. Has no one /really/ tested anything so simple on neuromorphic chips? What are the existing algorithms for MOT on neuromorphic chips? What exactly are neuromorphic chips, beyond the high-level idea that they emulate highly interconnected neurons? What tools does one use to program them? What is the maturity of these chips? Are the tools mature enough to be hardware and version independent? Can we [inefficiently] emulate them on traditional CPUs or GPUs? What programming challenges do such chips create? Again, obtaining a grounding in the literature and tools pertaining to this seems non-trivial. Anyone well-poised to answer these questions would be deserving of first authorship. If you are looking for formal collaboration, have a talk with [[https://www.cgs.iitk.ac.in/user/nsrivast/][Prof. Nisheeth Srivastava]].
+
+3. *[1 year, speculative, cognitive science] MOT and Identity Tracking:* This has been the main topic of the above publications. They are centered around the Visual Indexing Theory by Pylyshyn, with the claim being that humans perform MOT through the use of a certain mechanism known as indexes or indexicals. These provide a primitive means of identity maintenance. However, [[citet:&Pylyshyn2004]] reported that humans are good at tracking but not identity maintenance. The two publications take the stance that identity maintenance is /not/ a primitive process and that high-level cognition is essential --- even though high level cognition itself might operate on locally available information. However, towards the end of [[citet:&Pylyshyn2004]], he alluded to the possibility of indexes being local to visual system. This provides an alternative explanation for why /in the particular experiments of [[citet:&Pylyshyn2004]] as well as [[cite:&ayare2024tracking]], identification accuracy is poorer than tracking accuracy. We need an alternative experiment in which we can test identity maintenance through purely visual processes. Thinking about this will probably constitute one of my past-times over the next year or two. Amongst the people I have interacted with, in alphabetical order, check out [[https://www.sydney.edu.au/science/about/our-people/academic-staff/alex-holcombe.html][Prof. Alex Holcombe]], [[https://sites.google.com/view/devpriya-kumar/lab-page][Prof. Devpriya Kumar]], [[https://sites.google.com/site/ammuns68/][Prof. Narayanan Srinivasan]], or [[https://www.cgs.iitk.ac.in/user/nsrivast/][Prof. Nisheeth Srivastava]] for formal collaboration. Prof. Alex has particularly written two recent comprehensive works ([[citet:&holcombe2023]], [[citet:&holcombe2022trackinglimits]]) on the psychological side of Multiple Object Tracking.
+
+** [10 years, speculative, computer science] Cognition as the Tracking of Individuals
+
+It seems to be the norm in the Computer Science-y way of looking at things to construe reality in terms of types. However, reading [[citet:&pylyshyn2007book]], one may be convinced that, rather than types, it is the tokens or untyped individual entities that are fundamental. Types come after tokens or individuals, and in my speculation, they are closely linked to the mechanisms of communication between individuals that our species has evolved. 
+
+Are there any existing cognitive architecture projects that acknowledge this distinction? What would it take to actually build a cognitive architecture around these principles? I hope to someday answer these questions. Feel free to ping me if these questions seem interesting!
+
+** [4 years, speculative, cognitive science] Causality: Discovering Causal Variables
+
+If thinking is acting in an imagined space, we need models of the world - a simplification or abstraction of the world. By definition, models cannot capture everything about the world. But it turns out that models which incorporate causality are actually amongst such good models (See section 1.3 of version 2 of [[http://bayes.cs.ucla.edu/BOOK-2K/][this book]].).
+
+In fact, causal models have the potential to address issues related to transfer learning and out-of-distribution generalization that have been picking up pace in the machine learning community over the last decade. (See [[citet:&scholkopf2021]].) However, most research on causality either involves the causal models or at least the variables being given apriori. It is unclear how such variables may be discovered from high dimensional data. It should certainly be possible, since humans as well as non-human animals seem to be able to do it quite well.
+
+I expect investigating how humans - and particularly children - discover causal variables to constitute the major part of my upcoming doctoral studies.
+
+** [unknown years, speculative, cognitive science] Perspective Taking, Symbolic Communication and Social Cognition
+
+Over the years, several puzzles have crept up in my head.
+
+1. Both language and perspective taking are said to be uniquely human skills. Can a species have language without perspective taking, or perspective taking without language?
+2. My understanding of Imitation Learning in the domain of Robotics and Computer Science is that it does not use Perspective Taking. An argument I relate to is that practitioners of robotics or computer science try to teach machines to mimic surface level behavior, but seldom the goals. But even children as young as one year old try to learn the goals of the people around them --- their intentions --- and not just mimic their surface level behaviors.
+3. Pylyshyn's work [[cite:&pylyshyn2007book]] puts forth how symbols (concepts) in the mind relate to the non-symbolic (nonconceptual) visual elements in a scene. However, symbolic communication between people through natural language requires symbols in different heads to have common referents. Perspective taking seems to be a way by which they come to have common referents.
+4. For the same reality, different people have come up with different theories about the world. For instance, at some point in history, the idea that the earth was flat was quite accepted. At another point, earth was taken to be the center of the universe. At some another point, the sun as the center. And today, we accept there is no center (?). Thus, despite the same reality, our causal models have been radically different. There is no true objective causal model of the world. Where do the variables in the causal models come from then? Again, perspective taking seems to be the answer*.
+
+While the primary focus for my doctoral studies will be on the Cognitive Science side of things. If you are on the engineering, artificial intelligence, or machine learning side of things, a collaboration is welcome!
+
+*That's not to say species without culture cannot have causal models of the world. Apparantly, our pets do seem to have some understanding of causality about the world. What aspects of causality come through our perception vs what aspects through culture, that is an interesting question in itself.
+
+TODO: Provide citations for examples and more pointers.
+
+* References
+:properties:
+:html_container_class: references
+:end:
+
+bibliography:~/references.bib

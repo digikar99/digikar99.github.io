@@ -1,48 +1,30 @@
 #+HTML_HEAD: <meta charset="utf-8">
 #+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="index.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="common.css">
 #+HTML_HEAD: <script src="index.js"></script>
 #+OPTIONS: toc:nil num:nil title:nil html-postamble:nil
 #+TITLE: Shubhamkar Ayare (digikar)
 
-#+begin_export html
-<div class='defining-pic'><img id='defining-pic-img' src='defining-pic.jpg' /></div>
-#+end_export
-
-#+begin_export html
-<span id="home"></span>
-#+end_export
-
-* Shubhamkar Ayare
-
-#+BEGIN_CENTER
-*HOME* | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:thoughts.html][AI and CogSci]] | [[file:books-blog.html][Books and Blogs]] | [[./digimon.html][Digimon]]
-#+END_CENTER
+#+html: <nav>
+*HOME* | [[file:ai-cogsci.html][AI and CogSci]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:miscellaneous.html][Miscellaneous]]
+#+html: </nav>
 
 -----
 
-I am a graduate student under the Cognitive Science department at IIT Kanpur, India. As part of my master's thesis, I investigated the [[https://en.wikipedia.org/wiki/Visual_indexing_theory][Visual Indexing Theory]] of [[https://en.wikipedia.org/wiki/Zenon_Pylyshyn][Dr. Zenon Pylyshyn]] (also see [[citet:&pylyshyn2007book]]). I've worked on an index-less model of human multiple object tracking of visually identical objects under the guidance of [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]] [[cite:&ayare2023tracking]]
+Hello, I am Shubhamkar Ayare. My work may be summarized in terms of two main spheres of life.
 
 #+begin_export html
 <div id='profile-pic'><img src='profile-pic.jpg' /></div>
 #+end_export
 
-I did my undergraduate studies in Computer Science at IIT Bombay, where I had the chance to acquaintance myself with Reinforcement Learning and do a project on Tangram Solving using Constraint Satisfaction under [[https://www.cse.iitb.ac.in/~shivaram/][Prof. Shivaram Kalyanakrishnan]].
+*Primary sphere of a graduate student.* I have recently completed my master's in Cognitive Science from [[https://www.iitk.ac.in/][IIT Kanpur]]. There, I have worked under [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]] as part of the [[https://www.cgs.iitk.ac.in/user/nsrivast/platipus-lab/][PLATIPUS Lab]]. Currently, I'm looking forward to be part of the [[https://cdc.ceu.edu/][Cognitive Development Center]] of [[https://ceu.edu/][Central European University]] and, more particularly, the Causality Lab under [[https://www.jfkominsky.com/index.html][Prof. Jonathan Kominsky]] as part of my upcoming PhD studies.
 
-I spend my free time developing and maintaining Common Lisp libraries. These include a library to [[https://github.com/digikar99/py4cl2-cffi][call python callables from Common Lisp]] or a (very primitive) library for [[https://digikar99.github.io/numericals/][high performance numerical computing]] powered by [[https://github.com/digikar99/bmas][SIMD operations]]. Now, [[https://gist.github.com/digikar99/b76964faf17b3a86739c001dc1b14a39][Common Lisp has its limitations]], so while developing the numerical computing library, I have also gotten dragged into [[https://gitlab.com/digikar/peltadot/][extending Common Lisp's types and dispatching over them]].
+My primary sphere is largely driven by a quest to put the unknown unknowns relevant for building machines with human-like general intelligence into a more-or-less consistent framework. [[file:ai-cogsci.html][See what research areas this has touched so far.]]
 
-My interest in Common Lisp has stemmed from a search for a stable platform for long term projects, potentially spanning decades. It is [[http://random-state.net/features-of-common-lisp.html][more flexible yet stable than Python]] and at least [[https://stackoverflow.com/questions/19877268/why-are-python-and-ruby-so-slow-while-lisp-implementations-are-fast][one of its implementations (SBCL) is an optimizing compiler]] generating native code as performant as C compilers. These days, there are various [[https://portability.cl/][defacto libraries]] providing support for a number of modern features including multithreading and unicode amongst others. There are also [[https://github.com/coalton-lang/coalton/][efforts to bring the goodness of Hindley-Milner type system to Common Lisp]].
+*Secondary sphere of a [[https://github.com/digikar99/][Common Lisp enthusiast]].* This mainly began around my undergraduate days in Computer Science at [[https://www.iitb.ac.in/][IIT Bombay]]. It has been motivated by a search for a powerful practical yet stable programming platform for long term projects. This sphere contributes to my primary sphere every now and then, but it may be understood independently. [[file:common-lisp-and-emacs.html][See what projects this sphere had led to.]]
 
-I fancy the development of machines with human-like general intelligence. But after an initial encounter with artificial intelligence and machine learning, I have ended up on [[file:ai-cgs/20th-century.html][a tour to Dreyfus and Hiedeggerian AI]]. 
-
-I now think research into causality cite:&gopnik2022causal and on enabling robots and machines to learn from their sociocultural environments cite:&colas2022language would be important precursors for general intelligence. Reinforcement learning with some augmentations cite:&colas2022autotelic looks like a useful framework for both these goals.
-
-* References
-:properties:
-:html_container_class: references
-:end:
-
-bibliography:~/references.bib
+Besides these two spheres of life, I keep reading and sharing links to interesting, useful, or silly articles I run into or, sometimes, write. Upon a friend's recommendation, I'm maintaining them [[file:miscellaneous.html][here]].
 
 * Contact
 
@@ -50,11 +32,10 @@ Email: shubhamayare[at]yahoo[dot]co[dot]in.
 
 #+html: <hr/>
 
-#+begin_slideshow-container
-
-#+end_slideshow-container
-
 #+begin_center
+#+begin_slideshow-container
+Please enable javascript for random quotes from anime.
+#+end_slideshow-container
 
 /Ideas are dime a dozen. Tell me your trials, your learnings, and the assumptions behind them./
 

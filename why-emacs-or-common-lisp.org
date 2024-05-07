@@ -1,0 +1,95 @@
+* 1. Why Emacs (or Vi) in [insert year]?
+:PROPERTIES:
+:CUSTOM_ID: 1-why-emacs-or-vi-in-insert-year
+:END:
+
+If something is not discouraged by a community years after its first release, then that something must have some merit subject to your own scrutiny. Vi is ubiquitous, and its modal-editing is a boon for editing - not necessarily writing - code. Emacs is extensible, and its community has provided [[https://github.com/emacs-evil/evil][Extensible VI Layer]] to provide the best of Emacs and Vi.
+
+#+html: <br>
+#+html: <br>
+
+#+BEGIN_CENTER
+[[file:images/emacs.png]]
+
+This is emacs.
+#+END_CENTER
+
+#+html: <br>
+#+html: <br>
+
+#+BEGIN_CENTER
+[[https://raw.githubusercontent.com/hlissner/doom-emacs/screenshots/main.png]]
+
+This also is [[https://github.com/hlissner/doom-emacs][emacs]].
+#+END_CENTER
+
+#+html: <br>
+#+html: <br>
+
+#+BEGIN_CENTER
+https://raw.githubusercontent.com/syl20bnr/spacemacs/develop/doc/img/spacemacs-python.png
+
+This also is [[https://github.com/syl20bnr/spacemacs][emacs]].
+#+END_CENTER
+
+#+html: <br>
+#+html: <br>
+
+And if you ever feel annoyed by constantly switching between insert and edit mode in Vi, feel free to try out [[https://github.com/digikar99/smart-god-mode][smart-god-mode]]. The only thing beyond it (barring minor tweaks) would be a brain-computer-interface itself.
+
+* 2. Can Emacs substitute my IDE?
+:PROPERTIES:
+:CUSTOM_ID: 2-can-emacs-substitute-my-ide
+:END:
+
+If you know why exactly you need the IDE for, then, no. If you actually use the PyCharm or IntelliJ IDEA features dedicated to those languages, then, no, emacs - does not replace a full-blown IDE. But, [[https://www.reddit.com/r/emacs/search?q=intellij&restrict_sr=1][you could always ask a community]].
+
+Although as far as Common Lisp is concerned, the [[https://github.com/slime/slime][Superior Lisp Interaction Mode for Emacs (SLIME)]] absolutely blows most things out of the water even though it has its own shortcomings.
+
+#+BEGIN_CENTER
+#+BEGIN_EXPORT html
+<iframe width="932" height="524" src="https://www.youtube.com/embed/3GEAINRCbJ4?list=PLCpux10P7KDKPb4eI5b_qSnQaY1ePGKGK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+#+END_EXPORT
+#+END_CENTER
+
+* 3. Recommended Resources to start with Common Lisp
+:PROPERTIES:
+:CUSTOM_ID: 3-recommended-resources-to-start-with-common-lisp
+:END:
+
+[[https://gist.github.com/digikar99/a1925ad3249a431c9eecf09af2fdef8a][Opinionated Common Lisp Resources 2020]]
+
+* 4. Do I have to learn Emacs to learn Common Lisp?
+:PROPERTIES:
+:CUSTOM_ID: 4-do-i-have-to-learn-emacs-to-learn-common-lisp
+:END:
+
+If you are in it for the long haul, yes. But, something like [[https://github.com/digikar99/emacs-noob/tree/slime-company-modern][emacs-noob/slime-company-modern]] or [[https://github.com/corvideon/mousemacs][mousemacs]] can provide familiar (non-emacs/vi) key-bindings, so that you can focus on Common Lisp first, and then on Emacs.
+
+* 5. Some projects you have done / are working on
+:PROPERTIES:
+:CUSTOM_ID: 5-some-projects-you-have-done--are-working-on
+:END:
+
+All of these are immature projects. Wait for another 5-10* years to test their maturity.
+
+With Emacs, there is
+
+- [[https://github.com/digikar99/smart-god-mode][smart-god-mode]]: if you'd wish to do me or emacs community a favour - or want to tinker around in emacs, look into merging it into its original [[https://github.com/emacsorphanage/god-mode][god-mode]] repository
+- [[https://github.com/digikar99/emacs-noob][emacs-noob]]: a simplified starter kit for emacs; you should check out [[https://github.com/emacs-tw/awesome-emacs][awesome-emacs]] before sticking with it though! Again, here too, you could look into improving the code / repository structure by implementing DRY-principles while keeping the usage as simple as possible (drag 'n drop).
+
+With Common Lisp, there is
+
+- [[https://github.com/digikar99/py4cl2-cffi][py4cl2-cffi]]: finally, we have a CFFI approach to using python libraries from common lisp!
+- [[https://github.com/digikar99/py4cl2][py4cl2]]: a bunch of incompatible changes and improvements over the original [[https://github.com/bendudson/py4cl][py4cl]]; the goal is to enable the use of python libraries in common lisp in non-performance-intensive use cases. compared to py4cl, py4cl2 is still immature; like most things Common Lisp, I'll let time decide when it becomes mature enough.
+- [[https://github.com/digikar99/extensible-compound-types][extensible-compound-types]]: common lisp provides DEFTYPE that only allows defining type /aliases/ aka /derived type specifiers/. That means there is no way through which users can define types with true type parameters. The closest is =satisfies= which gets ugly quickly. =extensible-compound-types= is an attempt to overcome this limitation.
+- [[https://github.com/digikar99/polymorphic-functions/][polymorphic-functions]]: a library that intends to bring type-based adhoc, subtype as well as (limited) parametric polymorphism to common lisp; yeah common lisp does already have a super neat class-based polymorphism known as CLOS with a MOP, and a few [[https://github.com/alex-gutev/static-dispatch][helper]] [[https://github.com/marcoheisig/fast-generic-functions][libraries]]; but I and a few others have wished for type-based polymorphism.
+- [[https://github.com/digikar99/dense-arrays][dense-arrays]]: a numpy-like array object for common lisp
+- [[https://github.com/digikar99/numericals][numericals]]: a simd-based basic math library for common lisp
+- [[https://common-lisp-libraries.readthedocs.io/][common-lisp-libraries.readthedocs.io]]: an attractive documentation site for some of the defacto common lisp libraries
+
+#+html: <div style="text-align:center;display:block;"><img src="./images/dense-numericals.png" style="width:720px;"/></div>
+
+*If 5-10 years sounds like too much, then, welcome to the world of Common Lisp :). This language was ANSI standardized in 1994, which means if you stuck to the ANSI standard (or perhaps the then defacto libraries), then code written in the year 2000 should still be working in 2020. Well, that is in theory; in practice, I still lack much experience.
+
+For my purposes, I absolutely do need Common Lisp implementations with a working CLTL2 (and some more) support. In my experience, SBCL does this reasonably. But the day this support vanishes from SBCL, I might as well drop Common Lisp in favor of another language.

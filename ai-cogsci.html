@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-05-07 Tue 08:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Artificial Intelligence and Cognitive Science</title>
+<meta name="author" content="shubhamkar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="others.css">
+<link rel="stylesheet" type="text/css" href="common.css">
+
+<link rel='stylesheet' href='styles.css'>
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans' />
+</head>
+<body>
+<div id="content" class="content">
+<nav>
+<p>
+<a href="index.html">Home</a> | <b>AI AND COGSCI</b> | <a href="common-lisp-and-emacs.html">Common Lisp and Emacs</a> | <a href="miscellaneous.html">Miscellaneous</a>
+</p>
+</nav>
+
+<hr />
+
+<div id="outline-container-org1e8ccde" class="outline-2">
+<h2 id="org1e8ccde">A. Publications</h2>
+<div class="outline-text-2" id="text-org1e8ccde">
+<ol class="org-ol">
+<li>Ayare, S., Srivastava, N. (2023). Tracking Multiple Objects without Indexes [Paper Presentation]. Proceedings of the Annual Meeting of the Cognitive Science Society, 45, Sydney, Australia. Retrieved from <i><a href="https://escholarship.org/uc/item/29x6398w">https://escholarship.org/uc/item/29x6398w</a></i></li>
+
+<li>Ayare, S., Srivastava, N. (2024). Multiple Object Tracking Without Pre-attentive Indexing. <i>Open Mind</i>, 8, 278-308. <i><a href="https://doi.org/10.1162/opmi_a_00128">https://doi.org/10.1162/opmi_a_00128</a></i></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3e24651" class="outline-2">
+<h2 id="org3e24651">B. Potential Collaborations</h2>
+<div class="outline-text-2" id="text-org3e24651">
+<p>
+Where possible, I've labelled the projects in terms of (i) whether they are concrete enough or speculative. (ii) the time it might take to complete them sufficiently, given a certain (iii) broad undergraduate background. Note that I'll only be able to provide an informal collaboration. But, if you are looking for formal collaboration or supervision, take a look at the people I mention.
+</p>
+</div>
+
+<div id="outline-container-org2a2a6cb" class="outline-3">
+<h3 id="org2a2a6cb">Multiple Object Tracking without Correspondence</h3>
+<div class="outline-text-3" id="text-org2a2a6cb">
+<p>
+Both publications 1 (conference) and 2 (journal) propose and demonstrate that it is possible to perform multiple object tracking (MOT) without solving the global correspondence problem of data association. There are a few caveats, which can form the basis of future work and collaboration:
+</p>
+
+<ol class="org-ol">
+<li><b>[1 year, concrete, engineering] MOT and Optical Flow:</b> We primarily use instantenous location information for MOT. This information is, however, insufficient for human-level tracking performance as the analysis in publication 2 shows. A possible improvement would use locally computed optical flow as a proxy for velocity information and use it for tracking. Is this really a novel idea that the entire 40 years and counting of MOT engineering literature has not taken note of? If you are familiar with the engineering side of MOT literature - or want to study it and see for yourself - I'd love to talk and potentially turn it into a research project. I think surveying this literature would be a major undertaking, and I'd have no qualms giving first authorship to you. If you are looking for formal collaboration, have a talk with <a href="https://www.cgs.iitk.ac.in/user/nsrivast/">Prof. Nisheeth Srivastava</a>.</li>
+
+<li><b>[1 year, concrete, engineering] MOT and Neuromorphic Computing:</b> In both publications, we allude to a possible implementation of a scaleable MOT algorithm on neuromorphic chips. Has no one <i>really</i> tested anything so simple on neuromorphic chips? What are the existing algorithms for MOT on neuromorphic chips? What exactly are neuromorphic chips, beyond the high-level idea that they emulate highly interconnected neurons? What tools does one use to program them? What is the maturity of these chips? Are the tools mature enough to be hardware and version independent? Can we [inefficiently] emulate them on traditional CPUs or GPUs? What programming challenges do such chips create? Again, obtaining a grounding in the literature and tools pertaining to this seems non-trivial. Anyone well-poised to answer these questions would be deserving of first authorship. If you are looking for formal collaboration, have a talk with <a href="https://www.cgs.iitk.ac.in/user/nsrivast/">Prof. Nisheeth Srivastava</a>.</li>
+
+<li><b>[1 year, speculative, cognitive science] MOT and Identity Tracking:</b> This has been the main topic of the above publications. They are centered around the Visual Indexing Theory by Pylyshyn, with the claim being that humans perform MOT through the use of a certain mechanism known as indexes or indexicals. These provide a primitive means of identity maintenance. However, <a href="#citeproc_bib_item_4">Pylyshyn 2004</a> reported that humans are good at tracking but not identity maintenance. The two publications take the stance that identity maintenance is <i>not</i> a primitive process and that high-level cognition is essential &#x2014; even though high level cognition itself might operate on locally available information. However, towards the end of <a href="#citeproc_bib_item_4">Pylyshyn 2004</a>, he alluded to the possibility of indexes being local to visual system. This provides an alternative explanation for why /in the particular experiments of <a href="#citeproc_bib_item_4">Pylyshyn 2004</a> as well as (<a href="#citeproc_bib_item_1">Ayare and Srivastava 2024</a>), identification accuracy is poorer than tracking accuracy. We need an alternative experiment in which we can test identity maintenance through purely visual processes. Thinking about this will probably constitute one of my past-times over the next year or two. Amongst the people I have interacted with, in alphabetical order, check out <a href="https://www.sydney.edu.au/science/about/our-people/academic-staff/alex-holcombe.html">Prof. Alex Holcombe</a>, <a href="https://sites.google.com/view/devpriya-kumar/lab-page">Prof. Devpriya Kumar</a>, <a href="https://sites.google.com/site/ammuns68/">Prof. Narayanan Srinivasan</a>, or <a href="https://www.cgs.iitk.ac.in/user/nsrivast/">Prof. Nisheeth Srivastava</a> for formal collaboration. Prof. Alex has particularly written two recent comprehensive works (<a href="#citeproc_bib_item_3">Holcombe 2023</a>, <a href="#citeproc_bib_item_2">Holcombe 2022</a>) on the psychological side of Multiple Object Tracking.</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgee15700" class="outline-3">
+<h3 id="orgee15700">[10 years, speculative, computer science] Cognition as the Tracking of Individuals</h3>
+<div class="outline-text-3" id="text-orgee15700">
+<p>
+It seems to be the norm in the Computer Science-y way of looking at things to construe reality in terms of types. However, reading <a href="#citeproc_bib_item_5">Pylyshyn 2007</a>, one may be convinced that, rather than types, it is the tokens or untyped individual entities that are fundamental. Types come after tokens or individuals, and in my speculation, they are closely linked to the mechanisms of communication between individuals that our species has evolved. 
+</p>
+
+<p>
+Are there any existing cognitive architecture projects that acknowledge this distinction? What would it take to actually build a cognitive architecture around these principles? I hope to someday answer these questions. Feel free to ping me if these questions seem interesting!
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4faecb6" class="outline-3">
+<h3 id="org4faecb6">[4 years, speculative, cognitive science] Causality: Discovering Causal Variables</h3>
+<div class="outline-text-3" id="text-org4faecb6">
+<p>
+If thinking is acting in an imagined space, we need models of the world - a simplification or abstraction of the world. By definition, models cannot capture everything about the world. But it turns out that models which incorporate causality are actually amongst such good models (See section 1.3 of version 2 of <a href="http://bayes.cs.ucla.edu/BOOK-2K/">this book</a>.).
+</p>
+
+<p>
+In fact, causal models have the potential to address issues related to transfer learning and out-of-distribution generalization that have been picking up pace in the machine learning community over the last decade. (See <a href="#citeproc_bib_item_6">Schölkopf et al. 2021</a>.) However, most research on causality either involves the causal models or at least the variables being given apriori. It is unclear how such variables may be discovered from high dimensional data. It should certainly be possible, since humans as well as non-human animals seem to be able to do it quite well.
+</p>
+
+<p>
+I expect investigating how humans - and particularly children - discover causal variables to constitute the major part of my upcoming doctoral studies.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1edfc3d" class="outline-3">
+<h3 id="org1edfc3d">[unknown years, speculative, cognitive science] Perspective Taking, Symbolic Communication and Social Cognition</h3>
+<div class="outline-text-3" id="text-org1edfc3d">
+<p>
+Over the years, several puzzles have crept up in my head.
+</p>
+
+<ol class="org-ol">
+<li>Both language and perspective taking are said to be uniquely human skills. Can a species have language without perspective taking, or perspective taking without language?</li>
+<li>My understanding of Imitation Learning in the domain of Robotics and Computer Science is that it does not use Perspective Taking. An argument I relate to is that practitioners of robotics or computer science try to teach machines to mimic surface level behavior, but seldom the goals. But even children as young as one year old try to learn the goals of the people around them &#x2014; their intentions &#x2014; and not just mimic their surface level behaviors.</li>
+<li>Pylyshyn's work (<a href="#citeproc_bib_item_5">Pylyshyn 2007</a>) puts forth how symbols (concepts) in the mind relate to the non-symbolic (nonconceptual) visual elements in a scene. However, symbolic communication between people through natural language requires symbols in different heads to have common referents. Perspective taking seems to be a way by which they come to have common referents.</li>
+<li>For the same reality, different people have come up with different theories about the world. For instance, at some point in history, the idea that the earth was flat was quite accepted. At another point, earth was taken to be the center of the universe. At some another point, the sun as the center. And today, we accept there is no center (?). Thus, despite the same reality, our causal models have been radically different. There is no true objective causal model of the world. Where do the variables in the causal models come from then? Again, perspective taking seems to be the answer*.</li>
+</ol>
+
+<p>
+While the primary focus for my doctoral studies will be on the Cognitive Science side of things. If you are on the engineering, artificial intelligence, or machine learning side of things, a collaboration is welcome!
+</p>
+
+<p>
+*That's not to say species without culture cannot have causal models of the world. Apparantly, our pets do seem to have some understanding of causality about the world. What aspects of causality come through our perception vs what aspects through culture, that is an interesting question in itself.
+</p>
+
+<p>
+TODO: Provide citations for examples and more pointers.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga1c4f6c" class="outline-2 references">
+<h2 id="orga1c4f6c">References</h2>
+<div class="outline-text-2" id="text-orga1c4f6c">
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Ayare, Shubhamkar, and Nisheeth Srivastava. 2024. “Multiple Object Tracking Without Pre-attentive Indexing.” <i>Open Mind</i> 8: 278–308. doi:<a href="https://doi.org/10.1162/opmi_a_00128">10.1162/opmi_a_00128</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Holcombe, Alex O. 2022. “Temporal Crowding Imposes Severe Constraints on Multiple Object Tracking.” <a href="https://trackinglimits.whatanimalssee.com/">https://trackinglimits.whatanimalssee.com/</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>———. 2023. <i>Attending to Moving Objects</i>. Elements in Perception. Cambridge University Press. doi:<a href="https://doi.org/10.1017/9781009003414">10.1017/9781009003414</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Pylyshyn, Zenon W. 2004. “Some Puzzling Findings in Multiple Object Tracking: I. Tracking without Keeping Track of Object Identities.” <i>Visual Cognition</i> 11 (7). Informa UK Limited: 801–22. doi:<a href="https://doi.org/10.1080/13506280344000518">10.1080/13506280344000518</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>———. 2007. <i>Things and Places: How the Mind Connects with the World</i>. The Jean Nicod Lectures 2004. Cambridge, Mass.: MIT Press.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>Schölkopf, Bernhard, Francesco Locatello, Stefan Bauer, Nan Rosemary Ke, Nal Kalchbrenner, Anirudh Goyal, and Yoshua Bengio. 2021. “Toward Causal Representation Learning.” <i>Proceedings of the IEEE</i> 109 (5): 612–34. doi:<a href="https://doi.org/10.1109/JPROC.2021.3058954">10.1109/JPROC.2021.3058954</a>.</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

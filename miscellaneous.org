@@ -1,0 +1,259 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="common.css">
+#+HTML_HEAD: <script src="misc.js"></script>
+#+OPTIONS: toc:nil num:nil html-postamble:nil title:nil
+#+TITLE: Miscellaneous
+
+#+html: <nav>
+[[file:index.html][Home]] | [[file:ai-cogsci.html][AI and CogSci]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | *MISCELLANEOUS*
+#+html: </nav>
+
+-----
+
+I sometimes wish to write on topics that I'm just familiar with. But as soon as I sit down to write, I realize that while I may have spent a few days reading about a topic, there are others who spend their entire careers reading and learning about them. Simply sharing any interesting articles I come across seems to have a much higher utility for everyone involved. Below, I am maintaining such a list.
+
+#+begin_center
+/Any article on health and medicine is not a substitute for consulting your own medical provider./ 
+#+end_center
+
+* On This Page
+:PROPERTIES:
+:TOC:      :include all :depth 1 :ignore this
+:CUSTOM_ID: on-this-page
+:END:
+
+:CONTENTS:
+- [[#articles][Articles]]
+- [[#books][Books]]
+- [[#blogs][Blogs]]
+:END:
+
+* Articles
+:PROPERTIES:
+:CUSTOM_ID: articles
+:END:
+
+** Random
+:PROPERTIES:
+:CUSTOM_ID: random :ignore this
+:END:
+
+Note: This excludes Books and Blogs.
+
+#+HTML: <button id="show-random-articles">Show Random Articles</button>
+
+#+begin_random-articles
+Please enable javascript to see a random listing of articles from below.
+#+end_random-articles
+
+** Android
+:PROPERTIES:
+:CUSTOM_ID: android
+:END:
+
+- [[https://human9being9.wordpress.com/2020/03/30/apps-for-android-tablets/][Apps for Android Tablets - human9being9]]
+- [[https://www.reddit.com/r/GalaxyTab/comments/1cez6d3/using_samsung_taskbar_with_nova_or_other_third/][Using Samsung Taskbar with Nova or other third party launchers - reddit]]
+- [[https://www.reddit.com/r/emacs/comments/111ki1e/comment/jucysgq/?utm_source=share&utm_medium=web2x&context=3][Termux and Emacs on Android - reddit]]
+  - [[https://sourceforge.net/projects/android-ports-for-gnu-emacs/files/termux/][Android Ports for GNU Emacs Files - sourceforge]]
+- [[https://github.com/EXALAB/AnLinux-App][AnLinux - Run Linux on Android without root]]
+- [[https://f-droid.org/][F-Droid]]
+
+** Career Options
+:PROPERTIES:
+:CUSTOM_ID: career-options
+:END:
+
+- [[https://www.youtube.com/watch?v=CkwSeMrOPjc][The Comprehensive Map of Medicine]]
+- [[http://www.csfieldguide.org.nz/en/index.html][Computer Science Field Guide]]
+- [[https://www.grc.nasa.gov/WWW/k-12/airplane/][Beginner's Guide to Aeronautics]]
+- [[https://www.youtube.com/watch?v=pQgxiQAMTTo][The Map of Engineering]]
+
+** Climate Change
+:PROPERTIES:
+:CUSTOM_ID: climate-change
+:END:
+
+- [[https://news.cornell.edu/stories/1997/08/us-could-feed-800-million-people-grain-livestock-eat?fbclid=IwZXh0bgNhZW0CMTEAAR2yM83FdV7_YPBj7V2bAiJFHTTEDzoGN-EFzZtk1pAGYl49SvQVOYuWBkM_aem_ASS7GBDwOG2nqI3uPqqN14Y_nDAfTyxccNC6tQNCJ2U6iCp3Dvl64YIY3kbhDZXFe2KRlGIIusbyUY_nYuBmp3JN][U.S. could feed 800 million people with grain that livestock eat, Cornell ecologist advises animal scientists - Cornell Chronicle]]
+- [[https://www.theguardian.com/environment/ng-interactive/2019/jul/19/carbon-calculator-how-taking-one-flight-emits-as-much-as-many-people-do-in-a-year][How your flight emits as much CO2 as many people do in a year - The Guardian]]
+- [[https://usfblogs.usfca.edu/sustainability/2023/04/20/overconsumption-not-overpopulation-debunking-the-overpopulation-myth-and-eco-fascism/#:~:text=This%20idea%20is%20based%20on,same%20amount%20of%20fossil%20fuels.][Overconsumption, not Overpopulation: Debunking the Overpopulation Myth and Eco-Fascism]]
+
+** Common Lisp
+:PROPERTIES:
+:CUSTOM_ID: common-lisp
+:END:
+
+- [[https://lispcookbook.github.io/cl-cookbook/][The Common Lisp Cookbook]]
+- [[https://www.quora.com/What-is-your-favourite-non-mainstream-programming-language/answer/Shubhamkar-Ayare?ch=10&share=3d935d6a&srid=tWo7][Why Common Lisp]]
+- [[http://www.cs.cmu.edu/~dst/LispBook/][Common Lisp: A Gentle Introduction to Symbolic Computing]]
+- [[https://human9being9.wordpress.com/cs-se-aic/common-lisp-for-programmers/][Common Lisp for Programmers]]
+- [[https://github.com/lisp-maintainers/cl-repl][cl-repl - A colorful REPL for Common Lisp]]
+- [[https://github.com/nobody-famous/alive/][Alive - Common Lisp extension for VS Code]]
+- [[https://github.com/Enerccio/SLT][SLT - Common Lisp Language Plugin for Jetbrains IDE lineup]]
+- [[https://cl-community-spec.github.io/pages/index.html][CL Community Spec]]
+- [[https://novaspec.org/][Novaspec]]
+
+** Computer Science
+:PROPERTIES:
+:CUSTOM_ID: computer-science
+:END:
+
+- [[https://teachyourselfcs.com/][Teach Yourself Computer Science]]
+- [[http://www.csfieldguide.org.nz/en/index.html][Computer Science Field Guide]]
+- [[https://varunshenoy.substack.com/p/dont-major-in-computer-science][Don't Major in Computer Science - Varun Shenoy]]
+  
+** Emacs
+:PROPERTIES:
+:CUSTOM_ID: emacs
+:END:
+
+- [[https://github.com/corvideon/mousemacs][mousemacs]] - An Emacs setup without the idiosyncrasies of Emacs key bindings. Suitable for users of VS Code or other "modern" development environments.
+- [[https://github.com/org-roam/org-roam][org-roam - Plain-text Knowledge Management System]]
+- [[https://github.com/org-roam/org-roam-ui][org-roam-ui - A graphical frontend for exploring your org-roam Zettelkasten]]
+** Growing Up
+:PROPERTIES:
+:CUSTOM_ID: growing-up
+:END:
+
+- [[https://kidshealth.org/en/teens/][Resources for Teens - KidsHealth]]
+- [[https://www.psychologytoday.com/us/blog/fulfillment-any-age/201207/bragging-when-is-it-ok-and-when-is-it-not-ok][Bragging: When Is It OK and When Is It Not OK? - Psychology Today]]
+- [[https://www.quora.com/What-is-the-difference-between-introversion-and-social-anxiety][The Difference Between Introversion and Social Anxiety]]
+- [[https://www.youtube.com/watch?v=ESqfW_kyZq8][Validation, Communication through Empathy]]
+- [[https://writingcenter.unc.edu/tips-and-tools/fallacies/][Fallacies - This handout discusses common logical fallacies that you may encounter in your own writing or the writing of others.]]
+
+** JEE
+:PROPERTIES:
+:CUSTOM_ID: jee
+:END:
+
+- [[https://human9being9.wordpress.com/how-to-prepare-for-iit-jee-from-class-6-7-or-8/][How to Prepare for IIT JEE from class 6, 7 or 8?]]
+- [[https://human9being9.wordpress.com/how-to-prepare-for-iit-jee-from-class-11-without-coaching/][How to prepare for IIT JEE from class 11th without coaching?]]
+- [[https://human9being9.wordpress.com/jee-advanced-unsolved-papers-2013-2016/][IIT JEE / JEE (Advanced) Unsolved Papers (2008-2017)]]
+
+** Life
+:PROPERTIES:
+:CUSTOM_ID: life
+:END:
+
+- [[https://www.cfa.harvard.edu/~ejchaisson/cosmic_evolution/docs/splash.html][Cosmic Evolution: From Big Bang to Humankind]]
+- [[https://www.quora.com/What-is-the-most-interesting-fact-you-know-about-Understanding-Life/answer/Vandana-Thakur-99?ch=15&oid=397885467&share=ee834e2f&srid=tWo7&target_type=answer&fbclid=IwZXh0bgNhZW0CMTEAAR34WFhtf2GEQqCrB6-4EyHUvOhx8XybZIoRrLFBqF4WJPMMOsDmerzaCNY_aem_ASSxfdkyPKaZz992hGdRRu22-9-BKQnnHZ0wfigAjJ-s43REo2k_iNBFfJtQ6dcFAtjQrYC3pDsIAQKk9T6iSPIw][How much time do we have with different people in our life?]]
+  - [[https://waitbutwhy.com/2015/12/the-tail-end.html][The Tail End]] - A more detailed article that conveys the same points
+- [[https://zettelkasten.de/introduction/][Introduction to the Zettelkasten Method]]
+  - [[https://github.com/org-roam/org-roam-ui][org-roam-ui - A graphical frontend for exploring your org-roam Zettelkasten]]
+- [[https://www.youtube.com/watch?v=ESqfW_kyZq8][Validation, Communication through Empathy]]
+- [[https://michaelssorensen.com/how-to-validate-someone-when-you-dont-agree-with-them/][How to validate someone when you don't agree with them?]]
+- [[https://writingcenter.unc.edu/tips-and-tools/fallacies/][Fallacies - This handout discusses common logical fallacies that you may encounter in your own writing or the writing of others.]]
+- [[https://lolitafashion.fandom.com/wiki/Boystyle][Boystyle - Lolita (Rorita) Fashion Wiki]]
+- [[https://www.youtube.com/watch?v=-hjGgFgnYIA&list=PL8dPuuaLjXtNppY8ZHMPDH5TKK2UpU8Ng][Crash Course - History of Science]]
+- [[https://medium.com/the-mission/willpower-doesnt-work-here-s-the-key-to-being-more-productive-according-to-neuroscience-f6c4257eb6b9][Willpower Doesn’t Work. Here’s the Key to Being More Productive According to Neuroscience.]]
+  - [[https://en.wikipedia.org/wiki/Implementation_intention][Implementation Intention - Wikipedia]]    
+
+** Mental Health
+:PROPERTIES:
+:CUSTOM_ID: mental-health
+:END:
+
+- [[https://www.youtube.com/watch?v=ESqfW_kyZq8][Validation, Communication through Empathy]]
+- [[https://new.reddit.com/r/SuicideWatch/wiki/talking_tips/][Talking Tips to talk with someone struggling with suicidal thoughts]]
+
+** Metascience
+:PROPERTIES:
+:CUSTOM_ID: metascience
+:END:
+
+- [[https://scienceintegritydigest.com/2019/07/16/pubpeer-a-website-to-comment-on-scientific-papers/?fbclid=IwZXh0bgNhZW0CMTEAAR19f6V-Yd1EdMu6ary3hQorXZ-9KMfz14qUGMBCMBxFnO_oEQKmbE6fcb0_aem_ASTelQlBB2NMX5t3lvPlZtguDYLXHf-JRFsF0NI1DyNO4heXxoHxVTzRJV4s6f6PvWs92JcupHYi6iXrkeAluv3q][PubPeer - A website to comment on scientific papers]]
+- [[https://zettelkasten.de/introduction/][Introduction to the Zettelkasten Method]]
+- [[https://github.com/org-roam/org-roam][org-roam - Plain-text Knowledge Management System]]
+
+** Parenting
+:PROPERTIES:
+:CUSTOM_ID: parenting
+:END:
+
+- [[https://www.additudemag.com/autism-learning-disability-symptoms/?fbclid=IwZXh0bgNhZW0CMTEAAR1UsU6mt_n526hn0u7BSsNOfhGfRN0FMVH6WZhrBtjZNFTnRt7YukCXbhs_aem_ASQWpyF8Gg2INpsNCMi50N4r1Jbnbv8kjEE1Jdf9i6LR-PAGM_DFStMH_wGtHyKQULNjAAkMmMqEmczukMPU_qCy][How to differentiate autism from a learning disability - AdditudeMag]]
+- [[https://www.theguardian.com/lifeandstyle/2018/jun/30/how-to-survive-teenage-years-parents-guide][How to survive the teenage years: a parents’ guide - The Guardian]]
+- [[https://www.psychologytoday.com/us/blog/compassion-matters/201312/are-we-overpraising-our-children][Are we overpraising our children? - Psychology Today]]
+- [[https://www.scientificamerican.com/article/novel-finding-reading-literary-fiction-improves-empathy/][Reading Literary Fiction Improves Empathy - Scientific American]]
+- [[https://www.medicaldaily.com/how-summer-camp-helps-develop-your-childs-mental-health-and-resilience-246970][How Summer Camp helps develop your child's mental health and resilience - Medical Daily]]
+- [[https://kidshealth.org/en/parents/][Resources for Parents - KidsHealth]]
+- [[https://www.helloruby.com/][Hello Ruby - Hello Ruby is the world's most whimsical way to learn about computers, technology and programming. [...] It’s suited for kids age 5 years and older...]]
+- [[https://www.youtube.com/watch?v=YtvP5A5OHpU][Early Signs of Autism - Video Tutorial]]
+- [[https://www.youtube.com/watch?v=ESqfW_kyZq8][Validation, Communication through Empathy]]
+- [[https://michaelssorensen.com/how-to-validate-someone-when-you-dont-agree-with-them/][How to validate someone when you don't agree with them?]]
+
+** Relationships
+:PROPERTIES:
+:CUSTOM_ID: relationships
+:END:
+
+- [[https://www.verywellmind.com/how-to-build-a-relationship-based-on-interdependence-4161249#interdependence-is-not-codependence][Interdependence vs Codependence - VeryWellMind]]
+- [[https://www.psychologytoday.com/us/blog/compassion-matters/201307/how-your-attachment-style-impacts-your-relationship][How your Attachment Style impacts your relationship? - Psychology Today]]
+- [[https://www.youtube.com/watch?v=ESqfW_kyZq8][Validation, Communication through Empathy]]
+- [[https://michaelssorensen.com/how-to-validate-someone-when-you-dont-agree-with-them/][How to validate someone when you don't agree with them?]]
+
+** Society
+:PROPERTIES:
+:CUSTOM_ID: society
+:END:
+
+- [[https://hbr.org/2024/04/more-women-work-in-nonprofits-so-why-do-men-end-up-leading-them][More women work in nonprofits, so why do men end up leading them?]]
+- [[https://www.youtube.com/watch?v=-hjGgFgnYIA&list=PL8dPuuaLjXtNppY8ZHMPDH5TKK2UpU8Ng][Crash Course - History of Science]]
+- [[https://lolitafashion.fandom.com/wiki/Boystyle][Boystyle - Lolita (Rorita) Fashion Wiki]]
+- [[https://www.artofmanliness.com/people/relationships/bosom-buddies-a-photo-history-of-male-affection/][Bosom Buddies: A Photo History of Male Affection]]
+
+** Software Development
+:PROPERTIES:
+:CUSTOM_ID: software-development
+:END:
+
+Beginners: 
+
+- [[https://htdp.org/2019-02-24/part_preface.html][How To Design Programs]]
+- [[https://learngitbranching.js.org/][Learn Git Branching]]
+
+Intermediate:
+
+- [[https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html][Micromamba Installation]] - A fast lightweight package manager for conda packages powered by C++
+- [[https://github.com/prefix-dev/rattler-build/][rattler-build]] - A fast conda-package builder. Alternative to conda-build
+
+
+* Books
+:PROPERTIES:
+:CUSTOM_ID: books
+:END:
+
+- What the Buddha Taught by /Walpola Rahula/
+- Sapiens: A brief History of Humankind by /Yuval Noah Harari/
+- Ender’s Game and its sequel Speaker for the Dead by /Orson Scott Card/
+- Godel, Escher and Bach: An eternal golden braid by /Douglas R. Hofstadter/
+- Linear Algebra Done Right by /Sheldon Axler/
+- The Language Instinct: How the Mind creates language by /Steven Pinker/
+- The Evolution of Agency: Behavioral Organization from Lizards to Humans by /Michael Tomasello/
+- The Evolution of the Sensitive Soul: Learning and the Origins of Consciousness by /Simona Ginsburg and Eva Jablonka/
+- What Computers /Still/ Can't Do: A Critique of Artificial Reason by /Hubert Dreyfus/
+
+* Blogs
+:PROPERTIES:
+:CUSTOM_ID: blogs
+:END:
+
+Some of my Quora answers have been collected [[https://human9being9.wordpress.com/my-quora/][here]]. Most of them were written around 2014, before the decline of the platform began.
+
+There's also a [[http://human9being9.wordpress.com/][wordpress]] blog I write on sometimes. Some articles of general interest might include:
+
+- [[https://human9being9.wordpress.com/2022/10/09/whitewashing-persuasion-this-is-what-i-think-is-the-best-for-you-please-do-your-best-to-accept-this-uncertainty-and-choose-what-is-good/][Whitewashing Persuasion: “This is what I think is the best for you, please do your best to accept this uncertainty, and choose what is good.”]]
+- [[https://human9being9.wordpress.com/10-things-you-must-know/][10 Things You Must Know]]
+- [[https://human9being9.wordpress.com/2020/02/15/dealing-with-loneliness/][Dealing with Loneliness]]
+- [[https://human9being9.wordpress.com/2020/02/06/evolving-perspectives-on-actions-and-desires/][Evolving Perspectives on Actions and Desires]]
+- [[https://human9being9.wordpress.com/28-2/][Myopia]]
+- [[https://human9being9.wordpress.com/2021/06/06/active-learning-with-zettelkasten/][Active Learning \ast{}with Zettelkasten\ast{}]]
+
+Around the end of high school and the beginning of college, I used to wonder if anything could be done to make middle school education less siloed. I ended up with a partly-made (10%?) website - [[https://digikar99.github.io/alterschoolindia][alterschoolindia]] - that aimed at moving from one topic (eg: civics) to a distant another (eg: mathematics) through continuous interactive questioning.
+
+- There's also a section on [[https://digikar99.github.io/alterschoolindia/intermediate.html][alterschoolindia/intermediate]]: Some resources on Career Tasting (yes, that's T-A-S-T) - It's less of "Let's see how you perform" and more of "Check for yourself how you like each of these".
+
+- I recently ran into a [[https://www.lesswrong.com/posts/xg3hXCYQPJkwHyik2/the-best-textbooks-on-every-subject][LessWrong Blog Post on The Best Textbooks on Every Subject]] that may be of use to some. 
+
+Lacking an audience, and perhaps, more importantly, realizing that "useless" school education would be determined by the sociocultural system of a society, I lost the motivation for developing alterschoolindia further. It seems that to decide the school curriculum, one needs some opinions on the sociocultural system of a society -- hopefully, there exists something more sensible/efficient than the modern democratic systems. Here, by "useless", I mean the modern notion that school education should focus on "useful" skills and knowledge that can actually be applied so that the future citizens can be more productive members of the +labour-force+ society.
+
