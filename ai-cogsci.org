@@ -45,6 +45,11 @@ In fact, causal models have the potential to address issues related to transfer 
 
 I expect investigating how humans - and particularly children - discover causal variables to constitute the major part of my upcoming doctoral studies.
 
+I'm trying to develop my thoughts on Causality through writing. Some preliminary posts include:
+
+- [[file:permalink/data-vs-causal-models.html][Data vs Causal Models: Why [observational] data isn't the answer to everything?]]
+- [[file:permalink/hernan-robins-what-if.org][Summary and Notes of Hernan & Robins' Causal Inference: What If?]] (WIP)
+
 ** [unknown years, speculative, cognitive science] Perspective Taking, Symbolic Communication and Social Cognition
 
 Over the years, several puzzles have crept up in my head.

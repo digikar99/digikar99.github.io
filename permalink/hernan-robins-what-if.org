@@ -1,0 +1,293 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../others.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../common.css">
+#+LATEX_HEADER: \input{$HOME/Syncthing/sans.tex}
+#+OPTIONS: toc:nil num:t html-postamble:nil
+#+title: Causal Inference: What If (WIP)
+
+Book's Webpage: https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/
+- A [[https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf][pdf]] is available on the same page
+
+Pearl's works can be a bit lacking in examples and can seem too formalized for people lacking a background in formal computer science or mathematics. In contrast, the target audience of this book are health and social scientists (and hopefully, also psychologists). These researchers might be in a position to collect and analyze experimental or observational data. They might find this book useful in gaining experience on learning to make causal claims by going beyond correlations. by analyzing data collected through experimental or observational studies.
+
+#+begin_quote
+A key message of this book is that causal inference cannot be reduced to a collection of recipes for data analysis.
+#+end_quote
+
+We will make understanding this message from its introduction as one of the core goals of reading this book. In addition, the book ignores random errors until chapter 10, for pedagogical reasons.
+
+* Table of Contents
+:PROPERTIES:
+:TOC:      :include siblings :depth 2 :ignore (this)
+:CUSTOM_ID: table-of-contents
+:unnumbered: t
+:END:
+
+:CONTENTS:
+- [[#a-definition-of-causal-effect-1][A DEFINITION OF CAUSAL EFFECT]]
+  - [[#counterfactual-outcome-1][Counterfactual Outcome]]
+  - [[#individual-causal-effect-1][Individual Causal Effect]]
+  - [[#average-causal-effect-1][Average Causal Effect]]
+  - [[#consistency-1][Consistency]]
+  - [[#interference-between-individuals-1][Interference between individuals]]
+  - [[#sharp-causal-null-hypothesis-1][Sharp Causal Null Hypothesis]]
+  - [[#risk-difference-1][Risk Difference]]
+  - [[#risk-ratio-1][Risk Ratio]]
+  - [[#odds-ratio-1][Odds Ratio]]
+  - [[#number-needed-to-treat-nnt-1][Number Needed to Treat (NNT)]]
+  - [[#number-needed-to-harm-1][Number Needed to Harm]]
+  - [[#consistent-estimator-1][Consistent Estimator]]
+  - [[#sampling-variability-1][Sampling Variability]]
+  - [[#nondeterministic-counterfactuals-1][Nondeterministic Counterfactuals]]
+  - [[#random-error-1][Random Error]]
+  - [[#independence-1][Independence]]
+  - [[#confounding-1][Confounding]]
+:END:
+
+* A DEFINITION OF CAUSAL EFFECT
+:PROPERTIES:
+:CUSTOM_ID: a-definition-of-causal-effect-1
+:END:
+
+The crux of this chapter is to establish the difference between association and causation.
+
+I'll take a gripe with the examples:
+
+1. Jumping into the swimming pool followed by reaching the jam jar: a fear of drowning can avoid the jump 
+2. Sking on dangerous slopes followed by winning the ski race: a fear of falling
+3. Eating antibiotics followed by absence at park: a large number of anti-vaxers seem to precisely use similar associations
+
+In other words, as individuals, we are prone to mistaking associations for causation. Isn't that why we parrot /Correlation does not imply Causation/ in the statistics courses? Even though we might understand causation and correlation being two different concepts, it is very easy to mistake correlation for causation.
+
+It is only at a species level, that we have built defense mechanism using the sparse causal insights we gain into various phenomena. These defense mechanisms help individuals survive.
+
+Below, we note down the various terminologies and notations developed in this chapter. This will be relied upon in future chapters.
+
+** Counterfactual Outcome
+:PROPERTIES:
+:CUSTOM_ID: counterfactual-outcome-1
+:END:
+
+$Y^{a=a_i}$ denotes the outcome variable Y under the intervention $a=a_i$. It is also called a /potential outcome/ or /counterfactual outcome/. There are as many of them as the possible interventions.
+
+For a given individual, exactly one potential outcome is a factual outcome. This is what is actually observed.
+
+Note that the counterfactual outcome $Y^{a=a_i}$ and its associated probability $P(Y^{a=a_i})$ are different from the conditional outcome $Y | (a=a_i)$ and the conditional probability $P(Y | a=a_i)$. The latter are associative and do not require an intervention.
+
+** Individual Causal Effect
+:PROPERTIES:
+:CUSTOM_ID: individual-causal-effect-1
+:END:
+
+A binary intervention $a=1$ has a causal effect on the individual $i$'s outcome variable $Y$ if the outcome differs in the presence vs absence of the intervention. That is, $Y^{a=1}_i \neq Y^{a=0}_i$.
+
+Individual effects cannot actually be identified, since the non-factual outcomes are never observed for the given individual.
+
+** Average Causal Effect
+:PROPERTIES:
+:CUSTOM_ID: average-causal-effect-1
+:END:
+
+A variable $A$ has an average causal effect on outcome $Y$ if $P(Y^{a=1}=1) \neq P(Y^{a=0}=1)$ in the population of interest. In words, this means that the probability of outcome changes in the presence of the intervention.
+
+/Absence of average causal effect does not imply absence of individual causal effect./
+
+Even though Individual Causal Effects /cannot/ be identified, Average Causal Effects /can/ be identified from data. Therefore, the term *causal effect(s)*, will usually refer to Average Causal Effect(s).
+
+** Consistency
+:PROPERTIES:
+:CUSTOM_ID: consistency-1
+:END:
+
+DOUBT
+
+To be discussed in chapter 3.
+
+** Interference between individuals
+:PROPERTIES:
+:CUSTOM_ID: interference-between-individuals-1
+:END:
+
+/Interference between individuals/ refers to the phenomena wherein the effect of intervention on one individual also depends on other individuals. Social interaction poses a risk of such interference in the studies dealing with contagious agents or educational programs.
+
+** Sharp Causal Null Hypothesis
+:PROPERTIES:
+:CUSTOM_ID: sharp-causal-null-hypothesis-1
+:END:
+
+When the individal causal effect is absent for /all/ the individuals in the population, the /Sharp Causal Null Hypothesis/ is said to hold.
+
+COMMENT (Confirm/Disprove): The individual causal effect can never be identified from data. This means the Sharp Causal Null Hypothesis is undecidable from data.
+
+** Risk Difference 
+:PROPERTIES:
+:CUSTOM_ID: risk-difference-1
+:END:
+
+*Causal:* The /Causal Risk Difference/ is the average of the difference of individual causal effects, and boils down to:
+
+#+begin_latex
+\begin{equation*}
+P(Y^{a=1} = 1) - P(Y^{a=0} = 1)
+\end{equation*}
+#+end_latex
+
+*Associational:* In contrast, the /Associational Risk Difference/ is given by:
+
+#+begin_latex
+\begin{equation*}
+P(Y = 1 | a = 1) - P(Y = 1 | a = 0)
+\end{equation*}
+#+end_latex
+
+** Risk Ratio
+:PROPERTIES:
+:CUSTOM_ID: risk-ratio-1
+:END:
+
+*Causal:* With the outcome variables referring to the population measures, /Causal Risk Ratio/ is given by: 
+
+#+begin_latex
+\begin{equation*}
+P(Y^{a=1}=1) / P(Y^{a=0}=1)
+\end{equation*}
+#+end_latex
+
+*Associational:* The /Associational Risk Ratio/ is given by:
+
+#+begin_latex
+\begin{equation*}
+P(Y = 1 | a = 1) / P(Y = 1 | a = 0)
+\end{equation*}
+#+end_latex
+
+** Odds Ratio
+:PROPERTIES:
+:CUSTOM_ID: odds-ratio-1
+:END:
+
+*Causal:* With the outcome variables referring to the population measures, /Causal Odds Ratio/ is given by:
+
+#+begin_latex
+\begin{equation*}
+\displaystyle
+\frac {P(Y^{a=1}=1) / P(Y^{a=1} = 0)} {P(Y^{a=0}=1) / P(Y^{a=0} = 0)}
+\end{equation*}
+#+end_latex
+
+*Associational:* The /Associational Odds Ratio/ is given by:
+
+#+begin_latex
+\begin{equation*}
+\displaystyle
+\frac {P(Y = 1 | a = 1) / P(Y = 0 | a = 1)}
+  {P(Y = 1 | a = 0) | P(Y = 0 | a = 0)}
+\end{equation*}
+#+end_latex
+
+** Number Needed to Treat (NNT)
+:PROPERTIES:
+:CUSTOM_ID: number-needed-to-treat-nnt-1
+:END:
+
+Number Needed to Treat (NNT) is given by the average number of individuals that need to receive treatment reduce the number of cases by one.
+
+** Number Needed to Harm
+:PROPERTIES:
+:CUSTOM_ID: number-needed-to-harm-1
+:END:
+
+Symmetric to NNT, Number Needed to Harm is given by the average number of individuals that need to receive treatment increase the number of cases by one.
+
+** Consistent Estimator
+:PROPERTIES:
+:CUSTOM_ID: consistent-estimator-1
+:END:
+
+An estimator $\hat \theta_n$ of $\theta$ computed using a sample size $n$ is consistent if the following holds.
+
+#+begin_latex
+\begin{equation*}
+\displaystyle
+P(\lim_{n \to \infty} \hat \theta_n = \theta) = 1
+\end{equation*}
+#+end_latex
+
+Note that this is different from [[Consistency]] as defined above.
+
+Additional reading: [[https://en.wikipedia.org/wiki/Consistent_estimator][Consistent Estimator - Wikipedia]].
+
+** Sampling Variability
+:PROPERTIES:
+:CUSTOM_ID: sampling-variability-1
+:END:
+
+TODO
+
+** Nondeterministic Counterfactuals
+:PROPERTIES:
+:CUSTOM_ID: nondeterministic-counterfactuals-1
+:END:
+
+A [deterministic] [[Counterfactual Outcome]] assigns a single counterfactual outcome to each individual. In contrast, a /Nondeterministic Counterfactual/ assigns a distribution of outcomes to each individual. 
+
+DOUBT: Is this all there is to it?
+
+** Random Error
+:PROPERTIES:
+:CUSTOM_ID: random-error-1
+:END:
+
+Sampling Variability and Nondeterministic Counterfactuals are (the?) two sources of Random Error. However, the book ignores the random error for pedagogical reasons until chapter 10.
+
+** Independence
+:PROPERTIES:
+:CUSTOM_ID: independence-1
+:END:
+
+When the [[Risk Difference][Associational Risk Difference]] between two variables is zero, the two are said to be independent. This is denoted by:
+
+#+begin_center
+$A ⫫ Y$ or $Y ⫫ A$
+#+end_center
+
+As an exercise, consider what the associational risk difference, risk ratio, and odds ratio will be when two variables are independent.
+
+** Confounding
+:PROPERTIES:
+:CUSTOM_ID: confounding-1
+:END:
+
+Intuitively, the discrepancy between the causal effect measures and associational effect measures is referred to as confounding. This will be elaborated upon in chapter 7.
+
+
+* RANDOMIZED EXPERIMENTS :noexport:
+
+This chapter aims to explain why randomization results in convincing causal explanations.
+
+** Randomization
+
+In ideal randomized experiments, associative measures correspond exactly to causal measures. Thus, causal effect measures = randomized study + associative effect measures of that randomized study. 
+
+/Randomization/ should produce /exchangeability/ or /exchangeable groups/. This means that the counterfactual outcomes of an intervention should be the same across all groups. In other words, the counterfactual outcome and the intervention (treatment) are independent. In symbols, this is denoted by:
+
+#+begin_center
+$Y^a ⫫ A$ for all $a$
+#+end_center
+
+Or equivalently,
+
+#+begin_center
+$P(Y^a = 1 | A=0) = P(Y^a = 1 | A=1)$ for both $a=0$ and $a=1$
+#+end_center
+
+This also allows us to define the counterfactual outcomes $P(Y^a)$ for the entire population and not just the groups.
+
+When exchangeability does not hold and a randomized experiment is difficult, conditional exchangeability may be made to hold by conducting a conditionally randomized study. See next section.
+
+** Conditional Randomization
+
+** Standardization
+
+** Inverse Probability Weighting

@@ -1,0 +1,158 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../others.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../common.css">
+#+LATEX_HEADER: \input{$HOME/Syncthing/sans.tex}
+#+OPTIONS: toc:nil num:nil html-postamble:nil
+#+title: Data vs Causal Models
+#+subtitle: Why [observational] data isn't the answer to everything?
+
+Over the past several months, I have been enamoured with Causality. Yet, I haven't been able to shake off the feeling that with sufficient data, everything should be answerable. After all, this has been the conviction with Big Data and Deep Learning making big strides in the recent decade and a half. This post is therefore an attempt to convince myself (and hopefully, others) that causality indeed goes beyond (observational) data.
+
+The argument for causal models goes that causality is beyond observational data. Anyone who has taken a course on empirical statistics is made to parrot /Correlation does not imply Causation/. Observational data only gets us correlations. The basic courses on statistics (and even advanced) never get into what causality actually is, but they only leave it to our intuition.
+
+What, then, is causality? And do we actually need causality, or is merely having sufficient data enough?
+
+But, first of all, what do we actually want to do? I have been told there are two primary tasks that good science does: One, it helps us predict. Two, it helps us explain, through stories and analogies. I consider the second only as a stepping stone towards the first. Stories and explanations that do not aid predictions might as well be myths and delusions. Thus, the primary task we have at hand is making predictions. Understanding how exactly explanations help predictions still seems to be an open problem. We will assume explanations mean causal models, however, other kinds of explanations are possible too. See [[citet:&lombrozo2011]] and [[citet:&shmueli2010]] for more discussion on explanations and predictions.
+
+In addition, we will oversimplify the problem of prediction to a supervised learning problem.
+
+* Table of Contents
+:PROPERTIES:
+:TOC:      :include siblings :ignore (this)
+:CUSTOM_ID: table-of-contents
+:END:
+
+:CONTENTS:
+- [[#supervised-learning-for-prediction][Supervised learning for prediction]]
+- [[#under-determinism-of-distributions-by-finite-data][Under-determinism of distributions by finite data]]
+- [[#a-change-of-distributions][A Change of Distributions]]
+- [[#interventions][Interventions]]
+- [[#the-causal-context][The [causal] context]]
+- [[#under-determinism-of-causal-models-by-infinite-observational-data][Under-determinism of Causal Models by infinite observational data(!)]]
+- [[#causal-models][Causal Models]]
+- [[#references][References]]
+:END:
+
+#+latex: \pagebreak
+
+* Supervised learning for prediction
+:PROPERTIES:
+:CUSTOM_ID: supervised-learning-for-prediction
+:END:
+
+Given training samples $(x, y) \in \mathcal D$, supervised learning involves coming up with a function $\hat f$, such that the estimated y-value $\hat y = \hat f(x)$ closely resembles the true y-value $y$. Alternatively, instead of a point estimator, one can instead learn a conditional probability distribution $\hat P(y | x)$. We can then use $\hat f$ or $\hat P$ to make predictions about y-values given unseen x-values.
+
+* Under-determinism of distributions by finite data
+:PROPERTIES:
+:CUSTOM_ID: under-determinism-of-distributions-by-finite-data
+:END:
+
+If we actually knew the true $f$ or $P$, we could easily make predictions for new data. However, true $f$ or $P$ is unobservable, and thus, we do not have access to it. We only have access to samples of data $\mathcal D$ drawn from $P$.
+
+However, we know that even an unbiased pair of dice can sometimes create a hat-trick of a pair of sixes. Similarly, a uniform random distribution can sometimes create data resembling a normal distribution. In other words, with finite data, it is impossible to recover the true unobservable distribution $f$ with 100% certainty. Finite data underdetermines the distribution that generated it.
+
+To make predictions with finite data $\mathcal D$, we are then required to choose between competing potential distributions $\hat f_1, ..., \hat f_n$. This choice always involves going beyond $\mathcal D$, such as relying on your own preferences and intuitions. Weighing the different potential distributions in a particular way is another potential choice.
+
+However, it seems that increasing the amount of data $n = |\mathcal D|$ might actually allow us to recover the true distribution that generated it. In other words,
+
+\begin{equation*}
+\displaystyle
+\lim_{n \to \infty} \hat f = f
+\end{equation*}
+
+Somewhere in the middle of the two extremes of small-finite and infinite data, we have /a large amount of data/ or /Big Data/. And given the advances in 2010s and 2020s, it seems that Big Data, currently comprising purely of observational data, is actually helpful.
+
+* A Change of Distributions
+:PROPERTIES:
+:CUSTOM_ID: a-change-of-distributions
+:END:
+
+Now, what happens when the true $f$ or $P$ themselves change? Let's say they become $f'$ and $P'$. 
+
+In the era of Big Data, one might wonder what that even means. We continue to live in the same world after all! If the world remains the same, then data should continue to be sampled from the same distribution, right?
+
+Unfortunately, it seems to be the case that the world is more than just a distribution or a [potentially infinite] sample of data. The [fundamental] mechanisms in the world might remain constant, but the world keeps changing.  A more complete model of the world requires going beyond distributions. The alternative that this post advocates is /Causal Models/.
+
+* Interventions
+:PROPERTIES:
+:CUSTOM_ID: interventions
+:END:
+
+It might be helpful to consider this change-in-the-world in terms of /Interventions/. A camera kept outside the window might be exposed to certain data. However, if you /intervene/, say, by covering the camera with a black cloth, then the data it is exposed to corresponds to a different distribution than if the camera was uncovered.
+
+* The [causal] context
+:PROPERTIES:
+:CUSTOM_ID: the-causal-context
+:END:
+
+Another potential objection would be to let the camera's data include its "context". But that raises the further question of what need and need not be included in the context. The position or location of the camera, the time of the day, the objects whose images form on the camera, these all influence the camera's data, and might be rightfully considered its context. But, the [instantenous] position of a cat on the opposite side of the earth need not be included in the context. Nor what the cat had eaten in its last meal!
+
+It turns out [[cite:&pearl2019why]] that this context actually comes from the Causal Model itself! This process itself is formalized in terms of the do-calculus.
+
+* Under-determinism of Causal Models by infinite observational data(!)
+:PROPERTIES:
+:CUSTOM_ID: under-determinism-of-causal-models-by-infinite-observational-data
+:END:
+
+So far, we have only considered observational data $\mathcal D$. We have noted that while finite observational data underdetermines the unobserved distribution $f$, infinite data might actually allow us to recover it. And given empirical successes, Big Data seems like a good-enough amount of data to discover the unobserved true distribution.
+
+Can infinite observational data also allow us to discover the true underlying [unobservable] causal models that generate them?
+
+Turns out this is not the case ([[citet:&bareinboim2022pearl]], Appendix I). In the general case, multiple causal models can correspond to the same associational model (aka distribution). Given the same observational (associational) model $f$ and the same intervention, two different causal models $\mathcal M_1$ and $\mathcal M_2$ can evolve differently giving rise to different distributions $f'_1$ and $f'_2$. 
+
+There are certain cases (aka constraints) in which observational data can allow us to recover the corresponding causal model, or atleast impose restrictions on the causal mode. However, in the general case, such recovery is impossible. But, exactly delineating those cases to discover or constrain causal models remains an open question.
+
+* Causal Models
+:PROPERTIES:
+:CUSTOM_ID: causal-models
+:END:
+
+So far, we have vaguely mentioned causal models without actually defining them. I do not know if this is the only way to define causal models, but it is certainly a well-established one. We borrow from citet:&bareinboim2022pearl. 
+
+A Structural Causal Model $\mathcal M$ is a 4-tuple $\langle \pmb U, \pmb V, \mathcal F, P(\pmb U) \rangle$, where
+
+- $\pmb U$ is a set of background (exogeneous) variables determined by factors outside the model
+- $\pmb V$ is a set of endogenous variables determined by other variables inside the model, that is, by a subset of $\pmb U \cup \pmb V$
+- $\mathcal F = \{f_1, ..., f_n\}$ where each $f_i$ is a function from $U_i \cup Pa_i$ to $V_i$, with $Pa_i \subset \pmb V \setminus V_i$. Thus, $v_i \leftarrow f_i(pa_i, u_i)$
+- $P(\pmb U)$ is a probability function defined over the domain $\pmb U$.
+
+However, how exactly to obtain a causal model and how exactly to use them is a topic best left to other resources ([[citet:&Pearl2009]], [[citet:&Peters2017]]).
+
+* References
+:properties:
+:html_container_class: references
+:CUSTOM_ID: references
+:end:
+
+bibliography:~/references.bib
+
+#+html: <br/>
+
+* Trash :noexport:
+
+Practitioners of [[https://en.wikipedia.org/wiki/Density_estimation][Density Estimation]] would be familiar with this. (TODO: IS that really a density estimation method?) A particular method involves calculating the probability of each sample data point given a potential distribution. Post that, assuming the sample data were generated independently, we can take the product of probability of each sample data point. We compute this quantity for different potential distributions. Finally, we choose that distribution which gives the highest probability for the data, compared to other distributions. 
+
+
+/But, we can have temporal data, right? That can let us have a looot of data across different time steps! Won't that be enough instead of this mythical stuff about causal model $\mathcal M$?/ 
+
+** Causality and Temporal Data
+
+Suppose that our data $\mathcal D$ comprised of episodes of variable length finite time intervals. Again, when we have a large number of such episodes, we will be able to recover the true unobserved distribution $f$. Will this help us with prediction?
+
+Let us clarify the problem of prediction. Given an observation $d$ and an intervention, we want to  
+
+TODO: Look into causality and prediction.
+
+An intervention in the context of a causal model would correspond to a partial-episode in $f$. Conditioning on such partial-episodes can allow us to recover the effect once we obtain $\hat f = f$.
+
+However, predicting arbitrary length $\Delta t$ episodes requires that we actually had such $\Delta t$ -length or longer episodes in our sample $\mathcal D$. Ultimately, we want an AI to actually work for arbitrary lengths of time without requiring human engineers to correct its course of action. This length of time includes years, decades, and perhaps, centuries. Thus, unless we actually train the AI to correctly predict decade or century-length temporal data, it would constantly require correction from human engineers.
+
+But, if an AI can correctly predict for time from $t_1$ to $t_2$, from $t_2$ to $t_3$, from $t_{n-1}$ to $t_n$, and each interval is small but $t_1$ to $t_n$ spans decades, wouldn't such correctness be sufficient to predict correctly from $t_1$ to $t_n$? The problem here is /correctness/. What we have in reality is approximate correctness, which can deviate from true correctness in arbitrary ways. The errors may be trivial for small intervals, but can accumulate in large intervals. The errors themselves may be highly superlinear.
+
+On the other hand, incorporating causal modeling seems like a plausible method to run an AI for years, decades, and centuries without requiring correction from human engineers. (WHY?)
+
+** The confusion between P(X|Y) and P(X|do(Y))
+
+But, you say, that's a pathological case. In the real world, whenever I run into a new situation I can always look at the old data and find a similar situation, and act in accordance with it. That is, given that I observe Y, I can act in accordance P(...|Y) and I do not need anything new! (TODO: Formulate this properly.)
+

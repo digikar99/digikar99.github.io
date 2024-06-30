@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-07-01 Mon 00:34 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data vs Causal Models</title>
+<meta name="author" content="shubhamkar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="../others.css">
+<link rel="stylesheet" type="text/css" href="../common.css">
+
+<link rel='stylesheet' href='styles.css'>
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans' />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Data vs Causal Models
+<br />
+<span class="subtitle">Why [observational] data isn't the answer to everything?</span>
+</h1>
+<p>
+Over the past several months, I have been enamoured with Causality. Yet, I haven't been able to shake off the feeling that with sufficient data, everything should be answerable. After all, this has been the conviction with Big Data and Deep Learning making big strides in the recent decade and a half. This post is therefore an attempt to convince myself (and hopefully, others) that causality indeed goes beyond (observational) data.
+</p>
+
+<p>
+The argument for causal models goes that causality is beyond observational data. Anyone who has taken a course on empirical statistics is made to parrot <i>Correlation does not imply Causation</i>. Observational data only gets us correlations. The basic courses on statistics (and even advanced) never get into what causality actually is, but they only leave it to our intuition.
+</p>
+
+<p>
+What, then, is causality? And do we actually need causality, or is merely having sufficient data enough?
+</p>
+
+<p>
+But, first of all, what do we actually want to do? I have been told there are two primary tasks that good science does: One, it helps us predict. Two, it helps us explain, through stories and analogies. I consider the second only as a stepping stone towards the first. Stories and explanations that do not aid predictions might as well be myths and delusions. Thus, the primary task we have at hand is making predictions. Understanding how exactly explanations help predictions still seems to be an open problem. We will assume explanations mean causal models, however, other kinds of explanations are possible too. See <a href="#citeproc_bib_item_2">Lombrozo 2011</a> and <a href="#citeproc_bib_item_6">Shmueli 2010</a> for more discussion on explanations and predictions.
+</p>
+
+<p>
+In addition, we will oversimplify the problem of prediction to a supervised learning problem.
+</p>
+
+<div id="outline-container-table-of-contents" class="outline-2">
+<h2 id="table-of-contents">Table of Contents</h2>
+<div class="outline-text-2" id="text-table-of-contents">
+<ul class="org-ul">
+<li><a href="#supervised-learning-for-prediction">Supervised learning for prediction</a></li>
+<li><a href="#under-determinism-of-distributions-by-finite-data">Under-determinism of distributions by finite data</a></li>
+<li><a href="#a-change-of-distributions">A Change of Distributions</a></li>
+<li><a href="#interventions">Interventions</a></li>
+<li><a href="#the-causal-context">The [causal] context</a></li>
+<li><a href="#under-determinism-of-causal-models-by-infinite-observational-data">Under-determinism of Causal Models by infinite observational data(!)</a></li>
+<li><a href="#causal-models">Causal Models</a></li>
+<li><a href="#references">References</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-supervised-learning-for-prediction" class="outline-2">
+<h2 id="supervised-learning-for-prediction">Supervised learning for prediction</h2>
+<div class="outline-text-2" id="text-supervised-learning-for-prediction">
+<p>
+Given training samples \((x, y) \in \mathcal D\), supervised learning involves coming up with a function \(\hat f\), such that the estimated y-value \(\hat y = \hat f(x)\) closely resembles the true y-value \(y\). Alternatively, instead of a point estimator, one can instead learn a conditional probability distribution \(\hat P(y | x)\). We can then use \(\hat f\) or \(\hat P\) to make predictions about y-values given unseen x-values.
+</p>
+</div>
+</div>
+
+<div id="outline-container-under-determinism-of-distributions-by-finite-data" class="outline-2">
+<h2 id="under-determinism-of-distributions-by-finite-data">Under-determinism of distributions by finite data</h2>
+<div class="outline-text-2" id="text-under-determinism-of-distributions-by-finite-data">
+<p>
+If we actually knew the true \(f\) or \(P\), we could easily make predictions for new data. However, true \(f\) or \(P\) is unobservable, and thus, we do not have access to it. We only have access to samples of data \(\mathcal D\) drawn from \(P\).
+</p>
+
+<p>
+However, we know that even an unbiased pair of dice can sometimes create a hat-trick of a pair of sixes. Similarly, a uniform random distribution can sometimes create data resembling a normal distribution. In other words, with finite data, it is impossible to recover the true unobservable distribution \(f\) with 100% certainty. Finite data underdetermines the distribution that generated it.
+</p>
+
+<p>
+To make predictions with finite data \(\mathcal D\), we are then required to choose between competing potential distributions \(\hat f_1, ..., \hat f_n\). This choice always involves going beyond \(\mathcal D\), such as relying on your own preferences and intuitions. Weighing the different potential distributions in a particular way is another potential choice.
+</p>
+
+<p>
+However, it seems that increasing the amount of data \(n = |\mathcal D|\) might actually allow us to recover the true distribution that generated it. In other words,
+</p>
+
+\begin{equation*}
+\displaystyle
+\lim_{n \to \infty} \hat f = f
+\end{equation*}
+
+<p>
+Somewhere in the middle of the two extremes of small-finite and infinite data, we have <i>a large amount of data</i> or <i>Big Data</i>. And given the advances in 2010s and 2020s, it seems that Big Data, currently comprising purely of observational data, is actually helpful.
+</p>
+</div>
+</div>
+
+<div id="outline-container-a-change-of-distributions" class="outline-2">
+<h2 id="a-change-of-distributions">A Change of Distributions</h2>
+<div class="outline-text-2" id="text-a-change-of-distributions">
+<p>
+Now, what happens when the true \(f\) or \(P\) themselves change? Let's say they become \(f'\) and \(P'\). 
+</p>
+
+<p>
+In the era of Big Data, one might wonder what that even means. We continue to live in the same world after all! If the world remains the same, then data should continue to be sampled from the same distribution, right?
+</p>
+
+<p>
+Unfortunately, it seems to be the case that the world is more than just a distribution or a [potentially infinite] sample of data. The [fundamental] mechanisms in the world might remain constant, but the world keeps changing.  A more complete model of the world requires going beyond distributions. The alternative that this post advocates is <i>Causal Models</i>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-interventions" class="outline-2">
+<h2 id="interventions">Interventions</h2>
+<div class="outline-text-2" id="text-interventions">
+<p>
+It might be helpful to consider this change-in-the-world in terms of <i>Interventions</i>. A camera kept outside the window might be exposed to certain data. However, if you <i>intervene</i>, say, by covering the camera with a black cloth, then the data it is exposed to corresponds to a different distribution than if the camera was uncovered.
+</p>
+</div>
+</div>
+
+<div id="outline-container-the-causal-context" class="outline-2">
+<h2 id="the-causal-context">The [causal] context</h2>
+<div class="outline-text-2" id="text-the-causal-context">
+<p>
+Another potential objection would be to let the camera's data include its "context". But that raises the further question of what need and need not be included in the context. The position or location of the camera, the time of the day, the objects whose images form on the camera, these all influence the camera's data, and might be rightfully considered its context. But, the [instantenous] position of a cat on the opposite side of the earth need not be included in the context. Nor what the cat had eaten in its last meal!
+</p>
+
+<p>
+It turns out (<a href="#citeproc_bib_item_4">Pearl and Mackenzie 2019</a>) that this context actually comes from the Causal Model itself! This process itself is formalized in terms of the do-calculus.
+</p>
+</div>
+</div>
+
+<div id="outline-container-under-determinism-of-causal-models-by-infinite-observational-data" class="outline-2">
+<h2 id="under-determinism-of-causal-models-by-infinite-observational-data">Under-determinism of Causal Models by infinite observational data(!)</h2>
+<div class="outline-text-2" id="text-under-determinism-of-causal-models-by-infinite-observational-data">
+<p>
+So far, we have only considered observational data \(\mathcal D\). We have noted that while finite observational data underdetermines the unobserved distribution \(f\), infinite data might actually allow us to recover it. And given empirical successes, Big Data seems like a good-enough amount of data to discover the unobserved true distribution.
+</p>
+
+<p>
+Can infinite observational data also allow us to discover the true underlying [unobservable] causal models that generate them?
+</p>
+
+<p>
+Turns out this is not the case (<a href="#citeproc_bib_item_1">Bareinboim et al. 2022</a>, Appendix I). In the general case, multiple causal models can correspond to the same associational model (aka distribution). Given the same observational (associational) model \(f\) and the same intervention, two different causal models \(\mathcal M_1\) and \(\mathcal M_2\) can evolve differently giving rise to different distributions \(f'_1\) and \(f'_2\). 
+</p>
+
+<p>
+There are certain cases (aka constraints) in which observational data can allow us to recover the corresponding causal model, or atleast impose restrictions on the causal mode. However, in the general case, such recovery is impossible. But, exactly delineating those cases to discover or constrain causal models remains an open question.
+</p>
+</div>
+</div>
+
+<div id="outline-container-causal-models" class="outline-2">
+<h2 id="causal-models">Causal Models</h2>
+<div class="outline-text-2" id="text-causal-models">
+<p>
+So far, we have vaguely mentioned causal models without actually defining them. I do not know if this is the only way to define causal models, but it is certainly a well-established one. We borrow from <a href="#citeproc_bib_item_1">Bareinboim et al. 2022</a>. 
+</p>
+
+<p>
+A Structural Causal Model \(\mathcal M\) is a 4-tuple \(\langle \pmb U, \pmb V, \mathcal F, P(\pmb U) \rangle\), where
+</p>
+
+<ul class="org-ul">
+<li>\(\pmb U\) is a set of background (exogeneous) variables determined by factors outside the model</li>
+<li>\(\pmb V\) is a set of endogenous variables determined by other variables inside the model, that is, by a subset of \(\pmb U \cup \pmb V\)</li>
+<li>\(\mathcal F = \{f_1, ..., f_n\}\) where each \(f_i\) is a function from \(U_i \cup Pa_i\) to \(V_i\), with \(Pa_i \subset \pmb V \setminus V_i\). Thus, \(v_i \leftarrow f_i(pa_i, u_i)\)</li>
+<li>\(P(\pmb U)\) is a probability function defined over the domain \(\pmb U\).</li>
+</ul>
+
+<p>
+However, how exactly to obtain a causal model and how exactly to use them is a topic best left to other resources (<a href="#citeproc_bib_item_3">Pearl 2009</a>, <a href="#citeproc_bib_item_5">Peters, Janzing, and Schlkopf 2017</a>).
+</p>
+</div>
+</div>
+
+<div id="outline-container-references" class="outline-2 references">
+<h2 id="references">References</h2>
+<div class="outline-text-2" id="text-references">
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Bareinboim, Elias, Juan D Correa, Duligur Ibeling, and Thomas Icard. 2022. “On Pearl’s Hierarchy and the Foundations of Causal Inference.” In <i>Probabilistic and Causal Inference: The Works of Judea Pearl</i>, 507–56.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Lombrozo, Tania. 2011. “The Instrumental Value of Explanations.” <i>Philosophy Compass</i> 6 (8). Wiley: 539–51. doi:<a href="https://doi.org/10.1111/j.1747-9991.2011.00413.x">10.1111/j.1747-9991.2011.00413.x</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_3"></a>Pearl, Judea. 2009. <i>Causality: Models, Reasoning, and Inference</i>. Cambridge University Press. doi:<a href="https://doi.org/10.1017/cbo9780511803161">10.1017/cbo9780511803161</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_4"></a>Pearl, Judea, and Dana Mackenzie. 2019. <i>The Book of Why</i>. Harlow, England: Penguin Books.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_5"></a>Peters, Jonas, Dominik Janzing, and Bernhard Schlkopf. 2017. <i>Elements of Causal Inference: Foundations and Learning Algorithms</i>. The MIT Press.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_6"></a>Shmueli, Galit. 2010. “To Explain or to Predict?” <i>Statistical Science</i> 25 (3). Institute of Mathematical Statistics. doi:<a href="https://doi.org/10.1214/10-sts330">10.1214/10-sts330</a>.</div>
+</div>
+
+
+<br/>
+</div>
+</div>
+</div>
+</body>
+</html>

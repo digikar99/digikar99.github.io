@@ -19,3 +19,7 @@ blockquote{
 .references > div > div > div{
     padding-top: 0.5em;
 }
+
+h4{
+    text-decoration:underline;
+}

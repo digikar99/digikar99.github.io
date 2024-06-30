@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-06-30 Sun 23:16 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Causal Inference: What If (WIP)</title>
+<meta name="author" content="shubhamkar" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<link rel="stylesheet" type="text/css" href="../others.css">
+<link rel="stylesheet" type="text/css" href="../common.css">
+
+<link rel='stylesheet' href='styles.css'>
+<link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Droid+Sans' />
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Causal Inference: What If (WIP)</h1>
+<p>
+Book's Webpage: <a href="https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/">https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/</a>
+</p>
+<ul class="org-ul">
+<li>A <a href="https://www.hsph.harvard.edu/miguel-hernan/wp-content/uploads/sites/1268/2024/04/hernanrobins_WhatIf_26apr24.pdf">pdf</a> is available on the same page</li>
+</ul>
+
+<p>
+Pearl's works can be a bit lacking in examples and can seem too formalized for people lacking a background in formal computer science or mathematics. In contrast, the target audience of this book are health and social scientists (and hopefully, also psychologists). These researchers might be in a position to collect and analyze experimental or observational data. They might find this book useful in gaining experience on learning to make causal claims by going beyond correlations. by analyzing data collected through experimental or observational studies.
+</p>
+
+<blockquote>
+<p>
+A key message of this book is that causal inference cannot be reduced to a collection of recipes for data analysis.
+</p>
+</blockquote>
+
+<p>
+We will make understanding this message from its introduction as one of the core goals of reading this book. In addition, the book ignores random errors until chapter 10, for pedagogical reasons.
+</p>
+
+<div id="outline-container-table-of-contents" class="outline-2">
+<h2 id="table-of-contents">Table of Contents</h2>
+<div class="outline-text-2" id="text-table-of-contents">
+<ul class="org-ul">
+<li><a href="#a-definition-of-causal-effect-1">A DEFINITION OF CAUSAL EFFECT</a>
+<ul class="org-ul">
+<li><a href="#counterfactual-outcome-1">Counterfactual Outcome</a></li>
+<li><a href="#individual-causal-effect-1">Individual Causal Effect</a></li>
+<li><a href="#average-causal-effect-1">Average Causal Effect</a></li>
+<li><a href="#consistency-1">Consistency</a></li>
+<li><a href="#interference-between-individuals-1">Interference between individuals</a></li>
+<li><a href="#sharp-causal-null-hypothesis-1">Sharp Causal Null Hypothesis</a></li>
+<li><a href="#risk-difference-1">Risk Difference</a></li>
+<li><a href="#risk-ratio-1">Risk Ratio</a></li>
+<li><a href="#odds-ratio-1">Odds Ratio</a></li>
+<li><a href="#number-needed-to-treat-nnt-1">Number Needed to Treat (NNT)</a></li>
+<li><a href="#number-needed-to-harm-1">Number Needed to Harm</a></li>
+<li><a href="#consistent-estimator-1">Consistent Estimator</a></li>
+<li><a href="#sampling-variability-1">Sampling Variability</a></li>
+<li><a href="#nondeterministic-counterfactuals-1">Nondeterministic Counterfactuals</a></li>
+<li><a href="#random-error-1">Random Error</a></li>
+<li><a href="#independence-1">Independence</a></li>
+<li><a href="#confounding-1">Confounding</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-a-definition-of-causal-effect-1" class="outline-2">
+<h2 id="a-definition-of-causal-effect-1"><span class="section-number-2">1.</span> A DEFINITION OF CAUSAL EFFECT</h2>
+<div class="outline-text-2" id="text-a-definition-of-causal-effect-1">
+<p>
+The crux of this chapter is to establish the difference between association and causation.
+</p>
+
+<p>
+I'll take a gripe with the examples:
+</p>
+
+<ol class="org-ol">
+<li>Jumping into the swimming pool followed by reaching the jam jar: a fear of drowning can avoid the jump</li>
+<li>Sking on dangerous slopes followed by winning the ski race: a fear of falling</li>
+<li>Eating antibiotics followed by absence at park: a large number of anti-vaxers seem to precisely use similar associations</li>
+</ol>
+
+<p>
+In other words, as individuals, we are prone to mistaking associations for causation. Isn't that why we parrot <i>Correlation does not imply Causation</i> in the statistics courses? Even though we might understand causation and correlation being two different concepts, it is very easy to mistake correlation for causation.
+</p>
+
+<p>
+It is only at a species level, that we have built defense mechanism using the sparse causal insights we gain into various phenomena. These defense mechanisms help individuals survive.
+</p>
+
+<p>
+Below, we note down the various terminologies and notations developed in this chapter. This will be relied upon in future chapters.
+</p>
+</div>
+
+<div id="outline-container-counterfactual-outcome-1" class="outline-3">
+<h3 id="counterfactual-outcome-1"><span class="section-number-3">1.1.</span> Counterfactual Outcome</h3>
+<div class="outline-text-3" id="text-counterfactual-outcome-1">
+<p>
+\(Y^{a=a_i}\) denotes the outcome variable Y under the intervention \(a=a_i\). It is also called a <i>potential outcome</i> or <i>counterfactual outcome</i>. There are as many of them as the possible interventions.
+</p>
+
+<p>
+For a given individual, exactly one potential outcome is a factual outcome. This is what is actually observed.
+</p>
+
+<p>
+Note that the counterfactual outcome \(Y^{a=a_i}\) and its associated probability \(P(Y^{a=a_i})\) are different from the conditional outcome \(Y | (a=a_i)\) and the conditional probability \(P(Y | a=a_i)\). The latter are associative and do not require an intervention.
+</p>
+</div>
+</div>
+
+<div id="outline-container-individual-causal-effect-1" class="outline-3">
+<h3 id="individual-causal-effect-1"><span class="section-number-3">1.2.</span> Individual Causal Effect</h3>
+<div class="outline-text-3" id="text-individual-causal-effect-1">
+<p>
+A binary intervention \(a=1\) has a causal effect on the individual \(i\)'s outcome variable \(Y\) if the outcome differs in the presence vs absence of the intervention. That is, \(Y^{a=1}_i \neq Y^{a=0}_i\).
+</p>
+
+<p>
+Individual effects cannot actually be identified, since the non-factual outcomes are never observed for the given individual.
+</p>
+</div>
+</div>
+
+<div id="outline-container-average-causal-effect-1" class="outline-3">
+<h3 id="average-causal-effect-1"><span class="section-number-3">1.3.</span> Average Causal Effect</h3>
+<div class="outline-text-3" id="text-average-causal-effect-1">
+<p>
+A variable \(A\) has an average causal effect on outcome \(Y\) if \(P(Y^{a=1}=1) \neq P(Y^{a=0}=1)\) in the population of interest. In words, this means that the probability of outcome changes in the presence of the intervention.
+</p>
+
+<p>
+<i>Absence of average causal effect does not imply absence of individual causal effect.</i>
+</p>
+
+<p>
+Even though Individual Causal Effects <i>cannot</i> be identified, Average Causal Effects <i>can</i> be identified from data. Therefore, the term <b>causal effect(s)</b>, will usually refer to Average Causal Effect(s).
+</p>
+</div>
+</div>
+
+<div id="outline-container-consistency-1" class="outline-3">
+<h3 id="consistency-1"><span class="section-number-3">1.4.</span> Consistency</h3>
+<div class="outline-text-3" id="text-consistency-1">
+<p>
+DOUBT
+</p>
+
+<p>
+To be discussed in chapter 3.
+</p>
+</div>
+</div>
+
+<div id="outline-container-interference-between-individuals-1" class="outline-3">
+<h3 id="interference-between-individuals-1"><span class="section-number-3">1.5.</span> Interference between individuals</h3>
+<div class="outline-text-3" id="text-interference-between-individuals-1">
+<p>
+<i>Interference between individuals</i> refers to the phenomena wherein the effect of intervention on one individual also depends on other individuals. Social interaction poses a risk of such interference in the studies dealing with contagious agents or educational programs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sharp-causal-null-hypothesis-1" class="outline-3">
+<h3 id="sharp-causal-null-hypothesis-1"><span class="section-number-3">1.6.</span> Sharp Causal Null Hypothesis</h3>
+<div class="outline-text-3" id="text-sharp-causal-null-hypothesis-1">
+<p>
+When the individal causal effect is absent for <i>all</i> the individuals in the population, the <i>Sharp Causal Null Hypothesis</i> is said to hold.
+</p>
+
+<p>
+COMMENT (Confirm/Disprove): The individual causal effect can never be identified from data. This means the Sharp Causal Null Hypothesis is undecidable from data.
+</p>
+</div>
+</div>
+
+<div id="outline-container-risk-difference-1" class="outline-3">
+<h3 id="risk-difference-1"><span class="section-number-3">1.7.</span> Risk Difference</h3>
+<div class="outline-text-3" id="text-risk-difference-1">
+<p>
+<b>Causal:</b> The <i>Causal Risk Difference</i> is the average of the difference of individual causal effects, and boils down to:
+</p>
+
+<div class="latex" id="org093dec1">
+\begin{equation*}
+P(Y^{a=1} = 1) - P(Y^{a=0} = 1)
+\end{equation*}
+
+</div>
+
+<p>
+<b>Associational:</b> In contrast, the <i>Associational Risk Difference</i> is given by:
+</p>
+
+<div class="latex" id="org7a3e0bc">
+\begin{equation*}
+P(Y = 1 | a = 1) - P(Y = 1 | a = 0)
+\end{equation*}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-risk-ratio-1" class="outline-3">
+<h3 id="risk-ratio-1"><span class="section-number-3">1.8.</span> Risk Ratio</h3>
+<div class="outline-text-3" id="text-risk-ratio-1">
+<p>
+<b>Causal:</b> With the outcome variables referring to the population measures, <i>Causal Risk Ratio</i> is given by: 
+</p>
+
+<div class="latex" id="orgd98fa91">
+\begin{equation*}
+P(Y^{a=1}=1) / P(Y^{a=0}=1)
+\end{equation*}
+
+</div>
+
+<p>
+<b>Associational:</b> The <i>Associational Risk Ratio</i> is given by:
+</p>
+
+<div class="latex" id="orgcb41ef0">
+\begin{equation*}
+P(Y = 1 | a = 1) / P(Y = 1 | a = 0)
+\end{equation*}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-odds-ratio-1" class="outline-3">
+<h3 id="odds-ratio-1"><span class="section-number-3">1.9.</span> Odds Ratio</h3>
+<div class="outline-text-3" id="text-odds-ratio-1">
+<p>
+<b>Causal:</b> With the outcome variables referring to the population measures, <i>Causal Odds Ratio</i> is given by:
+</p>
+
+<div class="latex" id="orgfa05e07">
+\begin{equation*}
+\displaystyle
+\frac {P(Y^{a=1}=1) / P(Y^{a=1} = 0)} {P(Y^{a=0}=1) / P(Y^{a=0} = 0)}
+\end{equation*}
+
+</div>
+
+<p>
+<b>Associational:</b> The <i>Associational Odds Ratio</i> is given by:
+</p>
+
+<div class="latex" id="orge37f1d6">
+\begin{equation*}
+\displaystyle
+\frac {P(Y = 1 | a = 1) / P(Y = 0 | a = 1)}
+  {P(Y = 1 | a = 0) | P(Y = 0 | a = 0)}
+\end{equation*}
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-number-needed-to-treat-nnt-1" class="outline-3">
+<h3 id="number-needed-to-treat-nnt-1"><span class="section-number-3">1.10.</span> Number Needed to Treat (NNT)</h3>
+<div class="outline-text-3" id="text-number-needed-to-treat-nnt-1">
+<p>
+Number Needed to Treat (NNT) is given by the average number of individuals that need to receive treatment reduce the number of cases by one.
+</p>
+</div>
+</div>
+
+<div id="outline-container-number-needed-to-harm-1" class="outline-3">
+<h3 id="number-needed-to-harm-1"><span class="section-number-3">1.11.</span> Number Needed to Harm</h3>
+<div class="outline-text-3" id="text-number-needed-to-harm-1">
+<p>
+Symmetric to NNT, Number Needed to Harm is given by the average number of individuals that need to receive treatment increase the number of cases by one.
+</p>
+</div>
+</div>
+
+<div id="outline-container-consistent-estimator-1" class="outline-3">
+<h3 id="consistent-estimator-1"><span class="section-number-3">1.12.</span> Consistent Estimator</h3>
+<div class="outline-text-3" id="text-consistent-estimator-1">
+<p>
+An estimator \(\hat \theta_n\) of \(\theta\) computed using a sample size \(n\) is consistent if the following holds.
+</p>
+
+<div class="latex" id="org373abb2">
+\begin{equation*}
+\displaystyle
+P(\lim_{n \to \infty} \hat \theta_n = \theta) = 1
+\end{equation*}
+
+</div>
+
+<p>
+Note that this is different from <a href="#consistency-1">1.4</a> as defined above.
+</p>
+
+<p>
+Additional reading: <a href="https://en.wikipedia.org/wiki/Consistent_estimator">Consistent Estimator - Wikipedia</a>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sampling-variability-1" class="outline-3">
+<h3 id="sampling-variability-1"><span class="section-number-3">1.13.</span> Sampling Variability</h3>
+<div class="outline-text-3" id="text-sampling-variability-1">
+<p>
+TODO
+</p>
+</div>
+</div>
+
+<div id="outline-container-nondeterministic-counterfactuals-1" class="outline-3">
+<h3 id="nondeterministic-counterfactuals-1"><span class="section-number-3">1.14.</span> Nondeterministic Counterfactuals</h3>
+<div class="outline-text-3" id="text-nondeterministic-counterfactuals-1">
+<p>
+A [deterministic] <a href="#counterfactual-outcome-1">1.1</a> assigns a single counterfactual outcome to each individual. In contrast, a <i>Nondeterministic Counterfactual</i> assigns a distribution of outcomes to each individual. 
+</p>
+
+<p>
+DOUBT: Is this all there is to it?
+</p>
+</div>
+</div>
+
+<div id="outline-container-random-error-1" class="outline-3">
+<h3 id="random-error-1"><span class="section-number-3">1.15.</span> Random Error</h3>
+<div class="outline-text-3" id="text-random-error-1">
+<p>
+Sampling Variability and Nondeterministic Counterfactuals are (the?) two sources of Random Error. However, the book ignores the random error for pedagogical reasons until chapter 10.
+</p>
+</div>
+</div>
+
+<div id="outline-container-independence-1" class="outline-3">
+<h3 id="independence-1"><span class="section-number-3">1.16.</span> Independence</h3>
+<div class="outline-text-3" id="text-independence-1">
+<p>
+When the <a href="#risk-difference-1">Associational Risk Difference</a> between two variables is zero, the two are said to be independent. This is denoted by:
+</p>
+
+<div class="org-center">
+<p>
+\(A ⫫ Y\) or \(Y ⫫ A\)
+</p>
+</div>
+
+<p>
+As an exercise, consider what the associational risk difference, risk ratio, and odds ratio will be when two variables are independent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-confounding-1" class="outline-3">
+<h3 id="confounding-1"><span class="section-number-3">1.17.</span> Confounding</h3>
+<div class="outline-text-3" id="text-confounding-1">
+<p>
+Intuitively, the discrepancy between the causal effect measures and associational effect measures is referred to as confounding. This will be elaborated upon in chapter 7.
+</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
