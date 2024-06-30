@@ -31,7 +31,6 @@ p, h3{
 }
 
 .slideshow-container {
-    position: relative;
     background: #f1f1f1f1;
     width:60vw;
     margin:auto;
@@ -39,8 +38,11 @@ p, h3{
     margin-bottom:15px;
     padding: 30px;
     text-align: center;
-    overflow: scroll;
+    overflow: auto;
     height:90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .references{

@@ -1,3 +1,7 @@
+.org-center > * {
+    text-align:center;
+}
+
 nav{
     width:100%;
     background:black;
