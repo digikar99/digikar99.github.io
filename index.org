@@ -18,11 +18,11 @@ Hello, I am Shubhamkar Ayare. My work may be summarized in terms of two main sph
 <div id='profile-pic'><img src='profile-pic.jpg'/></div>
 #+end_export
 
-*Primary sphere of a graduate student.* I have recently completed my master's in Cognitive Science from IIT Kanpur. There, I have worked under [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]] as part of the [[https://www.cgs.iitk.ac.in/user/nsrivast/platipus-lab/][PLATIPUS Lab]]. Currently, I'm looking forward to be part of the [[https://cdc.ceu.edu/][Cognitive Development Center]] of Central European University and, more particularly, the Causality Lab under [[https://www.jfkominsky.com/index.html][Prof. Jonathan Kominsky]] as part of my upcoming PhD studies.
+*Primary sphere of a graduate student.* Currently, I'm pursuing my PhD at the Central European University in Vienna, Austria. I am looking forward to work under [[https://www.jfkominsky.com/index.html][Prof. Jonathan Kominsky]] as part of the Causal Cognition Lab and, more broadly, the [[https://cdc.ceu.edu/][Cognitive Development Center]]. I completed my Master's in Cognitive Science from IIT Kanpur, working under [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]] as part of the [[https://www.cgs.iitk.ac.in/user/nsrivast/platipus-lab/][PLATIPUS Lab]].
 
 My primary sphere is largely driven by a quest to put the unknown unknowns relevant for building machines with human-like general intelligence into a more-or-less consistent framework. [[file:ai-cogsci.html][See what research areas this has touched so far.]]
 
-[[https://cogscilounge.com][CogSciLounge]] (or [[https://reddit.com/r/cogsci][r/cogsci]]) can be a good place for discussion.
+[[https://cogscilounge.com][CogSciLounge]] is my attempt at providing a discussion platform not limited to the restrictions of (i) spatiotemporal locality that real-life discussions require (ii) the non-public nature of emails. [[https://reddit.com/r/cogsci][r/cogsci]] is a potential alternative.
 
 *Secondary sphere of a Common Lisp Enthusiast.* This mainly began around my undergraduate days in Computer Science at IIT Bombay. It has been motivated by a search for a powerful practical yet stable programming platform for long term projects. This sphere contributes to my primary sphere every now and then, but it may be understood independently. [[file:common-lisp-and-emacs.html][See what projects this sphere had led to.]]
 

@@ -56,6 +56,7 @@ Please enable javascript to see a random listing of articles from below.
 - [[https://human9being9.wordpress.com/2020/03/30/apps-for-android-tablets/][Apps for Android Tablets - human9being9]]
 - [[https://www.reddit.com/r/GalaxyTab/comments/1cez6d3/using_samsung_taskbar_with_nova_or_other_third/][Using Samsung Taskbar with Nova or other third party launchers - reddit]]
 - [[https://www.reddit.com/r/emacs/comments/111ki1e/comment/jucysgq/?utm_source=share&utm_medium=web2x&context=3][Termux and Emacs on Android - reddit]]
+  - [[https://github.com/termux/proot-distro][PRoot Distro - Utility for managing installations of the Linux distributions in Termux]]
   - [[https://sourceforge.net/projects/android-ports-for-gnu-emacs/files/termux/][Android Ports for GNU Emacs Files - sourceforge]]
 - [[https://github.com/EXALAB/AnLinux-App][AnLinux - Run Linux on Android without root]]
 - [[https://f-droid.org/][F-Droid]]
@@ -144,6 +145,7 @@ Please enable javascript to see a random listing of articles from below.
 - [[https://www.youtube.com/watch?v=ESqfW_kyZq8][Validation, Communication through Empathy]]
 - [[https://michaelssorensen.com/how-to-validate-someone-when-you-dont-agree-with-them/][How to validate someone when you don't agree with them?]]
 - [[https://writingcenter.unc.edu/tips-and-tools/fallacies/][Fallacies - This handout discusses common logical fallacies that you may encounter in your own writing or the writing of others.]]
+- [[https://betterexplained.com/articles/logical-fallacy-popularity-is-not-quality/][Logical fallacy: popularity is not quality - BetterExplained]]
 - [[https://lolitafashion.fandom.com/wiki/Boystyle][Boystyle - Lolita (Rorita) Fashion Wiki]]
 - [[https://www.youtube.com/watch?v=-hjGgFgnYIA&list=PL8dPuuaLjXtNppY8ZHMPDH5TKK2UpU8Ng][Crash Course - History of Science]]
 - [[https://medium.com/the-mission/willpower-doesnt-work-here-s-the-key-to-being-more-productive-according-to-neuroscience-f6c4257eb6b9][Willpower Doesn’t Work. Here’s the Key to Being More Productive According to Neuroscience.]]
@@ -223,6 +225,13 @@ Intermediate:
 :CUSTOM_ID: books
 :END:
 
+** Cognitive Science Fundamentals
+
+- Computation and Cognition: Towards a Foundation for Cognitive Science by /Zenon W. Pylyshyn/
+- What Computers /Still/ Can't Do: A Critique of Artificial Reason by /Hubert Dreyfus/
+
+** Miscellaneous
+
 - What the Buddha Taught by /Walpola Rahula/
 - Sapiens: A brief History of Humankind by /Yuval Noah Harari/
 - Ender’s Game and its sequel Speaker for the Dead by /Orson Scott Card/
@@ -231,7 +240,7 @@ Intermediate:
 - The Language Instinct: How the Mind creates language by /Steven Pinker/
 - The Evolution of Agency: Behavioral Organization from Lizards to Humans by /Michael Tomasello/
 - The Evolution of the Sensitive Soul: Learning and the Origins of Consciousness by /Simona Ginsburg and Eva Jablonka/
-- What Computers /Still/ Can't Do: A Critique of Artificial Reason by /Hubert Dreyfus/
+- Wonder: Childhood and the LIfelong Love of Science by /Frank Keil/
 
 * Blogs
 :PROPERTIES:
