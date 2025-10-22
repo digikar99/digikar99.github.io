@@ -1,0 +1,15 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="common.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil title:nil
+#+TITLE: CogSciLounge Archive
+
+See [[https://web.archive.org/web/*/cogscilounge.com*][web archive]] for the full archive or drop me an email justifying the database archive. 
+
+- [[https://web.archive.org/web/20250831170255/https://cogscilounge.com/topic/26/taxonomy-of-models-what-is-a-model-what-are-the-different-kinds-of-models-what-are-the-differences-between-each][Taxonomy of Models]]
+- [[https://web.archive.org/web/20250912012840/https://cogscilounge.com/topic/33/functions-and-graphs][Functions and Graphs]]
+- [[https://web.archive.org/web/20250904032223/https://cogscilounge.com/topic/41/the-best-textbooks-on-every-subject-by-lukeprog-on-lesswrong][The Best Textbooks on Every Subject - by lukeprog on LessWrong]]
+
+- [[https://web.archive.org/web/20250915155500/https://cogscilounge.com/topic/23/transcripts-and-certificates-iitk][IITK Transcripts and Certificates]]
+- [[https://web.archive.org/web/20250607104356/https://cogscilounge.com/topic/47/no-dues-procedure-for-graduating-students-at-iit-kanpur][No-Dues Procedure for Graduating Students at IIT Kanpur]]
