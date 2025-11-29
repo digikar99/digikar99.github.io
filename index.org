@@ -24,15 +24,11 @@ I have very much enjoyed my interactions with [[https://sites.google.com/view/de
 
 My primary sphere is largely driven by a quest to put the unknown unknowns relevant for building machines with human-like general intelligence into a more-or-less consistent framework. [[file:ai-cogsci.html][See what research areas this has touched so far.]]
 
-I had previously attempted an online forum for cognitive science, but it has since been [[file:cogscilounge.html][archived]]. 
+I had previously attempted an online forum for cognitive science, but it has since been [[file:cogscilounge.html][archived]].
 
 *Secondary sphere of a Common Lisp Enthusiast.* This mainly began around my undergraduate days in Computer Science at IIT Bombay. It has been motivated by a search for a powerful practical yet stable programming platform for long term projects. This sphere contributes to my primary sphere every now and then, but it may be understood independently. [[file:common-lisp-and-emacs.html][See what projects this sphere had led to.]]
 
-Besides these two spheres of life, I keep reading and sharing links to interesting, useful, or silly articles I run into or, sometimes, write. Upon a friend's recommendation, I'm maintaining them [[file:miscellaneous.html][here]].
-
-#+begin_center
-[[file:braindump/][See my braindump.]] (WIP)
-#+end_center
+Besides these two spheres of life, I keep reading and sharing links to interesting, useful, or silly articles I run into or, sometimes, write. Upon a friend's recommendation, I'm maintaining them [[file:miscellaneous.html][here]]. I have additionally started [[https://digikar99.github.io/microblog/][another (micro)blog]], which you can navigate via tags.
 
 * Contact
 
