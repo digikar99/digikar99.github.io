@@ -7,28 +7,28 @@
 #+TITLE: Shubhamkar Ayare (digikar)
 
 #+html: <nav>
-*HOME* | [[file:ai-cogsci.html][AI and CogSci]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:miscellaneous.html][Miscellaneous]]
+*HOME* | [[file:ai-cogsci.html][AI and CogSci]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:academic-history.html][Academic History]] | [[file:miscellaneous.html][Miscellaneous]] 
 #+html: </nav>
 
 -----
-
-Hello, I am Shubhamkar Ayare. My work may be summarized in terms of two main spheres of life.  
 
 #+begin_export html
 <div id='profile-pic'><img src='profile-pic.jpg'/></div>
 #+end_export
 
-*Primary sphere of a graduate student.* Since September 2024, I'm pursuing my PhD at the [[https://cognitivescience.ceu.edu/][Cognitive Science department]] of [[https://ceu.edu/][Central European University]] in Vienna, Austria. I am working under [[https://www.jfkominsky.com/index.html][Prof. Jonathan Kominsky]] as my primary supervisor as part of the [[https://ccl.ceu.edu][Causal Cognition Lab]]. I am also advised by [[https://people.ceu.edu/gergely_csibra][Gergely Csibra]] and [[https://people.ceu.edu/jozsef_fiser][Jozsef Fiser]] and I can usually be spotted at the Lab Meetings of the [[https://cdc.ceu.edu][Cognitive Development Center]] or the [[https://visionlab-ceu.org/][Vision Lab]]. My doctoral studies are motivated by Causal Representation Learning with links to Causal Selection Judgments and Theories of Actual Causation.
+I am Shubhamkar Ayare. I'm a doctoral student in Cognitive Science, and also an open source developer focusing on Common Lisp.
 
-Before CEU, I completed my Master's in [[https://www.cgs.iitk.ac.in/][Cognitive Science]] from [[https://www.iitk.ac.in/][IIT Kanpur]] under [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]] as part of the [[https://www.cgs.iitk.ac.in/user/nsrivast/platipus-lab/][PLATIPUS Lab]]. Besides him, I have very much enjoyed my interactions with [[https://sites.google.com/view/devpriya-kumar/home][Prof. Devpriya Kumar]] and will be forever grateful for the often lengthy (but very interesting!) discussions with [[https://sites.google.com/site/ammuns68][Prof. Narayanan Srinivasan]] amongst others. Before IIT Kanpur, I completed my Bachelor's in [[https://www.cse.iitb.ac.in/][Computer Science]] at [[https://www.iitb.ac.in/][IIT Bombay]], where I enjoyed my interactions with too many people to name, with the last semester under [[https://www.cse.iitb.ac.in/~shivaram/][Prof. Shivaram Kalyanakrishnan]].
+As a doctoral student, I'm pursuing my PhD at Central European University in Vienna, Austria. Under Prof. Jonathan Kominsky, my doctoral studies are motivated by Causal Representation Learning with links to Causal Selection Judgments and Theories of Actual Causation.
 
-My primary sphere is largely driven by a quest to put the unknown unknowns relevant for building machines with human-like general intelligence into a more-or-less consistent framework. [[file:ai-cogsci.html][See what research areas this has touched so far.]]
+#+begin_quote
+*Prior Education*
+- 2021-24: MS(R) Cognitive Science - IIT Kanpur
+- 2017-21: B. Tech. Computer Science - IIT Bombay
+#+end_quote
+
+During my undergraduate days in Computer Science, I stumbled upon Common Lisp. I continue to be enthusiastic about it for its expressivity, interactivity, and performance. These days, I als have a primitive [[https://moonli-lang.github.io/][transpiler from algol-syntax to Common Lisp]]. (See [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]].)
 
 I had previously attempted an online forum for cognitive science, but it has since been [[file:cogscilounge.html][archived]].
-
-*Secondary sphere of a Common Lisp Enthusiast.* This mainly began around my undergraduate days and has been motivated by a search for a powerful practical yet stable programming platform for long term projects. This sphere contributes to my primary sphere every now and then, but it may be understood independently. The most recent byproduct of this endeavour is a transpiler from Python/Julia-like syntax that is popular these days to Common Lisp called [[https://moonli-lang.github.io/][Moonli]]. [[file:common-lisp-and-emacs.html][See what other projects this sphere had led to.]]
-
-Besides these two spheres of life, I keep reading and sharing links to interesting, useful, or silly articles I run into or, sometimes, write. Upon a friend's recommendation, I'm maintaining them [[file:miscellaneous.html][here]]. I have additionally started [[https://digikar99.github.io/microblog/][another (micro)blog]], which you can navigate via tags.
 
 * Contact
 
@@ -46,7 +46,7 @@ Please enable javascript for random quotes from anime.
 
 /Say not just what's wrong with things, but also how they can be made right./ 
 
-[[https://github.com/digikar99][Github]] | [[https://www.linkedin.com/in/shubhamkar-a-9583b7133/][LinkedIn]]
+[[https://digikar99.github.io/microblog/][Blog]] | [[https://primal.net/p/npub14f2lywp9dyrnl3exttjly0y3alqsuykeqveqz26mtwg6pu5e2s9scmfr5q][Nostr]] | [[https://github.com/digikar99][Github]] | [[https://www.linkedin.com/in/shubhamkar-a-9583b7133/][LinkedIn]]
 
 (made with [[https://orgmode.org/][_emacs org_]])
 

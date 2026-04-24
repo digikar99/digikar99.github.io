@@ -7,7 +7,7 @@
 #+TITLE: Miscellaneous
 
 #+html: <nav>
-[[file:index.html][Home]] | [[file:ai-cogsci.html][AI and CogSci]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | *MISCELLANEOUS*
+[[file:index.html][Home]] | [[file:ai-cogsci.html][AI and CogSci]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | [[file:academic-history.html][Academic History]] | *MISCELLANEOUS*
 #+html: </nav>
 
 -----
@@ -94,6 +94,7 @@ Please enable javascript to see a random listing of articles from below.
 - [[https://github.com/Enerccio/SLT][SLT - Common Lisp Language Plugin for Jetbrains IDE lineup]]
 - [[https://cl-community-spec.github.io/pages/index.html][CL Community Spec]]
 - [[https://novaspec.org/][Novaspec]]
+- [[https://moonli-lang.github.io/][Moonli]]
 
 ** Computer Science
 :PROPERTIES:
@@ -112,6 +113,18 @@ Please enable javascript to see a random listing of articles from below.
 - [[https://github.com/corvideon/mousemacs][mousemacs]] - An Emacs setup without the idiosyncrasies of Emacs key bindings. Suitable for users of VS Code or other "modern" development environments.
 - [[https://github.com/org-roam/org-roam][org-roam - Plain-text Knowledge Management System]]
 - [[https://github.com/org-roam/org-roam-ui][org-roam-ui - A graphical frontend for exploring your org-roam Zettelkasten]]
+
+** Free and Open Source
+:PROPERTIES:
+:CUSTOM_ID: free-and-open-source
+:END:
+
+- [[https://www.lyx.org/][Lyx - The Document Processor]] - A GUI frontend and a nicer layer over Latex
+- [[https://nostr.com/][Nostr]] - Notes and Other Stuff Transmitted by Relays
+  - [[https://nostr.how/en/why-nostr][Why Nostr]]
+- [[https://vigneshwarshankar.com/blog/why-you-should-write-in-markdown/][Why you should write in markdown - Vigneshwar's blog]]
+- [[https://rpdillon.net/why-doesnt-emacs-org-mode-just-use-markdown-2021.html][Why doesn't Emacs' Org Mode just use Markdown? (2021)]]
+
 ** Growing Up
 :PROPERTIES:
 :CUSTOM_ID: growing-up
@@ -219,7 +232,6 @@ Intermediate:
 - [[https://mamba.readthedocs.io/en/latest/installation/micromamba-installation.html][Micromamba Installation]] - A fast lightweight package manager for conda packages powered by C++
 - [[https://github.com/prefix-dev/rattler-build/][rattler-build]] - A fast conda-package builder. Alternative to conda-build
 
-
 * Books
 :PROPERTIES:
 :CUSTOM_ID: books
@@ -230,17 +242,31 @@ Intermediate:
 - Computation and Cognition: Towards a Foundation for Cognitive Science by /Zenon W. Pylyshyn/
 - What Computers /Still/ Can't Do: A Critique of Artificial Reason by /Hubert Dreyfus/
 
-** Miscellaneous
+** Life
 
 - What the Buddha Taught by /Walpola Rahula/
+- Utilitarianism: A Very Short Introduction by /Katarzyna de Lazari-Radek/ and /Peter Singer/
+- How Are We to Live by /Peter Singer/
+- What we owe the future by /David MacAskill/
+- Development as Freedom by /Peter Singer/
 - Sapiens: A brief History of Humankind by /Yuval Noah Harari/
-- Ender’s Game and its sequel Speaker for the Dead by /Orson Scott Card/
+  
+** Cognition etc
+
 - Godel, Escher and Bach: An eternal golden braid by /Douglas R. Hofstadter/
-- Linear Algebra Done Right by /Sheldon Axler/
 - The Language Instinct: How the Mind creates language by /Steven Pinker/
 - The Evolution of Agency: Behavioral Organization from Lizards to Humans by /Michael Tomasello/
 - The Evolution of the Sensitive Soul: Learning and the Origins of Consciousness by /Simona Ginsburg and Eva Jablonka/
 - Wonder: Childhood and the LIfelong Love of Science by /Frank Keil/
+
+** Mathematics
+
+- Linear Algebra Done Right by /Sheldon Axler/
+- Challenge and Thrill of Pre-College Mathematics by /C. R. Pranesachar/ and /V Krishnamurthy/
+
+** Fiction
+
+- Ender’s Game and its sequel Speaker for the Dead by /Orson Scott Card/
 
 * Blogs
 :PROPERTIES:
@@ -249,7 +275,7 @@ Intermediate:
 
 Some of my Quora answers have been collected [[https://human9being9.wordpress.com/my-quora/][here]]. Most of them were written around 2014, before the decline of the platform began.
 
-There's also a [[http://human9being9.wordpress.com/][wordpress]] blog I write on sometimes. Some articles of general interest might include:
+These days, I have moved to a [[https://digikar99.github.io/microblog/][static blog]] as well as [[https://primal.net/p/npub14f2lywp9dyrnl3exttjly0y3alqsuykeqveqz26mtwg6pu5e2s9scmfr5q][Nostr]]. Earlier, I used to write on a [[http://human9being9.wordpress.com/][wordpress]] blog. Some articles of potential general interest from wordpress blog include:
 
 - [[https://human9being9.wordpress.com/2022/10/09/whitewashing-persuasion-this-is-what-i-think-is-the-best-for-you-please-do-your-best-to-accept-this-uncertainty-and-choose-what-is-good/][Whitewashing Persuasion: “This is what I think is the best for you, please do your best to accept this uncertainty, and choose what is good.”]]
 - [[https://human9being9.wordpress.com/10-things-you-must-know/][10 Things You Must Know]]

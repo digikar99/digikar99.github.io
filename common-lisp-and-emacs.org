@@ -6,7 +6,7 @@
 #+TITLE: Common Lisp and Emacs
 
 #+html: <nav>
-[[file:index.html][Home]] | [[file:ai-cogsci.html][AI and CogSci]] | *COMMON LISP AND EMACS* | [[file:miscellaneous.html][Miscellaneous]]
+[[file:index.html][Home]] | [[file:ai-cogsci.html][AI and CogSci]] | *COMMON LISP AND EMACS* | [[file:academic-history.html][Academic History]] | [[file:miscellaneous.html][Miscellaneous]]
 #+html: </nav>
 
 #+html: <br>
@@ -18,9 +18,10 @@
 
 :CONTENTS:
 - [[#major-common-lisp-related-projects][Major Common Lisp-related Projects]]
-  - [[#1-python-libraries-for-common-lisp][1. Python libraries for Common Lisp]]
-  - [[#2-fast-math-library-for-common-lisp][2. Fast math library for Common Lisp]]
-  - [[#3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them][3. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them]]
+  - [[#1-moonli-transpiler-from-pythonjulia-like-algol-syntax-to-common-lisp][1. Moonli: Transpiler from Python/Julia-like algol-syntax to Common Lisp]]
+  - [[#2-python-libraries-for-common-lisp][2. Python libraries for Common Lisp]]
+  - [[#3-fast-math-library-for-common-lisp][3. Fast math library for Common Lisp]]
+  - [[#4-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them][4. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them]]
 - [[#conda-lisp][Conda Lisp]]
 :END:
 
@@ -30,11 +31,47 @@
 :CUSTOM_ID: major-common-lisp-related-projects
 :END:
 
-My major Lisp projects can be divided into three broad themes.
+My major Lisp projects can be divided into four broad themes.
 
-** 1. Python libraries for Common Lisp
+** 1. Moonli: Transpiler from Python/Julia-like /algol-syntax/ to Common Lisp
 :PROPERTIES:
-:CUSTOM_ID: 1-python-libraries-for-common-lisp
+:CUSTOM_ID: 1-moonli-transpiler-from-pythonjulia-like-algol-syntax-to-common-lisp
+:END:
+
+Can we get the power of Common Lisp in a syntax that is more familiar to most people? [[https://moonli-lang.github.io/][Moonli is an attempt at this.]]
+
+The simple idea is to transpile
+
+#+begin_src moonli
+defun fib-iter(n):
+  let f1 = 0, f2 = 1:
+    loop :repeat n
+      :for temp := f2 :do
+      f2 = f1 + f2
+      f1 = temp
+    end
+    f1
+  end
+end
+#+end_src
+
+to
+
+#+begin_src common-lisp
+(defun fib-iter (n)
+  (let ((f1 0) (f2 1))
+    (loop :repeat n
+          :for temp := f2
+          :do (setf f2 (+ f1 f2))
+              (setf temp f1 temp))
+    f1))
+#+end_src
+
+Read more here: https://moonli-lang.github.io/docs/
+
+** 2. Python libraries for Common Lisp
+:PROPERTIES:
+:CUSTOM_ID: 2-python-libraries-for-common-lisp
 :END:
 
 [[https://www.quora.com/What-is-your-favourite-non-mainstream-programming-language/answer/Shubhamkar-Ayare?ch=10&share=3d935d6a&srid=tWo7][Common Lisp is a superb tool.]] Unfortunately, its ecosystem vastly lags behind mainstream languages like Python. As one of my past-times, I have been working to provide facilities for calling Python functions and callables from Lisp. There are two major approaches to this:
@@ -44,9 +81,9 @@ My major Lisp projects can be divided into three broad themes.
 
 The former is robust but slow. The latter is fast but relatively brittle. I'm certainly not the first one to attempt this. You can find more about the latter approach - as well as the open issues - from [[https://doi.org/10.5281/zenodo.10997435][this paper]].
 
-** 2. Fast math library for Common Lisp
+** 3. Fast math library for Common Lisp
 :PROPERTIES:
-:CUSTOM_ID: 2-fast-math-library-for-common-lisp
+:CUSTOM_ID: 3-fast-math-library-for-common-lisp
 :END:
 
 Common Lisp actually has [[https://gist.github.com/digikar99/16066dbf24b8789c969ea58837e0fbef][several numerical computing libraries]]. While many of them use BLAS/LAPACK/GSLL for linear algebra operations, there are no optimized operations in these libraries for basic mathematics. By basic mathematics, I mean addition, subtraction, multiplication, division. But even beyond them, there are other operations including floor, ceiling, round, absolute-value, exponentiation, logarithmic, as well as trigonometric, inverse trigonometric and their hyperbolic counterparts.
@@ -63,11 +100,11 @@ numericals works with standard Common Lisp arrays, this means, you can use it in
 This line of work has actually spanned two C libraries. So, if you are a C developer and are looking for projects to contribute, here are two such projects.
 
 - [[https://github.com/digikar99/bmas][BMAS]]: The ultimate goal is to provide a certain set of math operations across different SIMD platforms and for strided vectors. Currently, full support is only limited to AVX256.
-- [[https://github.com/digikar99/ceigen_lite][ceigen_lite]]: [[https://eigen.tuxfamily.org/][Eigen]] is an excellent C++ library for numerical computing with vectors and matrices. ceigen_lite aims to provide a C interface to some of the common tasks that Eigen is capable of. In some sense, this will be a higher level interface to BLAS and LAPACK. Currently, this is just 20% complete. Besides, the compile times are enormous, so distributing the library as a binary would be great! But this has only so far been done for linux-amd64. Porting to other OS and architectures remains.
+- [[https://github.com/digikar99/ceigen_lite][=ceigen_lite=]]: [[https://eigen.tuxfamily.org/][Eigen]] is an excellent C++ library for numerical computing with vectors and matrices. ceigen_lite aims to provide a C interface to some of the common tasks that Eigen is capable of. In some sense, this will be a higher level interface to BLAS and LAPACK. Currently, this is just 20% complete. Besides, the compile times are enormous, so distributing the library as a binary would be great! But this has only so far been done for linux-amd64. Porting to other OS and architectures remains.
   
-** 3. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them
+** 4. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them
 :PROPERTIES:
-:CUSTOM_ID: 3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them
+:CUSTOM_ID: 4-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them
 :END:
 
 Despite being a great language, I have run into several issues while using Common Lisp to develop the numerical computing library described above:

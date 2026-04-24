@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-05-07 Tue 08:56 -->
+<!-- 2026-04-24 Fri 20:46 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Common Lisp and Emacs</title>
@@ -191,7 +191,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
+  .org-svg { }
 </style>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -205,21 +205,22 @@
 <div id="content" class="content">
 <nav>
 <p>
-<a href="index.html">Home</a> | <a href="ai-cogsci.html">AI and CogSci</a> | <b>COMMON LISP AND EMACS</b> | <a href="miscellaneous.html">Miscellaneous</a>
+<a href="index.html">Home</a> | <a href="ai-cogsci.html">AI and CogSci</a> | <b>COMMON LISP AND EMACS</b> | <a href="academic-history.html">Academic History</a> | <a href="miscellaneous.html">Miscellaneous</a>
 </p>
 </nav>
 
 <br>
 
-<div id="outline-container-org23adf8b" class="outline-2">
-<h2 id="org23adf8b">On This Page</h2>
-<div class="outline-text-2" id="text-org23adf8b">
+<div id="outline-container-org1150758" class="outline-2">
+<h2 id="org1150758">On This Page</h2>
+<div class="outline-text-2" id="text-org1150758">
 <ul class="org-ul">
 <li><a href="#major-common-lisp-related-projects">Major Common Lisp-related Projects</a>
 <ul class="org-ul">
-<li><a href="#1-python-libraries-for-common-lisp">1. Python libraries for Common Lisp</a></li>
-<li><a href="#2-fast-math-library-for-common-lisp">2. Fast math library for Common Lisp</a></li>
-<li><a href="#3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">3. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them</a></li>
+<li><a href="#1-moonli-transpiler-from-pythonjulia-like-algol-syntax-to-common-lisp">1. Moonli: Transpiler from Python/Julia-like algol-syntax to Common Lisp</a></li>
+<li><a href="#2-python-libraries-for-common-lisp">2. Python libraries for Common Lisp</a></li>
+<li><a href="#3-fast-math-library-for-common-lisp">3. Fast math library for Common Lisp</a></li>
+<li><a href="#4-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">4. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them</a></li>
 </ul></li>
 <li><a href="#conda-lisp">Conda Lisp</a></li>
 </ul>
@@ -231,13 +232,59 @@
 <h2 id="major-common-lisp-related-projects">Major Common Lisp-related Projects</h2>
 <div class="outline-text-2" id="text-major-common-lisp-related-projects">
 <p>
-My major Lisp projects can be divided into three broad themes.
+My major Lisp projects can be divided into four broad themes.
 </p>
 </div>
 
-<div id="outline-container-1-python-libraries-for-common-lisp" class="outline-3">
-<h3 id="1-python-libraries-for-common-lisp">1. Python libraries for Common Lisp</h3>
-<div class="outline-text-3" id="text-1-python-libraries-for-common-lisp">
+<div id="outline-container-1-moonli-transpiler-from-pythonjulia-like-algol-syntax-to-common-lisp" class="outline-3">
+<h3 id="1-moonli-transpiler-from-pythonjulia-like-algol-syntax-to-common-lisp">1. Moonli: Transpiler from Python/Julia-like <i>algol-syntax</i> to Common Lisp</h3>
+<div class="outline-text-3" id="text-1-moonli-transpiler-from-pythonjulia-like-algol-syntax-to-common-lisp">
+<p>
+Can we get the power of Common Lisp in a syntax that is more familiar to most people? <a href="https://moonli-lang.github.io/">Moonli is an attempt at this.</a>
+</p>
+
+<p>
+The simple idea is to transpile
+</p>
+
+<div class="org-src-container">
+<pre class="src src-moonli"><span style="color: #00ffff;">defun</span> fib-iter(n):
+  <span style="color: #00ffff;">let</span> f1 <span style="color: #b0c4de;">=</span> 0, f2 <span style="color: #b0c4de;">=</span> 1:
+    <span style="color: #00ffff;">loop</span> <span style="color: #8470ff; font-weight: bold;">:repeat</span> n
+      <span style="color: #8470ff; font-weight: bold;">:for</span> temp <span style="color: #8470ff; font-weight: bold;">:=</span> f2 <span style="color: #8470ff; font-weight: bold;">:do</span>
+      f2 <span style="color: #b0c4de;">=</span> f1 <span style="color: #b0c4de;">+</span> f2
+      f1 <span style="color: #b0c4de;">=</span> temp
+    <span style="color: #00ffff;">end</span>
+    f1
+  <span style="color: #00ffff;">end</span>
+<span style="color: #00ffff;">end</span>
+</pre>
+</div>
+
+<p>
+to
+</p>
+
+<div class="org-src-container">
+<pre class="src src-common-lisp">(<span style="color: #00ffff;">defun</span> <span style="color: #00fa9a; font-weight: bold;">fib-iter</span> (n)
+  (<span style="color: #00ffff;">let</span> ((f1 0) (f2 1))
+    (<span style="color: #00ffff;">loop</span> <span style="color: #b0c4de;">:repeat</span> n
+          <span style="color: #b0c4de;">:for</span> temp <span style="color: #b0c4de;">:=</span> f2
+          <span style="color: #b0c4de;">:do</span> (setf f2 (+ f1 f2))
+              (setf temp f1 temp))
+    f1))
+</pre>
+</div>
+
+<p>
+Read more here: <a href="https://moonli-lang.github.io/docs/">https://moonli-lang.github.io/docs/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-2-python-libraries-for-common-lisp" class="outline-3">
+<h3 id="2-python-libraries-for-common-lisp">2. Python libraries for Common Lisp</h3>
+<div class="outline-text-3" id="text-2-python-libraries-for-common-lisp">
 <p>
 <a href="https://www.quora.com/What-is-your-favourite-non-mainstream-programming-language/answer/Shubhamkar-Ayare?ch=10&amp;share=3d935d6a&amp;srid=tWo7">Common Lisp is a superb tool.</a> Unfortunately, its ecosystem vastly lags behind mainstream languages like Python. As one of my past-times, I have been working to provide facilities for calling Python functions and callables from Lisp. There are two major approaches to this:
 </p>
@@ -253,9 +300,9 @@ The former is robust but slow. The latter is fast but relatively brittle. I'm ce
 </div>
 </div>
 
-<div id="outline-container-2-fast-math-library-for-common-lisp" class="outline-3">
-<h3 id="2-fast-math-library-for-common-lisp">2. Fast math library for Common Lisp</h3>
-<div class="outline-text-3" id="text-2-fast-math-library-for-common-lisp">
+<div id="outline-container-3-fast-math-library-for-common-lisp" class="outline-3">
+<h3 id="3-fast-math-library-for-common-lisp">3. Fast math library for Common Lisp</h3>
+<div class="outline-text-3" id="text-3-fast-math-library-for-common-lisp">
 <p>
 Common Lisp actually has <a href="https://gist.github.com/digikar99/16066dbf24b8789c969ea58837e0fbef">several numerical computing libraries</a>. While many of them use BLAS/LAPACK/GSLL for linear algebra operations, there are no optimized operations in these libraries for basic mathematics. By basic mathematics, I mean addition, subtraction, multiplication, division. But even beyond them, there are other operations including floor, ceiling, round, absolute-value, exponentiation, logarithmic, as well as trigonometric, inverse trigonometric and their hyperbolic counterparts.
 </p>
@@ -283,14 +330,14 @@ This line of work has actually spanned two C libraries. So, if you are a C devel
 
 <ul class="org-ul">
 <li><a href="https://github.com/digikar99/bmas">BMAS</a>: The ultimate goal is to provide a certain set of math operations across different SIMD platforms and for strided vectors. Currently, full support is only limited to AVX256.</li>
-<li><a href="https://github.com/digikar99/ceigen_lite">ceigen<sub>lite</sub></a>: <a href="https://eigen.tuxfamily.org/">Eigen</a> is an excellent C++ library for numerical computing with vectors and matrices. ceigen<sub>lite</sub> aims to provide a C interface to some of the common tasks that Eigen is capable of. In some sense, this will be a higher level interface to BLAS and LAPACK. Currently, this is just 20% complete. Besides, the compile times are enormous, so distributing the library as a binary would be great! But this has only so far been done for linux-amd64. Porting to other OS and architectures remains.</li>
+<li><a href="https://github.com/digikar99/ceigen_lite"><code>ceigen_lite</code></a>: <a href="https://eigen.tuxfamily.org/">Eigen</a> is an excellent C++ library for numerical computing with vectors and matrices. ceigen<sub>lite</sub> aims to provide a C interface to some of the common tasks that Eigen is capable of. In some sense, this will be a higher level interface to BLAS and LAPACK. Currently, this is just 20% complete. Besides, the compile times are enormous, so distributing the library as a binary would be great! But this has only so far been done for linux-amd64. Porting to other OS and architectures remains.</li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them" class="outline-3">
-<h3 id="3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">3. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them</h3>
-<div class="outline-text-3" id="text-3-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">
+<div id="outline-container-4-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them" class="outline-3">
+<h3 id="4-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">4. PELTADOT: PELTADOT Extends Lisp's Types And Dispatches Over Them</h3>
+<div class="outline-text-3" id="text-4-peltadot-peltadot-extends-lisps-types-and-dispatches-over-them">
 <p>
 Despite being a great language, I have run into several issues while using Common Lisp to develop the numerical computing library described above:
 </p>

@@ -1,0 +1,22 @@
+#+HTML_HEAD: <meta charset="utf-8">
+#+HTML_HEAD: <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="others.css">
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="common.css">
+#+OPTIONS: toc:nil num:nil html-postamble:nil title:nil
+#+TITLE: Academic History
+
+#+html: <nav>
+[[file:index.html][Home]] | [[file:ai-cogsci.html][AI and CogSci]] | [[file:common-lisp-and-emacs.html][Common Lisp and Emacs]] | *ACADEMIC HISTORY* | [[file:miscellaneous.html][Miscellaneous]]
+#+html: </nav>
+
+* 2024-present
+
+I'm a PhD student at the [[https://cognitivescience.ceu.edu/][Cognitive Science department]] of [[https://ceu.edu/][Central European University]] in Vienna, Austria. I am working under [[https://www.jfkominsky.com/index.html][Prof. Jonathan Kominsky]] as my primary supervisor as part of the [[https://ccl.ceu.edu][Causal Cognition Lab]]. I am also advised by [[https://people.ceu.edu/gergely_csibra][Prof. Gergely Csibra]] and [[https://people.ceu.edu/jozsef_fiser][Prof. Jozsef Fiser]] and I can usually be spotted at the Lab Meetings of the [[https://cdc.ceu.edu][Cognitive Development Center]] or the [[https://visionlab-ceu.org/][Vision Lab]]. My doctoral studies are motivated by Causal Representation Learning with links to Causal Selection Judgments and Theories of Actual Causation.
+
+* 2021-24
+
+Before CEU, I completed my Master's in [[https://www.cgs.iitk.ac.in/][Cognitive Science]] from [[https://www.iitk.ac.in/][IIT Kanpur]] under [[https://www.cse.iitk.ac.in/users/nsrivast/][Prof. Nisheeth Srivastava]] as part of the [[https://www.cgs.iitk.ac.in/user/nsrivast/platipus-lab/][PLATIPUS Lab]]. Besides him, I have very much enjoyed my interactions with [[https://sites.google.com/view/devpriya-kumar/home][Prof. Devpriya Kumar]] and will be forever grateful for the often lengthy (but very interesting!) discussions with [[https://sites.google.com/site/ammuns68][Prof. Narayanan Srinivasan]] amongst others. 
+
+* 2017-21
+
+Before IIT Kanpur, I completed my Bachelor's in [[https://www.cse.iitb.ac.in/][Computer Science]] at [[https://www.iitb.ac.in/][IIT Bombay]], where I enjoyed my interactions with [[https://www.cse.iitb.ac.in/people/faculty][too many people to name]], with the last semester under [[https://www.cse.iitb.ac.in/~shivaram/][Prof. Shivaram Kalyanakrishnan]].

@@ -2,6 +2,18 @@
     font-style:italic;
 }
 
+blockquote{
+    background: #f1f1f1f1;
+    padding: 6px;
+    margin: 0;
+    margin-right: 200px;
+}
+
+blockquote > p, blockquote > ul{
+    padding-top: 6px;
+    margin: 0;
+}
+
 p, h3{
     text-align:justify;
     min-width:300px;
@@ -27,6 +39,9 @@ p, h3{
         float:none;
         margin:auto;
         padding:0;
+    }
+    blockquote{
+        margin-right: 0;
     }
 }
 

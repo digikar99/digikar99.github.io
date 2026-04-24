@@ -2,6 +2,10 @@
     text-align:center;
 }
 
+pre, code{
+    font-size: 1.2em;
+}
+
 nav{
     width:100%;
     background:black;
